@@ -82,8 +82,8 @@ export default function Process() {
     <section id="proceso" className="bg-cream py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
-          {/* Left Column */}
-          <div className="space-y-8">
+          {/* Left Column - Sticky */}
+          <div className="space-y-8 md:sticky md:top-32 md:h-fit">
             <div className="space-y-4">
               <p className="label-badge">El Proceso</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy leading-tight">
@@ -97,9 +97,16 @@ export default function Process() {
             </p>
 
             {/* Info Card */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8">
+            <div className="bg-white border rounded-xl p-6 md:p-8" style={{
+              borderColor: 'rgba(10,22,40,0.1)',
+              borderLeft: '3px solid #1d4ed8',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.06)'
+            }}>
+              <p className="font-semibold text-navy mb-3" style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#1d4ed8' }}>
+                PLAZOS INAPI
+              </p>
               <p className="font-semibold text-navy mb-2">
-                PLAZOS INAPI / Variable por expediente
+                Variable por expediente
               </p>
               <p className="text-sm md:text-base text-text-muted leading-relaxed">
                 Depende de clase, antecedentes y observaciones. Lo fijo es
@@ -128,28 +135,39 @@ export default function Process() {
                 }}
               >
                 <div className="flex items-start gap-4">
-                  {/* Step Number */}
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-lg">
+                  {/* Step Number - Ring Style */}
+                  <div
+                    className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs"
+                    style={{
+                      background: 'transparent',
+                      border: '1.5px solid #1d4ed8',
+                      color: '#1d4ed8'
+                    }}
+                  >
                     {step.number}
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 space-y-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="font-semibold text-navy text-lg">
-                        {step.title}
-                      </h3>
-                    </div>
+                    <h3 className="font-semibold text-navy text-lg">
+                      {step.title}
+                    </h3>
 
                     {step.badge && (
-                      <div className="inline-block px-2 py-1 bg-blue-100 text-accent text-xs font-medium uppercase tracking-wider rounded">
+                      <div className="inline-block px-2.5 py-1 text-xs font-medium uppercase tracking-wider rounded-full" style={{
+                        background: 'rgba(59,130,246,0.1)',
+                        color: '#3b82f6'
+                      }}>
                         {step.badge}
                       </div>
                     )}
 
-                    <p className="text-sm text-text-muted font-medium">
+                    <div className="inline-block px-2.5 py-1 text-xs font-medium rounded-full" style={{
+                      background: 'rgba(59,130,246,0.1)',
+                      color: '#3b82f6'
+                    }}>
                       {step.time}
-                    </p>
+                    </div>
 
                     <p className="text-sm md:text-base text-text-muted leading-relaxed">
                       {step.description}

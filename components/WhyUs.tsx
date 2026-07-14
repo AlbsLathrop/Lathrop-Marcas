@@ -49,22 +49,43 @@ export default function WhyUs() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 md:gap-6">
-            <div className="text-center space-y-2">
-              <p className="text-2xl md:text-3xl font-bold text-navy">✓</p>
-              <p className="text-sm md:text-base text-text-muted leading-relaxed">
+          <div className="flex items-center justify-center gap-6 md:gap-12">
+            {/* Stat 1 */}
+            <div className="flex flex-col items-center text-center space-y-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-navy">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <p className="text-xs md:text-sm text-text-muted leading-relaxed">
                 Sin costo adicional de honorarios
               </p>
             </div>
-            <div className="text-center space-y-2">
-              <p className="text-2xl md:text-3xl font-bold text-navy">🕐</p>
-              <p className="text-sm md:text-base text-text-muted leading-relaxed">
+
+            {/* Divider */}
+            <div className="w-px h-16 bg-gray-200"></div>
+
+            {/* Stat 2 */}
+            <div className="flex flex-col items-center text-center space-y-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-navy">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <p className="text-xs md:text-sm text-text-muted leading-relaxed">
                 Mismo equipo técnico
               </p>
             </div>
-            <div className="text-center space-y-2">
-              <p className="text-2xl md:text-3xl font-bold text-navy">🛡</p>
-              <p className="text-sm md:text-base text-text-muted leading-relaxed">
+
+            {/* Divider */}
+            <div className="w-px h-16 bg-gray-200"></div>
+
+            {/* Stat 3 */}
+            <div className="flex flex-col items-center text-center space-y-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-navy">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <p className="text-xs md:text-sm text-text-muted leading-relaxed">
                 Aplica al mismo signo y clase
               </p>
             </div>

@@ -19,25 +19,37 @@ export default function Footer() {
           <nav className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <a
               href="#servicios"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              style={{ color: 'rgba(255,255,255,0.6)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
             >
               SERVICIOS
             </a>
             <a
               href="#proceso"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              style={{ color: 'rgba(255,255,255,0.6)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
             >
               PROCESO
             </a>
             <a
               href="#pricing"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              style={{ color: 'rgba(255,255,255,0.6)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
             >
               PRICING
             </a>
             <a
               href="#faq"
-              className="text-gray-300 hover:text-white transition-colors"
+              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              style={{ color: 'rgba(255,255,255,0.6)' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
             >
               FAQ
             </a>

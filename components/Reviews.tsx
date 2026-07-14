@@ -55,40 +55,54 @@ export default function Reviews() {
 
         {/* Slider */}
         <div
-          className="space-y-6 md:space-y-8"
+          className="space-y-8"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.slice(currentSlide, currentSlide + 3).map((review, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 md:p-8 border border-gray-200 space-y-4 transition-all duration-300"
-              >
-                {/* Stars */}
-                <div className="flex gap-1">
-                  {[...Array(review.stars)].map((_, i) => (
-                    <span key={i} className="text-yellow-400">
-                      ★
-                    </span>
-                  ))}
-                </div>
+          {/* Cards Container */}
+          <div className="overflow-hidden">
+            <div
+              className="flex gap-6 transition-transform duration-300"
+              style={{
+                transform: `translateX(-${(currentSlide % reviews.length) * (100 / 3)}%)`,
+                transitionTimingFunction: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+              }}
+            >
+              {reviews.map((review, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 rounded-xl p-6 md:p-8 border space-y-4 transition-all duration-300 hover:-translate-y-0.5"
+                  style={{
+                    width: 'calc(33.333% - 16px)',
+                    background: '#f9fafb',
+                    borderColor: 'rgba(0,0,0,0.08)',
+                    boxShadow: '0 2px 16px rgba(0,0,0,0.06)'
+                  }}
+                >
+                  {/* Stars */}
+                  <div className="flex gap-1">
+                    {[...Array(review.stars)].map((_, i) => (
+                      <span key={i} style={{ fontSize: '16px', color: '#f59e0b' }}>
+                        ★
+                      </span>
+                    ))}
+                  </div>
 
-                {/* Review Text */}
-                <p className="text-base md:text-lg text-text-muted leading-relaxed">
-                  &quot;{review.text}&quot;
-                </p>
-
-                {/* Author */}
-                <div className="pt-4 border-t border-gray-200 space-y-1">
-                  <p className="font-semibold text-navy">{review.author}</p>
-                  <p className="text-xs md:text-sm text-text-muted uppercase tracking-wider">
-                    {review.source}
+                  {/* Review Text */}
+                  <p className="text-base md:text-lg text-text-muted leading-relaxed">
+                    &quot;{review.text}&quot;
                   </p>
+
+                  {/* Author */}
+                  <div className="pt-4 border-t border-gray-200 space-y-1">
+                    <p className="font-semibold text-navy" style={{ fontWeight: 600 }}>{review.author}</p>
+                    <p className="text-xs uppercase tracking-widest" style={{ color: '#9ca3af', fontSize: '10px' }}>
+                      {review.source}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Navigation Dots */}

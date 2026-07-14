@@ -37,9 +37,22 @@ export default function Risk() {
           {risks.map((risk, index) => (
             <div
               key={index}
-              className="glassmorphism p-6 md:p-8 rounded-xl border border-white/10 backdrop-blur-md hover:border-accent/30 transition-all duration-300"
+              className="p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group"
+              style={{
+                background: 'rgba(255,255,255,0.04)',
+                backdropFilter: 'blur(20px) saturate(180%)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
+                borderTop: '2px solid rgba(59,130,246,0.4)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(59,130,246,0.3)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'
+              }}
             >
-              <h3 className="text-xl md:text-2xl font-serif font-bold mb-4">
+              <h3 className="text-lg font-semibold uppercase tracking-widest mb-3" style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
                 {risk.title}
               </h3>
               <p className="text-base md:text-lg text-gray-100 leading-relaxed">

@@ -41,8 +41,8 @@ export default function Services() {
         {/* Services List */}
         <div className="space-y-8">
           {services.map((service, index) => (
-            <div key={index}>
-              <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-8 py-8">
+            <div key={index} className="group">
+              <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-8 py-8 px-4 -mx-4 rounded-lg transition-colors duration-200 group-hover:bg-blue-50">
                 {/* Number */}
                 <span className="text-6xl md:text-7xl font-serif font-bold text-navy/20 flex-shrink-0">
                   {service.number}
@@ -59,7 +59,13 @@ export default function Services() {
                     {service.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs font-medium bg-navy/10 text-navy rounded-full uppercase tracking-wider"
+                        className="px-3 py-1 text-xs font-medium rounded-full uppercase tracking-widest border"
+                        style={{
+                          background: 'rgba(10,22,40,0.06)',
+                          color: '#1a2744',
+                          borderColor: 'rgba(10,22,40,0.1)',
+                          fontSize: '10px'
+                        }}
                       >
                         {tag}
                       </span>

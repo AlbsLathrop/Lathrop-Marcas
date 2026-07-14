@@ -65,24 +65,28 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg overflow-hidden"
+                className="border border-gray-200 rounded-lg overflow-hidden transition-colors duration-200"
+                style={{ borderColor: openIndex === index ? 'rgba(59,130,246,0.3)' : 'rgb(229,231,235)' }}
               >
                 <button
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between hover:bg-gray-50 transition-colors text-left"
+                  className="w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between transition-colors duration-200 text-left"
+                  style={{
+                    background: openIndex === index ? 'rgba(59,130,246,0.04)' : 'transparent'
+                  }}
                 >
                   <span className="font-semibold text-navy text-base md:text-lg pr-4">
                     {faq.question}
                   </span>
-                  <span className="flex-shrink-0 text-accent text-xl">
+                  <span className="flex-shrink-0 text-accent text-xl font-light">
                     {openIndex === index ? '−' : '+'}
                   </span>
                 </button>
 
                 {openIndex === index && (
-                  <div className="px-6 md:px-8 py-4 md:py-5 bg-gray-50 border-t border-gray-200">
+                  <div className="px-6 md:px-8 py-4 md:py-5 bg-gray-50 border-t border-gray-200 transition-all duration-300">
                     <p className="text-base md:text-lg text-text-muted leading-relaxed">
                       {faq.answer}
                     </p>

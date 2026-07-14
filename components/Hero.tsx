@@ -20,7 +20,11 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-navy leading-tight">
+            <h1 className="font-serif font-bold text-navy" style={{
+              fontSize: 'clamp(28px, 8vw, 44px)',
+              lineHeight: 1.15,
+              letterSpacing: '-0.02em'
+            }}>
               El registro de marca es una{' '}
               <span className="italic text-accent">decisión técnica</span> que
               impacta el crecimiento de tu negocio.
@@ -35,31 +39,31 @@ export default function Hero() {
             </p>
 
             {/* Protection Badges */}
-            <div className="space-y-3 pt-4">
-              <div className="flex items-start gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 pt-4">
+              <div className="flex items-center gap-2 px-4 py-2.5 bg-navy/6 border border-navy/12 rounded-full" style={{ borderRadius: '999px' }}>
                 <svg
-                  className="w-6 h-6 text-accent flex-shrink-0 mt-1"
+                  className="w-5 h-5 text-accent flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
                 </svg>
-                <div>
+                <div className="text-xs md:text-sm">
                   <p className="font-medium text-navy">Protección Activa</p>
-                  <p className="text-sm text-text-muted">Vigilancia Marcaria</p>
+                  <p className="text-text-muted">Vigilancia Marcaria</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-2 px-4 py-2.5 bg-navy/6 border border-navy/12 rounded-full" style={{ borderRadius: '999px' }}>
                 <svg
-                  className="w-6 h-6 text-accent flex-shrink-0 mt-1"
+                  className="w-5 h-5 text-accent flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
                 </svg>
-                <div>
-                  <p className="font-medium text-navy">Garantía de Segundo Intento</p>
-                  <p className="text-sm text-text-muted">Incluido en Base</p>
+                <div className="text-xs md:text-sm">
+                  <p className="font-medium text-navy">Garantía de 2° Intento</p>
+                  <p className="text-text-muted">Incluido en Base</p>
                 </div>
               </div>
             </div>
@@ -70,16 +74,11 @@ export default function Hero() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 md:px-8 py-4 md:py-5 bg-navy text-white rounded-lg font-medium text-base md:text-lg hover:bg-text-primary transition-colors"
+                className="inline-flex items-center gap-1 px-7 md:px-8 py-3.5 md:py-4 bg-navy text-white rounded-lg font-medium text-base md:text-lg hover:bg-accent-dark transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{ boxShadow: '0 8px 24px rgba(10,22,40,0.25)' }}
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.781 1.469c-1.595.893-2.788 2.39-3.643 4.408-.393.89-.643 1.902-.643 3.08 0 .837.134 1.641.394 2.458l.457 1.486-1.523 5.471 5.639-1.48.955.236c.828.215 1.671.322 2.447.322h.004c5.55 0 10.046-4.49 10.046-10.009 0-2.676-1.093-5.2-3.076-7.1a10.008 10.008 0 00-7.14-2.953z" />
-                </svg>
                 Hablar por WhatsApp
+                <span className="ml-1">→</span>
               </a>
               <p className="text-sm text-text-muted mt-3">
                 Respuesta dentro de 24 h hábiles
@@ -87,18 +86,20 @@ export default function Hero() {
             </div>
 
             {/* Micro Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200">
+            <div className="flex items-center justify-start gap-8 pt-8 border-t border-gray-200">
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-bold text-navy">+250</p>
-                <p className="text-xs md:text-sm text-text-muted">Marcas asesoradas</p>
+                <p className="text-xs md:text-sm text-gray-500">Marcas asesoradas</p>
               </div>
+              <div className="w-px h-8 bg-gray-200"></div>
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-bold text-navy">4.9/5</p>
-                <p className="text-xs md:text-sm text-text-muted">Google Reviews</p>
+                <p className="text-xs md:text-sm text-gray-500">Google Reviews</p>
               </div>
+              <div className="w-px h-8 bg-gray-200"></div>
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-bold text-navy">24h</p>
-                <p className="text-xs md:text-sm text-text-muted">Respuesta</p>
+                <p className="text-xs md:text-sm text-gray-500">Respuesta</p>
               </div>
             </div>
           </div>
@@ -107,11 +108,17 @@ export default function Hero() {
           <div className="flex flex-col items-center md:items-end">
             <div className="w-full max-w-sm">
               {/* Card Container */}
-              <div className="bg-navy rounded-3xl overflow-hidden aspect-[340/420] flex items-center justify-center relative">
+              <div
+                className="bg-navy overflow-hidden aspect-[340/420] flex items-center justify-center relative"
+                style={{
+                  borderRadius: '24px',
+                  boxShadow: '0 0 0 1px rgba(59,130,246,0.3), 0 24px 48px rgba(10,22,40,0.4)'
+                }}
+              >
                 {/* Fallback: AL Initials */}
                 {/* Image would go here: <Image src="/images/alberto-lathrop.jpg" alt="Alberto Lathrop" fill objectFit="cover" /> */}
                 <div className="text-center">
-                  <p className="font-serif text-7xl md:text-8xl font-bold text-blue-900 opacity-80">
+                  <p className="font-serif text-7xl md:text-8xl font-bold" style={{ color: 'rgba(59,130,246,0.25)' }}>
                     AL
                   </p>
                 </div>
