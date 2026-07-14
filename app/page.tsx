@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from '@/components/Hero'
 import AboutFirm from '@/components/AboutFirm'
 import Risk from '@/components/Risk'
