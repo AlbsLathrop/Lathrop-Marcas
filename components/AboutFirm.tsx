@@ -60,8 +60,8 @@ export default function AboutFirm() {
             {/* Blockquote */}
             <div className="border-l-4 border-accent pl-6 py-4 mt-8">
               <p className="italic text-lg md:text-xl leading-relaxed">
-                "Registrar una marca sin estrategia de clases es como firmar un
-                contrato sin leerlo."
+                &quot;Registrar una marca sin estrategia de clases es como firmar un
+                contrato sin leerlo.&quot;
               </p>
               <p className="text-accent font-semibold mt-4">— ALBERTO LATHROP</p>
             </div>

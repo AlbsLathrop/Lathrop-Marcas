@@ -37,16 +37,6 @@ export default function Reviews() {
     return () => clearInterval(timer)
   }, [isHovered, reviews.length])
 
-  const visibleCards = () => {
-    const cards = []
-    const totalCards = reviews.length
-    const itemsPerPage = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3
-
-    for (let i = 0; i < itemsPerPage; i++) {
-      cards.push(reviews[(currentSlide + i) % totalCards])
-    }
-    return cards
-  }
 
   return (
     <section className="bg-white py-16 md:py-24">
@@ -87,7 +77,7 @@ export default function Reviews() {
 
                 {/* Review Text */}
                 <p className="text-base md:text-lg text-text-muted leading-relaxed">
-                  "{review.text}"
+                  &quot;{review.text}&quot;
                 </p>
 
                 {/* Author */}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function ClientLogos() {
   const logos = [
@@ -47,9 +48,11 @@ export default function ClientLogos() {
                     {logo.name || ''}
                   </p>
                 ) : (
-                  <img
+                  <Image
                     src={`/images/logos/${logo.file}`}
                     alt={logo.name}
+                    width={150}
+                    height={96}
                     className="max-w-full max-h-full object-contain grayscale opacity-65 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                     onError={() => handleImageError(logo.file)}
                   />

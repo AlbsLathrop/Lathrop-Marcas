@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Hero() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
   const whatsappLink = `https://wa.me/${whatsappNumber}`
