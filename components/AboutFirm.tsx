@@ -1,3 +1,5 @@
+"use client";
+
 export default function AboutFirm() {
   return (
     <section className="bg-navy text-white py-16 md:py-24 relative overflow-hidden">
