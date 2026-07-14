@@ -1,3 +1,5 @@
+"use client";
+
 export default function WhyUs() {
   return (
     <section className="bg-cream py-16 md:py-24">

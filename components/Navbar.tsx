@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 export default function Navbar() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
