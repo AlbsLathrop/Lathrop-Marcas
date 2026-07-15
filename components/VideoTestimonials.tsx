@@ -24,7 +24,7 @@ export default function VideoTestimonials() {
         {/* Header */}
         <div className="text-center space-y-6 mb-12 md:mb-16">
           <p className="label-badge">Casos Reales</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink">
             Negocios reales. Procesos técnicos reales.
           </h2>
           <p className="text-lg md:text-xl text-text-muted max-w-2xl mx-auto">
@@ -38,7 +38,7 @@ export default function VideoTestimonials() {
           {videos.map((video, index) => (
             <div key={index} className="space-y-4">
               {/* Video Placeholder */}
-              <div className="relative bg-navy rounded-xl aspect-video flex items-center justify-center overflow-hidden group">
+              <div className="relative bg-ink rounded-xl aspect-video flex items-center justify-center overflow-hidden group">
                 {video.videoUrl ? (
                   <iframe
                     src={`https://www.youtube.com/embed/${video.videoUrl}`}
@@ -62,13 +62,13 @@ export default function VideoTestimonials() {
 
               {/* Content */}
               <div className="space-y-3">
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-navy">
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-ink">
                   {video.title}
                 </h3>
                 <p className="text-base md:text-lg text-text-muted leading-relaxed">
                   {video.description}
                 </p>
-                <span className="inline-block px-3 py-1 bg-navy/10 text-navy text-xs font-medium uppercase tracking-wider rounded-full">
+                <span className="inline-block px-3 py-1 bg-ink/10 text-ink text-xs font-medium uppercase tracking-wider rounded-full">
                   {video.tag}
                 </span>
               </div>

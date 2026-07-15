@@ -48,7 +48,7 @@ export default function FAQ() {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="label-badge">Preguntas Frecuentes</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy leading-tight">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
                 Criterio senior antes de firmar nada.
               </h2>
             </div>
@@ -77,10 +77,10 @@ export default function FAQ() {
                     background: openIndex === index ? 'rgba(59,130,246,0.04)' : 'transparent'
                   }}
                 >
-                  <span className="font-semibold text-navy text-base md:text-lg pr-4">
+                  <span className="font-semibold text-ink text-base md:text-lg pr-4">
                     {faq.question}
                   </span>
-                  <span className="flex-shrink-0 text-accent text-xl font-light">
+                  <span className="flex-shrink-0 text-azure text-xl font-light">
                     {openIndex === index ? '−' : '+'}
                   </span>
                 </button>

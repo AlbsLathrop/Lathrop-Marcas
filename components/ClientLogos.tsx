@@ -29,7 +29,7 @@ export default function ClientLogos() {
     <section className="bg-cream py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <h2 className="text-center text-3xl md:text-4xl font-serif font-bold text-navy mb-12 md:mb-16">
+        <h2 className="text-center text-3xl md:text-4xl font-serif font-bold text-ink mb-12 md:mb-16">
           Marcas que confían
         </h2>
 

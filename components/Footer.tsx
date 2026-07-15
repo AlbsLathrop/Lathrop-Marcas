@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white py-12 md:py-16">
+    <footer className="bg-ink text-white py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-8 border-b border-white/10">
@@ -14,7 +14,7 @@ export default function Footer() {
             <span className="font-serif text-xl md:text-2xl font-bold">
               marcas
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-azure mt-1"></span>
           </div>
 
           {/* Links */}

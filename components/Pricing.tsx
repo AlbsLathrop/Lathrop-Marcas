@@ -5,11 +5,11 @@ export default function Pricing() {
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   return (
-    <section id="pricing" className="bg-navy py-16 md:py-24 text-white">
+    <section id="pricing" className="bg-ink py-16 md:py-24 text-white">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="text-center space-y-6 mb-12 md:mb-20">
-          <p className="label-badge text-accent">La Inversión</p>
+          <p className="label-badge text-azure">La Inversión</p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold">
             Claridad total antes de empezar.
           </h2>
@@ -22,7 +22,7 @@ export default function Pricing() {
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Card 1 - Informe */}
-          <div className="bg-navy-light rounded-xl p-8 border border-white/10">
+          <div className="bg-ink-light rounded-xl p-8 border border-white/10">
             <div className="space-y-6">
               <div>
                 <span className="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium uppercase tracking-wider rounded-full">
@@ -68,7 +68,7 @@ export default function Pricing() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full py-3 bg-white text-navy font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center"
+                className="block w-full py-3 bg-white text-ink font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center"
                 style={{ boxShadow: '0 4px 12px rgba(10,22,40,0.15)' }}
               >
                 Solicitar informe →
@@ -145,7 +145,7 @@ export default function Pricing() {
           </div>
 
           {/* Card 3 - Protección Integral */}
-          <div className="bg-navy-light rounded-xl p-8 border border-white/10">
+          <div className="bg-ink-light rounded-xl p-8 border border-white/10">
             <div className="space-y-6">
               <div>
                 <span className="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium uppercase tracking-wider rounded-full">
@@ -189,7 +189,7 @@ export default function Pricing() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full py-3 bg-white text-navy font-medium rounded-lg hover:bg-gray-200 transition-colors text-center"
+                className="block w-full py-3 bg-white text-ink font-medium rounded-lg hover:bg-gray-200 transition-colors text-center"
               >
                 Solicitar propuesta →
               </a>
@@ -198,7 +198,7 @@ export default function Pricing() {
         </div>
 
         {/* Vigilancia Section */}
-        <div className="bg-navy-light rounded-2xl p-8 md:p-12 border border-white/10">
+        <div className="bg-ink-light rounded-2xl p-8 md:p-12 border border-white/10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left */}
             <div className="space-y-6">
@@ -221,7 +221,7 @@ export default function Pricing() {
                   'Sin letra chica: servicio activo mientras tu suscripción esté vigente',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-base">
-                    <span className="text-accent flex-shrink-0">✓</span>
+                    <span className="text-azure flex-shrink-0">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -245,7 +245,7 @@ export default function Pricing() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-2.5 bg-white text-navy font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center text-sm"
+                  className="block w-full py-2.5 bg-white text-ink font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center text-sm"
                   style={{ boxShadow: '0 4px 12px rgba(255,255,255,0.1)' }}
                 >
                   Hablar por WhatsApp →

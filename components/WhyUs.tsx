@@ -9,7 +9,7 @@ export default function WhyUs() {
           {/* Icon */}
           <div className="flex justify-center">
             <svg
-              className="w-16 h-16 text-accent"
+              className="w-16 h-16 text-azure"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -20,7 +20,7 @@ export default function WhyUs() {
           {/* Header */}
           <div className="text-center space-y-4">
             <p className="label-badge text-center justify-center">Por Qué Elegirnos</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-ink">
               Un abogado especialista. Ningún formulario genérico.
             </h2>
           </div>
@@ -35,11 +35,11 @@ export default function WhyUs() {
           {/* Guarantee Section */}
           <div className="border-t border-b border-gray-200 py-8 space-y-4">
             <div className="flex items-center justify-center gap-2">
-              <span className="inline-block px-3 py-1 bg-blue-100 text-accent text-xs font-medium uppercase tracking-wider rounded-full">
+              <span className="inline-block px-3 py-1 bg-blue-100 text-azure text-xs font-medium uppercase tracking-wider rounded-full">
                 Incluido en Base
               </span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy text-center">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-ink text-center">
               Garantía de segundo intento
             </h3>
             <p className="text-lg text-text-muted leading-relaxed text-center">
@@ -54,7 +54,7 @@ export default function WhyUs() {
           <div className="flex items-center justify-center gap-6 md:gap-12">
             {/* Stat 1 */}
             <div className="flex flex-col items-center text-center space-y-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-navy">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ink">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                 <polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
@@ -68,7 +68,7 @@ export default function WhyUs() {
 
             {/* Stat 2 */}
             <div className="flex flex-col items-center text-center space-y-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-navy">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ink">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -84,7 +84,7 @@ export default function WhyUs() {
 
             {/* Stat 3 */}
             <div className="flex flex-col items-center text-center space-y-3">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-navy">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ink">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
               <p className="text-xs md:text-sm text-text-muted leading-relaxed">

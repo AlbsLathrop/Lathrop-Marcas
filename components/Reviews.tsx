@@ -43,11 +43,11 @@ export default function Reviews() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink">
             Lo que dicen quienes ya registraron
           </h2>
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span className="font-semibold text-navy">4.9/5 en Google</span>
+            <span className="font-semibold text-ink">4.9/5 en Google</span>
             <span className="text-text-muted">·</span>
             <span className="text-text-muted">+250 marcas asesoradas</span>
           </div>
@@ -95,7 +95,7 @@ export default function Reviews() {
 
                   {/* Author */}
                   <div className="pt-4 border-t border-gray-200 space-y-1">
-                    <p className="font-semibold text-navy" style={{ fontWeight: 600 }}>{review.author}</p>
+                    <p className="font-semibold text-ink" style={{ fontWeight: 600 }}>{review.author}</p>
                     <p className="text-xs uppercase tracking-widest" style={{ color: '#9ca3af', fontSize: '10px' }}>
                       {review.source}
                     </p>
@@ -113,7 +113,7 @@ export default function Reviews() {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentSlide % reviews.length
-                    ? 'bg-navy w-6'
+                    ? 'bg-ink w-6'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -127,7 +127,7 @@ export default function Reviews() {
               href={process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_URL || '#'}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-navy font-medium hover:text-accent transition-colors"
+              className="text-ink font-medium hover:text-azure transition-colors"
             >
               Ver todas las opiniones en Google →
             </a>

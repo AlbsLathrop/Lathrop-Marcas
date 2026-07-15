@@ -20,11 +20,11 @@ export default function Risk() {
   ]
 
   return (
-    <section className="bg-navy-light text-white py-16 md:py-24">
+    <section className="bg-ink-light text-white py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-6 mb-12 md:mb-16">
-          <p className="label-badge text-accent">El Riesgo de No Actuar</p>
+          <p className="label-badge text-azure">El Riesgo de No Actuar</p>
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight">
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>

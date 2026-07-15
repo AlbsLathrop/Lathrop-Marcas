@@ -2,7 +2,7 @@
 
 export default function AboutFirm() {
   return (
-    <section className="bg-navy text-white py-16 md:py-24 relative overflow-hidden">
+    <section className="bg-ink text-white py-16 md:py-24 relative overflow-hidden">
       {/* Grid pattern - subtle */}
       <div
         className="absolute inset-0 opacity-10"
@@ -18,7 +18,7 @@ export default function AboutFirm() {
           {/* Left Column */}
           <div className="space-y-8">
             {/* Label */}
-            <p className="label-badge text-accent">Sobre la Firma</p>
+            <p className="label-badge text-azure">Sobre la Firma</p>
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
@@ -49,7 +49,7 @@ export default function AboutFirm() {
                 'Vigilancia marcaria continua, no puntual',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
-                  <span className="text-accent text-xl font-bold flex-shrink-0 mt-1">
+                  <span className="text-azure text-xl font-bold flex-shrink-0 mt-1">
                     ✓
                   </span>
                   <span className="text-base md:text-lg leading-relaxed">
@@ -60,24 +60,24 @@ export default function AboutFirm() {
             </div>
 
             {/* Blockquote */}
-            <div className="border-l-4 border-accent pl-6 py-4 mt-8">
+            <div className="border-l-4 border-azure pl-6 py-4 mt-8">
               <p className="italic text-lg md:text-xl leading-relaxed">
                 &quot;Registrar una marca sin estrategia de clases es como firmar un
                 contrato sin leerlo.&quot;
               </p>
-              <p className="text-accent font-semibold mt-4">— ALBERTO LATHROP</p>
+              <p className="text-azure font-semibold mt-4">— ALBERTO LATHROP</p>
             </div>
           </div>
 
           {/* Right Column - Circular Card */}
           <div className="flex flex-col items-center md:items-end justify-center">
-            <div className="w-64 h-64 rounded-full bg-navy-light/60 border-2 border-accent/30 flex flex-col items-center justify-center text-center space-y-4">
+            <div className="w-64 h-64 rounded-full bg-ink-light/60 border-2 border-azure/30 flex flex-col items-center justify-center text-center space-y-4">
               {/* AL Initials - Circular */}
               <p className="font-serif text-6xl font-bold text-blue-400 opacity-60">
                 AL
               </p>
               <div className="space-y-1 w-full">
-                <p className="text-sm font-medium text-accent uppercase tracking-wider">
+                <p className="text-sm font-medium text-azure uppercase tracking-wider">
                   Abogado Marcario
                 </p>
                 <p className="text-base font-bold">Alberto Lathrop</p>
