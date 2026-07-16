@@ -101,18 +101,18 @@ export default function Hero() {
 
           {/* Right Column - Portrait Card */}
           <div className="flex flex-col items-center md:items-end">
-            <div className="w-full max-w-sm relative">
+            <div className="w-full max-w-xs relative">
               {/* Corner Brackets */}
               <div className="absolute -top-3 -left-3 w-4 h-4 border-t border-l border-azure z-10"></div>
               <div className="absolute -top-3 -right-3 w-4 h-4 border-t border-r border-azure z-10"></div>
               <div className="absolute -bottom-3 -left-3 w-4 h-4 border-b border-l border-azure z-10"></div>
               <div className="absolute -bottom-3 -right-3 w-4 h-4 border-b border-r border-azure z-10"></div>
 
-              {/* Card Container */}
+              {/* Portrait Container */}
               <div
-                className="portrait bg-ink overflow-hidden aspect-[340/420] flex flex-col items-center justify-center relative"
+                className="portrait overflow-hidden aspect-[4/5] flex items-center justify-center relative rounded-sm"
                 style={{
-                  borderRadius: '8px'
+                  backgroundColor: '#0B1A2F',
                 }}
               >
                 {/* Photo */}
@@ -126,37 +126,77 @@ export default function Hero() {
                     height: '100%',
                     objectFit: 'cover',
                     objectPosition: 'center 22%',
-                    filter: 'grayscale(1) contrast(1.02)'
+                    filter: 'grayscale(1) contrast(1.02)',
                   }}
                 />
 
-                {/* Scrim Gradient */}
+                {/* Scrim Gradient - Navy top/bottom */}
                 <div
                   style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to bottom, rgba(11,26,47,0.4) 0%, transparent 30%, transparent 70%, rgba(11,26,47,0.6) 100%)',
+                    background: 'linear-gradient(to bottom, rgba(11,26,47,0.5) 0%, transparent 40%, transparent 60%, rgba(11,26,47,0.8) 100%)',
                     zIndex: 1,
-                    pointerEvents: 'none'
+                    pointerEvents: 'none',
                   }}
                 ></div>
 
-                {/* Name & Title - z-index 2 */}
-                <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', pointerEvents: 'none' }}>
-                  <p className="font-serif text-2xl md:text-3xl font-bold text-white">
-                    Alberto Lathrop
-                  </p>
-                </div>
-              </div>
-
-              {/* Badge under card */}
-              <div className="portrait-cap text-center mt-8 space-y-1" style={{ position: 'relative', zIndex: 2 }}>
-                <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">
+                {/* Caption - Top Left (PROPIEDAD INDUSTRIAL) */}
+                <div
+                  className="portrait-cap"
+                  style={{
+                    position: 'absolute',
+                    top: 14,
+                    left: 14,
+                    zIndex: 2,
+                    fontFamily: 'JetBrains Mono, monospace',
+                    fontSize: '10px',
+                    letterSpacing: '0.14em',
+                    color: 'rgba(255,255,255,0.6)',
+                    textTransform: 'uppercase',
+                  }}
+                >
                   Propiedad Industrial
-                </p>
-                <p className="text-sm text-graphite">
-                  Abogado especialista en marcas · Fundador
-                </p>
+                </div>
+
+                {/* Name & Title - Bottom (ABSOLUTE POSITIONED) */}
+                <div
+                  className="portrait-name"
+                  style={{
+                    position: 'absolute',
+                    bottom: 14,
+                    left: 0,
+                    right: 0,
+                    textAlign: 'center',
+                    color: 'rgba(255,255,255,0.9)',
+                    zIndex: 2,
+                  }}
+                >
+                  <b
+                    style={{
+                      fontFamily: 'Playfair Display, Georgia, serif',
+                      fontWeight: 600,
+                      fontSize: '1.05rem',
+                      display: 'block',
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Alberto Lathrop
+                  </b>
+                  <span
+                    style={{
+                      fontFamily: 'JetBrains Mono, monospace',
+                      fontSize: '9px',
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(255,255,255,0.5)',
+                      display: 'block',
+                      marginTop: 4,
+                    }}
+                  >
+                    Abogado especialista en marcas · Fundador
+                  </span>
+                </div>
               </div>
             </div>
           </div>

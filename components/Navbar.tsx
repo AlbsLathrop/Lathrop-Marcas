@@ -37,7 +37,7 @@ export default function Navbar() {
           />
         </a>
 
-        {/* WhatsApp Button */}
+        {/* Contact Button */}
         <a
           href={whatsappLink}
           target="_blank"
@@ -47,10 +47,9 @@ export default function Navbar() {
               (window as any).fbq('track', 'Lead');
             }
           }}
-          className="flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 bg-ink border border-azure/30 text-bone rounded-lg font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
+          className="px-5 md:px-6 py-2.5 md:py-3 bg-ink border border-azure/30 text-bone rounded-lg font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
         >
-          <span className="w-1 h-1 rounded-full bg-azure flex-shrink-0"></span>
-          WHATSAPP
+          Contacto
         </a>
       </div>
     </nav>
