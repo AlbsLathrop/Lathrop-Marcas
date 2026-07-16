@@ -26,7 +26,7 @@ export default function ClientLogos() {
   }
 
   return (
-    <section className="bg-cream py-16 md:py-24">
+    <section className="bg-bone py-20 md:py-28 border-t border-b border-bone-line">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <h2 className="text-center text-3xl md:text-4xl font-serif font-bold text-ink mb-12 md:mb-16">

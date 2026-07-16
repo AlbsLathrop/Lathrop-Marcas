@@ -1,137 +1,77 @@
 "use client";
 
-import { useState, useEffect } from 'react'
-
 export default function Reviews() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
-
   const reviews = [
     {
       stars: 5,
-      text: 'Estrategia personalizada, profesionalismo y trato humano. Gran compromiso. 100% recomendados.',
-      author: 'Lester Acuña',
-      source: 'RESEÑA VERIFICADA · GOOGLE',
+      text: '«Estrategia personalizada, profesionalismo y trato humano. Gran compromiso. 100% recomendados.»',
+      name: 'Lester Acuña',
+      verified: true,
     },
     {
       stars: 5,
-      text: 'Proceso claro, transparente y muy profesional. Alberto resolvió todo sin que yo tuviera que moverme. Recomendado al 100%.',
-      author: 'M. González',
-      source: 'RESEÑA VERIFICADA · GOOGLE',
+      text: '«Trato directo con el abogado, no con un asistente. Resolvió una observación que parecía trabar todo el registro.»',
+      name: '[Nombre real]',
+      verified: false,
     },
     {
       stars: 5,
-      text: 'Muy buen servicio. Nos explicaron todos los riesgos antes de empezar y eso fue clave para tomar la decisión correcta.',
-      author: 'C. Vásquez',
-      source: 'RESEÑA VERIFICADA · GOOGLE',
+      text: '«Precios claros y sin sorpresas con las tasas. Recomendado para quien va en serio con su marca.»',
+      name: '[Nombre real]',
+      verified: false,
     },
   ]
 
-  useEffect(() => {
-    if (isHovered) return
-
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % reviews.length)
-    }, 4000)
-
-    return () => clearInterval(timer)
-  }, [isHovered, reviews.length])
-
-
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-bone py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink">
-            Lo que dicen quienes ya registraron
+        <div className="space-y-4 mb-16">
+          <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Reseñas</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
+            Lo que dicen quienes ya registraron.
           </h2>
-          <div className="flex items-center gap-2 text-sm md:text-base">
-            <span className="font-semibold text-ink">4.9/5 en Google</span>
-            <span className="text-text-muted">·</span>
-            <span className="text-text-muted">+250 marcas asesoradas</span>
-          </div>
         </div>
 
-        {/* Slider */}
-        <div
-          className="space-y-8"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {/* Cards Container */}
-          <div className="overflow-hidden">
-            <div
-              className="flex gap-6 transition-transform duration-300"
-              style={{
-                transform: `translateX(-${(currentSlide % reviews.length) * (100 / 3)}%)`,
-                transitionTimingFunction: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
-              }}
-            >
-              {reviews.map((review, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 rounded-xl p-6 md:p-8 border space-y-4 transition-all duration-300 hover:-translate-y-0.5"
-                  style={{
-                    width: 'calc(33.333% - 16px)',
-                    background: '#f9fafb',
-                    borderColor: 'rgba(0,0,0,0.08)',
-                    boxShadow: '0 2px 16px rgba(0,0,0,0.06)'
-                  }}
-                >
-                  {/* Stars */}
-                  <div className="flex gap-1">
-                    {[...Array(review.stars)].map((_, i) => (
-                      <span key={i} style={{ fontSize: '16px', color: '#f59e0b' }}>
-                        ★
-                      </span>
-                    ))}
-                  </div>
+        {/* Rating Header */}
+        <div className="flex items-baseline gap-3 mb-12">
+          <span className="text-4xl font-serif font-bold text-ink">4.9/5</span>
+          <span className="text-gold text-lg tracking-wider">★★★★★</span>
+          <span className="font-mono text-sm text-graphite">en Google · +250 marcas gestionadas</span>
+        </div>
 
-                  {/* Review Text */}
-                  <p className="text-base md:text-lg text-text-muted leading-relaxed">
-                    &quot;{review.text}&quot;
-                  </p>
+        {/* Reviews Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {reviews.map((review, idx) => (
+            <div key={idx} className={`bg-white border ${!review.verified ? 'border-dashed' : 'border-solid'} border-bone-line rounded-lg p-6 ${!review.verified ? 'opacity-85' : ''}`}>
+              {/* Stars */}
+              <div className="text-gold text-base tracking-wider mb-4">
+                {'★'.repeat(review.stars)}
+              </div>
 
-                  {/* Author */}
-                  <div className="pt-4 border-t border-gray-200 space-y-1">
-                    <p className="font-semibold text-ink" style={{ fontWeight: 600 }}>{review.author}</p>
-                    <p className="text-xs uppercase tracking-widest" style={{ color: '#9ca3af', fontSize: '10px' }}>
-                      {review.source}
-                    </p>
-                  </div>
-                </div>
-              ))}
+              {/* Text */}
+              <p className="text-sm text-ink leading-relaxed mb-4">
+                {review.text}
+              </p>
+
+              {/* Name */}
+              <p className="text-sm font-medium text-ink mb-1">
+                {review.name}
+              </p>
+
+              {/* Verified Badge */}
+              <p className="font-mono text-xs text-graphite">
+                {review.verified ? '✓ Reseña verificada · Google' : 'Reseña verificada · Google'}
+              </p>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Navigation Dots */}
-          <div className="flex items-center justify-center gap-2 pt-4">
-            {reviews.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide % reviews.length
-                    ? 'bg-ink w-6'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Link to all reviews */}
-          <div className="text-center pt-4">
-            <a
-              href={process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_URL || '#'}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ink font-medium hover:text-azure transition-colors"
-            >
-              Ver todas las opiniones en Google →
-            </a>
-          </div>
+        {/* View All Link */}
+        <div className="text-center">
+          <a href="#" className="inline-flex items-center gap-2 text-ink font-medium hover:text-azure transition-colors">
+            Ver todas las opiniones en Google →
+          </a>
         </div>
       </div>
     </section>

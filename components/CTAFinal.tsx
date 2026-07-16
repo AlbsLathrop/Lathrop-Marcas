@@ -1,14 +1,24 @@
 "use client";
 
+import Image from 'next/image'
+
 export default function CTAFinal() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   return (
-    <section className="bg-ink text-white py-16 md:py-24">
+    <section className="bg-ink text-white py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-8">
-        {/* Label */}
-        <p className="label-badge text-azure justify-center">Siguiente Paso</p>
+        {/* Logo Signature */}
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/images/lathrop-logo-light.png"
+            width={462}
+            height={160}
+            className="h-8 w-auto opacity-70"
+            alt="Lathrop Marcas"
+          />
+        </div>
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
