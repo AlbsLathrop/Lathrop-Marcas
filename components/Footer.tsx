@@ -69,6 +69,14 @@ export default function Footer() {
             Alberto Lathrop · Abogado · Propiedad Industrial · Registro y
             gestión ante el INAPI · Chile
           </p>
+          <p className="text-sm text-gray-400">
+            <a
+              href="/privacidad"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              Política de Privacidad
+            </a>
+          </p>
         </div>
       </div>
     </footer>
