@@ -27,7 +27,7 @@ export default function AboutFirm() {
 
             {/* Paragraphs */}
             <div className="space-y-6">
-              <p className="text-lg md:text-xl leading-relaxed opacity-90">
+              <p className="section-subtitle opacity-90">
                 Es la primera decisión técnica de todo negocio que escala. Alberto
                 Lathrop fundó esta firma con un principio operativo claro: cada
                 marca es un activo intangible que merece gestión técnica, no

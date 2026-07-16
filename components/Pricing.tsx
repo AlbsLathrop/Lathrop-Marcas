@@ -22,8 +22,8 @@ export default function Pricing() {
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Card 1 - Informe */}
-          <div className="bg-ink-light rounded-xl p-8 border border-white/10">
-            <div className="space-y-6">
+          <div className="bg-ink-light rounded-xl p-8 border border-white/10 flex flex-col">
+            <div className="space-y-6 flex-1">
               <div>
                 <span className="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium uppercase tracking-wider rounded-full">
                   Punto de Partida
@@ -78,14 +78,14 @@ export default function Pricing() {
 
           {/* Card 2 - Registro (Highlighted) */}
           <div
-            className="rounded-xl p-8 transform md:scale-105 relative z-10"
+            className="rounded-xl p-8 transform md:scale-105 relative z-10 flex flex-col"
             style={{
               background: '#0f2040',
               border: '1px solid rgba(59,130,246,0.4)',
               boxShadow: '0 0 0 1px rgba(59,130,246,0.2), 0 24px 48px rgba(0,0,0,0.4)'
             }}
           >
-            <div className="space-y-6 text-white">
+            <div className="space-y-6 text-white flex-1">
               <div>
                 <span className="inline-block px-3 py-1 text-xs font-medium uppercase tracking-widest rounded-full" style={{
                   background: '#1d4ed8',
@@ -145,8 +145,8 @@ export default function Pricing() {
           </div>
 
           {/* Card 3 - Protección Integral */}
-          <div className="bg-ink-light rounded-xl p-8 border border-white/10">
-            <div className="space-y-6">
+          <div className="bg-ink-light rounded-xl p-8 border border-white/10 flex flex-col">
+            <div className="space-y-6 flex-1">
               <div>
                 <span className="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium uppercase tracking-wider rounded-full">
                   Recomendado

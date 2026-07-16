@@ -28,7 +28,7 @@ export default function Risk() {
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight">
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
+          <p className="section-subtitle text-gray-300">
             Cada día que operas sin marca registrada es un día en que cualquier
             competidor puede apropiarse legalmente de tu identidad comercial.
           </p>

@@ -25,17 +25,18 @@ export default function Hero() {
             <h1 className="font-serif font-bold text-ink" style={{
               fontSize: 'clamp(28px, 8vw, 44px)',
               lineHeight: 1.15,
-              letterSpacing: '-0.02em'
+              letterSpacing: '-0.02em',
+              textWrap: 'balance'
             }}>
               El registro de marca es una{' '}
-              <span className="italic text-azure">decisión técnica</span> que
+              <span className="italic text-azure" style={{ whiteSpace: 'nowrap' }}>decisión técnica</span> que
               impacta el crecimiento de tu negocio.
               <br />
               No un mero trámite.
             </h1>
 
             {/* Paragraph */}
-            <p className="text-lg md:text-xl text-text-muted leading-relaxed">
+            <p className="section-subtitle">
               Para negocios que ya facturan y necesitan resolver su marca de
               forma técnica y definitiva.
             </p>

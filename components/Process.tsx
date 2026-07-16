@@ -91,7 +91,7 @@ export default function Process() {
               </h2>
             </div>
 
-            <p className="text-lg md:text-xl text-text-muted leading-relaxed">
+            <p className="section-subtitle">
               Sin sorpresas, sin fricción comercial. Cada etapa tiene responsable
               claro: nosotros.
             </p>
