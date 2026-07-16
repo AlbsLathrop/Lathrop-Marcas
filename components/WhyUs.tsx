@@ -37,7 +37,7 @@ export default function WhyUs() {
             Garantía de segundo intento
           </h3>
           <p className="text-lg text-white/75 leading-relaxed">
-            Si el INAPI rechaza en el primer intento, vuelvo a presentar sin cobrar honorarios de nuevo. Aplico los ajustes técnicos necesarios para maximizar la probabilidad de éxito. Tu marca no queda a medias por un detalle técnico.
+            Si el INAPI rechaza en el primer intento, vuelvo a presentar sin cobrar honorarios de nuevo. Aplico los ajustes técnicos necesarios para maximizar la probabilidad de éxito. Tu registro no queda abandonado por una decisión inconveniente de INAPI o el Tribunal.
           </p>
         </div>
 

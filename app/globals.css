@@ -48,7 +48,7 @@
   .heading-large {
     @apply font-serif font-medium;
     color: #0B1A2F;
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(2.05rem, 6vw, 3.75rem);
     line-height: 1.05;
     letter-spacing: -0.02em;
     text-wrap: balance;
