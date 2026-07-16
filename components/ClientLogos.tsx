@@ -8,15 +8,25 @@ export default function ClientLogos() {
   const [isHovering, setIsHovering] = useState(false);
 
   const logos = [
-    { name: 'Cherry Boom', file: 'cherry-boom.png' },
+    { name: 'D Joyas', file: 'djoyas.png' },
     { name: 'StartHunt', file: 'starthunt.png' },
-    { name: 'Rocas del Tabo', file: 'rocas-del-tabo.png' },
+    { name: 'Mac Golf', file: 'macgolf.png' },
+    { name: 'PKI', file: 'pki.png' },
+    { name: 'Cherry Boom', file: 'cherryboom.png' },
+    { name: 'La Raya', file: 'laraya.png' },
+    { name: 'Tierras de San Clemente', file: 'tierrasdesanclemente.png' },
+    { name: 'Tutum', file: 'tutum.png' },
+    { name: 'Casa Torreón', file: 'casatorreon.png' },
+    { name: 'Ruta Outdoor', file: 'rutaoutdoor.png' },
     { name: 'BAGZ', file: 'bagz.png' },
-    { name: 'Ideniglass', file: 'ideniglass.png' },
-    { name: 'Mirador del Tabo', file: 'mirador-del-tabo.png' },
-    { name: 'Casa Torreón', file: 'casa-torreon.png' },
-    { name: 'Tierra Magna', file: 'tierra-magna.png' },
-    { name: 'Valfra', file: 'valfra.png' },
+    { name: '572', file: '572.png' },
+    { name: 'Rocas del Tabo', file: 'rocasdeltabo.png' },
+    { name: 'Mirador del Tabo', file: 'miradordeltabo.png' },
+    { name: 'Pre Senior', file: 'presenior.png' },
+    { name: 'Identiglass', file: 'identiglass.png' },
+    { name: 'Sour and Soul', file: 'sourandsoul.png' },
+    { name: 'Tierra Magna', file: 'tierramagna.png' },
+    { name: 'Time 2 Clean', file: 'time2clean.png' },
   ];
 
   return (

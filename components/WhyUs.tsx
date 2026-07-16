@@ -30,17 +30,6 @@ export default function WhyUs() {
           </p>
         </div>
 
-        {/* Featured Box */}
-        <div className="bg-ink-soft border border-azure rounded-lg p-8 md:p-10 mb-8">
-          <p className="font-mono text-xs text-brass uppercase tracking-widest mb-3">Incluido en base</p>
-          <h3 className="text-3xl font-serif font-bold text-bone mb-4">
-            Garantía de segundo intento
-          </h3>
-          <p className="text-lg text-white/75 leading-relaxed">
-            Si el INAPI rechaza en el primer intento, vuelvo a presentar sin cobrar honorarios de nuevo. Aplico los ajustes técnicos necesarios para maximizar la probabilidad de éxito. Tu registro no queda abandonado por una decisión inconveniente de INAPI o el Tribunal.
-          </p>
-        </div>
-
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded overflow-hidden">
           {features.map((feature, idx) => (

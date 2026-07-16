@@ -5,7 +5,7 @@ export default function VideoTestimonials() {
     {
       name: 'Cherry Boom',
       description: 'En el análisis detecté que otra marca ya apuntaba al mismo signo. Ajusté la estrategia y hoy operan con título vigente.',
-      tag: 'Ecommerce · Producto',
+      tag: 'Agencia · Publicidad',
       videoId: 'PicBZqTpIu4',
       url: 'https://youtube.com/shorts/PicBZqTpIu4',
     },

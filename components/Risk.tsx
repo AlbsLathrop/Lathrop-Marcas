@@ -72,22 +72,21 @@ export default function Risk() {
   }, []);
 
   return (
-    <section className="bg-ink-light text-white py-16 md:py-24">
+    <section className="bg-ink text-white py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-6 mb-12 md:mb-16">
-          <p className="label-badge text-azure">El Riesgo de No Actuar</p>
+          <p className="label-badge text-azure-bright">El Riesgo de No Actuar</p>
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight">
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>
-          <p className="section-subtitle text-gray-300">
-            Cada día que operas sin marca registrada es un día en que cualquier
-            competidor puede apropiarse legalmente de tu identidad comercial.
+          <p className="text-lg md:text-xl leading-relaxed text-white/70">
+            Cada día que operas sin marca registrada es un día en que cualquier competidor puede apropiarse legalmente de tu identidad comercial.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {risks.map((risk, index) => (
             <div
               key={index}
