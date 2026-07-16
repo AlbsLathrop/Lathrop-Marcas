@@ -4,21 +4,21 @@ export default function Reviews() {
   const reviews = [
     {
       stars: 5,
-      text: '«Estrategia personalizada, profesionalismo y trato humano. Gran compromiso. 100% recomendados.»',
+      text: '«Desde la comunicación clara y constante hasta la estrategia personalizada y efectiva. Me orientaron y ayudaron en todo momento. 100% recomendados.»',
       name: 'Lester Acuña',
       verified: true,
     },
     {
       stars: 5,
-      text: '«Trato directo con el abogado, no con un asistente. Resolvió una observación que parecía trabar todo el registro.»',
-      name: '[Nombre real]',
-      verified: false,
+      text: '«Excelente asesoría legal. Fue clave la fijación en los pequeños detalles de mi situación por parte de Alberto, que me permitieron tomar una decisión acertada y estratégica.»',
+      name: 'Pedro Pablo Rojas Muñoz',
+      verified: true,
     },
     {
       stars: 5,
-      text: '«Precios claros y sin sorpresas con las tasas. Recomendado para quien va en serio con su marca.»',
-      name: '[Nombre real]',
-      verified: false,
+      text: '«El equipo demostró gran experiencia en propiedad intelectual, resolviendo mis dudas de manera clara y eficiente. Me sentí respaldado en cada etapa con Alberto.»',
+      name: 'Ignacio Jasen',
+      verified: true,
     },
   ]
 
@@ -43,7 +43,7 @@ export default function Reviews() {
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {reviews.map((review, idx) => (
-            <div key={idx} className={`bg-white border ${!review.verified ? 'border-dashed' : 'border-solid'} border-bone-line rounded-lg p-6 ${!review.verified ? 'opacity-85' : ''}`}>
+            <div key={idx} className="bg-white border border-solid border-bone-line rounded-lg p-6">
               {/* Stars */}
               <div className="text-gold text-base tracking-wider mb-4">
                 {'★'.repeat(review.stars)}
@@ -61,7 +61,7 @@ export default function Reviews() {
 
               {/* Verified Badge */}
               <p className="font-mono text-xs text-graphite">
-                {review.verified ? '✓ Reseña verificada · Google' : 'Reseña verificada · Google'}
+                Reseña verificada · Google
               </p>
             </div>
           ))}
