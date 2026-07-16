@@ -1,17 +1,19 @@
 "use client";
 
+import WrittenCases from './WrittenCases';
+
 export default function VideoTestimonials() {
   const videos = [
     {
       name: 'Cherry Boom',
-      description: 'En el análisis detecté que otra marca ya apuntaba al mismo signo. Ajusté la estrategia y hoy operan con título vigente.',
+      description: 'Aseguró su marca y hoy opera con título vigente.',
       tag: 'Agencia · Publicidad',
       videoId: 'PicBZqTpIu4',
       url: 'https://youtube.com/shorts/PicBZqTpIu4',
     },
     {
       name: 'StartHunt',
-      description: 'El INAPI rechazó la marca por una similar. Presenté la apelación ante el TDPI y el tribunal ordenó el registro.',
+      description: 'Registró su marca antes de escalar su operación.',
       tag: 'B2B · Consultoría',
       videoId: 'GFLXJF8Pk7c',
       url: 'https://youtube.com/shorts/GFLXJF8Pk7c',
@@ -24,13 +26,23 @@ export default function VideoTestimonials() {
         {/* Header */}
         <div className="space-y-4 mb-16">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Casos reales</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight mb-4">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
             Negocios reales. Procesos técnicos reales.
           </h2>
-          <p className="text-lg text-graphite max-w-56ch">
+          <p className="text-lg md:text-xl text-graphite leading-relaxed max-w-2xl">
             No son casos hipotéticos: negocios que ya operaban y necesitaban resolver su marca.
           </p>
         </div>
+
+        {/* Written Cases */}
+        <div className="mb-12">
+          <WrittenCases />
+        </div>
+
+        {/* Testimonios en video label */}
+        <p className="font-mono text-xs font-medium text-graphite uppercase tracking-widest mb-8">
+          Testimonios en video
+        </p>
 
         {/* Videos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -103,12 +115,23 @@ export default function VideoTestimonials() {
       </div>
 
       <style jsx>{`
-        .group-hover\:grayscale-0:hover {
-          filter: grayscale(0);
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
         }
 
-        .group-hover\:scale-104:hover {
-          transform: scale(1.04);
+        @media (prefers-reduced-motion: reduce) {
+          .track {
+            animation: none !important;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+          }
         }
       `}</style>
     </section>
