@@ -5,17 +5,17 @@ export default function Risk() {
     {
       title: 'Pérdida del nombre comercial',
       description:
-        'Un tercero puede registrar tu nombre antes que tú y obligarte a un reposicionamiento completo: nombre, web, redes, y todo el capital de marca que construiste hasta ahora.',
+        'Un tercero puede registrar tu nombre antes que tú y forzarte a rehacerlo todo: marca, web, redes y el capital comercial que construiste durante años.',
     },
     {
       title: 'Fricción comercial en expansión',
       description:
-        'Mercado Libre Tienda Oficial, distribuidores internacionales y cadenas de retail exigen título de marca vigente. Sin él, cada canal nuevo que quieras abrir tiene un freno legal antes de empezar.',
+        'Mercado Libre Tienda Oficial, distribuidores y cadenas de retail exigen título de marca vigente. Sin él, cada canal nuevo tiene un freno legal antes de empezar.',
     },
     {
-      title: 'Activo intangible sin respaldo legal',
+      title: 'Activo sin respaldo legal',
       description:
-        'En una venta, fusión, ronda de inversión o due diligence, una marca no registrada no tiene valor contable. El trabajo construido queda en narrativa, no en documento.',
+        'En una venta, fusión o ronda de inversión, una marca no registrada no tiene valor contable. El trabajo construido queda en narrativa, no en documento.',
     },
   ]
 
