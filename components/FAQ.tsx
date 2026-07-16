@@ -18,7 +18,7 @@ export default function FAQ() {
         'Clases de Niza, redacción del signo, alcance del titular y estrategia frente a antecedentes definen qué tan útil es tu título en la práctica. Una solicitud mal planteada puede dejarte expuesto en canales digitales, contratos o expansión. Eso es criterio de propiedad industrial, no rellenar formularios.',
     },
     {
-      question: '¿Qué hacemos si ya existe una marca parecida a la mía?',
+      question: '¿Qué pasa si ya existe una marca parecida a la mía?',
       answer:
         'Primero, mapa de riesgo con búsqueda profesional y criterio de confundibilidad. Después: oposición, negociación de convivencia o ajuste de estrategia según el caso. El dueño de negocio necesita una recomendación clara, no una lista de trámites posibles.',
     },
@@ -26,7 +26,7 @@ export default function FAQ() {
       question:
         '¿Alcanza con registrar solo en Chile o conviene el extranjero?',
       answer:
-        'El registro en Chile protege el territorio nacional. Si vendes online, licencias o expansión regional están en el plan, conviene alinear Chile con Madrid o vías directas por país. La decisión es de negocio; nosotros la traducimos a plan de PI.',
+        'El registro en Chile protege el territorio nacional. Si vendes online, licencias o expansión regional están en el plan, conviene alinear Chile con Madrid o vías directas por país. La decisión es de negocio; yo la traduzco a plan de PI.',
     },
     {
       question: '¿Cómo impacta la marca registrada en la valuación del negocio?',

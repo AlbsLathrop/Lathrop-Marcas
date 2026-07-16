@@ -16,7 +16,7 @@ export default function Pricing() {
             Claridad total antes de empezar.
           </h2>
           <p className="text-lg leading-relaxed text-gray-300 max-w-56ch">
-            Cada caso se cotiza a la medida de su complejidad. Empezamos por entender el tuyo y te enviamos una propuesta clara.
+            Cada caso se cotiza a la medida de su complejidad. Empiezo por entender el tuyo y te envío una propuesta clara.
           </p>
         </div>
 

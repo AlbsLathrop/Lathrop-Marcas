@@ -2,12 +2,12 @@
 
 export default function Process() {
   const steps = [
-    { num: 'Paso 1', title: 'Búsqueda de disponibilidad', time: '1–3 días hábiles', desc: 'Analizamos el registro nacional y antecedentes para determinar si tu signo es distintivo y registrable. Detectamos conflictos antes de que generen fricción comercial.' },
-    { num: 'Paso 2', title: 'Estrategia de clases Niza', time: '1–2 días hábiles', desc: 'Definimos las clases correctas según tu modelo de negocio y tu plan de expansión. Una estrategia mal diseñada es una de las decisiones técnicas más costosas.' },
-    { num: 'Paso 3', title: 'Solicitud ante el INAPI', time: 'Mismo día de aprobación interna', desc: 'Redactamos y presentamos la solicitud con la documentación exigible en Chile. Nos encargamos del expediente: tú sigues operando.' },
-    { num: 'Paso 4', title: 'Seguimiento del expediente', time: 'Durante todo el trámite', badge: 'Proceso automatizado', desc: 'Monitoreamos cada etapa, respondemos requerimientos de forma y fondo, y te informamos sin que tengas que perseguir el estado.' },
-    { num: 'Paso 5', title: 'Vigilancia del registro', time: 'Continuo', badge: 'Vigilancia por IA activa', desc: 'Supervisamos publicaciones y movimientos en el entorno del INAPI para anticipar riesgos sobre tu signo. Priorizamos por impacto en tu operación.' },
-    { num: 'Paso 6', title: 'Título de marca en tu poder', time: 'Plazo según expediente', desc: 'Con el título emitido, tu activo queda protegido por diez años renovables. Te acompañamos en renovaciones y cambios de titular.' },
+    { num: 'Paso 1', title: 'Búsqueda de disponibilidad', time: '1–3 días hábiles', desc: 'Analizo el registro nacional y antecedentes para determinar si tu signo es distintivo y registrable. Detecto conflictos antes de que generen fricción comercial.' },
+    { num: 'Paso 2', title: 'Estrategia de clases Niza', time: '1–2 días hábiles', desc: 'Defino las clases correctas según tu modelo de negocio y tu plan de expansión. Una estrategia mal diseñada es una de las decisiones técnicas más costosas.' },
+    { num: 'Paso 3', title: 'Solicitud ante el INAPI', time: 'Mismo día de aprobación interna', desc: 'Redacto y presento la solicitud con la documentación exigible en Chile. Me encargo del expediente: tú sigues operando.' },
+    { num: 'Paso 4', title: 'Seguimiento del expediente', time: 'Durante todo el trámite', badge: 'Proceso automatizado', desc: 'Monitoreo cada etapa, respondo requerimientos de forma y fondo, y te informo sin que tengas que perseguir el estado.' },
+    { num: 'Paso 5', title: 'Vigilancia del registro', time: 'Continuo', badge: 'Vigilancia por IA activa', desc: 'Superviso publicaciones y movimientos en el entorno del INAPI para anticipar riesgos sobre tu signo. Priorizo por impacto en tu operación.' },
+    { num: 'Paso 6', title: 'Título de marca en tu poder', time: 'Plazo según expediente', desc: 'Con el título emitido, tu activo queda protegido por diez años renovables. Te acompaño en renovaciones y cambios de titular.' },
   ]
 
   return (
@@ -20,7 +20,7 @@ export default function Process() {
             De cero a marca registrada.
           </h2>
           <p className="text-lg text-graphite max-w-56ch">
-            Sin sorpresas, sin fricción comercial. Cada etapa tiene un responsable claro: nosotros.
+            Sin sorpresas, sin fricción comercial. Cada etapa tiene un responsable claro: yo.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ export default function WhyUs() {
     },
     {
       label: 'Mismo abogado, de principio a fin',
-      desc: 'Quien analiza tu marca es quien la presenta y la defiende.',
+      desc: 'Yo analizo tu marca, la presento y la defiendo.',
     },
     {
       label: 'Criterio técnico, no formulario',
@@ -21,7 +21,7 @@ export default function WhyUs() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-16">
-          <p className="font-mono text-xs font-medium text-brass uppercase tracking-widest">Por qué nosotros</p>
+          <p className="font-mono text-xs font-medium text-brass uppercase tracking-widest">Por qué trabajar conmigo</p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight mb-4">
             Un abogado especialista. Ningún formulario genérico.
           </h2>
@@ -37,7 +37,7 @@ export default function WhyUs() {
             Garantía de segundo intento
           </h3>
           <p className="text-lg text-white/75 leading-relaxed">
-            Si el INAPI rechaza en el primer intento, volvemos a presentar sin cobrar honorarios de nuevo. Aplicamos los ajustes técnicos necesarios para maximizar la probabilidad de éxito. Tu marca no queda a medias por un detalle técnico.
+            Si el INAPI rechaza en el primer intento, vuelvo a presentar sin cobrar honorarios de nuevo. Aplico los ajustes técnicos necesarios para maximizar la probabilidad de éxito. Tu marca no queda a medias por un detalle técnico.
           </p>
         </div>
 

@@ -6,19 +6,19 @@ export default function Services() {
       number: '01',
       title: 'Registro de Marca',
       tags: ['Búsqueda', 'Estrategia', 'Solicitud', 'Seguimiento'],
-      description: 'Analizamos la disponibilidad del signo, definimos la estrategia de clases de Niza y gestionamos el expediente completo ante el INAPI. Tu activo, protegido desde el inicio.'
+      description: 'Analizo la disponibilidad del signo, defino la estrategia de clases de Niza y gestiono el expediente completo ante el INAPI. Tu activo, protegido desde el inicio.'
     },
     {
       number: '02',
       title: 'Defensa y Oposiciones',
       tags: ['Oposiciones', 'Observaciones', 'Contestación'],
-      description: 'Respondemos observaciones del INAPI, presentamos oposiciones contra marcas similares y defendemos tu distintividad frente a terceros.'
+      description: 'Respondo observaciones del INAPI, presento oposiciones contra marcas similares y defiendo tu distintividad frente a terceros.'
     },
     {
       number: '03',
       title: 'Vigilancia Marcaria',
       tags: ['Monitoreo', 'Alertas', 'Acción preventiva'],
-      description: 'Monitoreamos el registro de marcas que puedan amenazar tu negocio. La expansión exige que tu activo permanezca blindado en todo momento.'
+      description: 'Monitoreo el registro de marcas que puedan amenazar tu negocio. La expansión exige que tu activo permanezca blindado en todo momento.'
     },
   ]
 

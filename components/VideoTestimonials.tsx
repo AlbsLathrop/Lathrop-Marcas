@@ -4,12 +4,12 @@ export default function VideoTestimonials() {
   const videos = [
     {
       title: 'Nicolás · StartHunt',
-      description: 'El INAPI rechazó la marca por una similar. Presentamos la apelación ante el TDPI y el tribunal ordenó el registro.',
+      description: 'El INAPI rechazó la marca por una similar. Presenté la apelación ante el TDPI y el tribunal ordenó el registro.',
       tag: 'B2B · Consultoría',
     },
     {
       title: 'Cherry Boom',
-      description: 'En el análisis detectaron que otra marca ya apuntaba al mismo signo. Ajustamos la estrategia y hoy operan con título vigente.',
+      description: 'En el análisis detecté que otra marca ya apuntaba al mismo signo. Ajusté la estrategia y hoy operan con título vigente.',
       tag: 'Ecommerce · Producto',
     },
   ]

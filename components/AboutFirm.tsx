@@ -29,14 +29,13 @@ export default function AboutFirm() {
             <div className="space-y-6">
               <p className="section-subtitle opacity-90">
                 Es la primera decisión técnica de todo negocio que escala. Alberto
-                Lathrop fundó esta firma con un principio operativo claro: cada
-                marca es un activo intangible que merece gestión técnica, no
+                Lathrop fundó la firma sobre un principio: cada marca es un activo intangible que{' '}
+                <span style={{ color: '#2D5A8C' }}>exige criterio técnico</span>, no
                 atención genérica.
               </p>
               <p className="text-lg md:text-xl leading-relaxed opacity-90">
-                Trabajamos exclusivamente con dueños de negocio que entienden que
-                proteger su marca es una inversión patrimonial con retorno
-                medible.
+                Trabajo solo con dueños de negocio que entienden que{' '}
+                <span style={{ color: '#2D5A8C' }}>proteger su marca es una inversión patrimonial con retorno medible</span>.
               </p>
             </div>
 
