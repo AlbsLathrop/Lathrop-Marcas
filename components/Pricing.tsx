@@ -47,7 +47,11 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright hover:-translate-y-0.5 transition-all">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+              if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                (window as any).fbq('track', 'Lead');
+              }
+            }} className="w-full py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright hover:-translate-y-0.5 transition-all">
               Solicitar informe →
             </a>
           </div>
@@ -81,7 +85,11 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-azure text-white text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+              if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                (window as any).fbq('track', 'Lead');
+              }
+            }} className="w-full py-2.5 bg-azure text-white text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all">
               Iniciar el proceso →
             </a>
           </div>
@@ -111,7 +119,11 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright hover:-translate-y-0.5 transition-all">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+              if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                (window as any).fbq('track', 'Lead');
+              }
+            }} className="w-full py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright hover:-translate-y-0.5 transition-all">
               Solicitar propuesta →
             </a>
           </div>
@@ -146,7 +158,11 @@ export default function Pricing() {
               <div className="border border-white/15 rounded p-4">
                 <p className="font-serif font-bold text-lg text-bone mb-1">Plan mensual</p>
                 <p className="text-sm text-white/60">Cancela cuando quieras</p>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full mt-4 py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright transition-all block">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+                  if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                    (window as any).fbq('track', 'Lead');
+                  }
+                }} className="w-full mt-4 py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright transition-all block">
                   Hablar por WhatsApp →
                 </a>
               </div>
@@ -156,7 +172,11 @@ export default function Pricing() {
                 </span>
                 <p className="font-serif font-bold text-lg text-bone mb-1 pt-2">Plan anual</p>
                 <p className="text-sm text-white/60">Cobertura continua todo el año</p>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full mt-4 py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright transition-all block">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+                  if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                    (window as any).fbq('track', 'Lead');
+                  }
+                }} className="w-full mt-4 py-2.5 border border-white/20 text-white text-center rounded font-medium text-sm hover:border-azure-bright transition-all block">
                   Hablar por WhatsApp →
                 </a>
               </div>

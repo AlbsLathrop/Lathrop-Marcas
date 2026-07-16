@@ -37,6 +37,11 @@ export default function CTAFinal() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                (window as any).fbq('track', 'Lead');
+              }
+            }}
             className="inline-flex items-center gap-2 px-8 md:px-12 py-4 md:py-5 bg-white text-ink rounded-lg font-semibold text-base md:text-lg transition-all duration-200 hover:-translate-y-1"
             style={{ boxShadow: '0 12px 32px rgba(255,255,255,0.25)' }}
           >

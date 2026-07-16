@@ -64,6 +64,11 @@ export default function Hero() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                    (window as any).fbq('track', 'Lead');
+                  }
+                }}
                 className="inline-flex items-center gap-1 px-7 md:px-8 py-3.5 md:py-4 bg-ink text-white rounded-lg font-medium text-base md:text-lg hover:bg-azure-dark transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ boxShadow: '0 8px 24px rgba(10,22,40,0.25)' }}
               >
