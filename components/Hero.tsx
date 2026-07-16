@@ -5,9 +5,9 @@ export default function Hero() {
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   return (
-    <section className="bg-bone py-16 md:py-24 relative overflow-hidden">
+    <section className="bg-bone relative overflow-hidden" style={{ padding: '56px 0 100px' }}>
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ display: 'grid', gridTemplateColumns: '1.15fr 0.85fr', gap: '64px', alignItems: 'center', position: 'relative' }}>
           {/* Left Column */}
           <div className="space-y-6 md:space-y-8">
             {/* Badge */}

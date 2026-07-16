@@ -402,3 +402,20 @@
     animation: none;
   }
 }
+
+/* Hero Grid Alignment - Desktop */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+}
+
+.portrait-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-width: 320px;
+  margin-left: auto;
+}
