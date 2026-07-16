@@ -32,7 +32,7 @@ export default function Navbar() {
             width={462}
             height={160}
             priority
-            className="h-6 w-auto"
+            className="h-9 md:h-9 w-auto"
             alt="Lathrop Marcas"
           />
         </a>

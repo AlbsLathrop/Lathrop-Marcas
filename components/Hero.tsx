@@ -29,9 +29,10 @@ export default function Hero() {
                   width: '100%',
                   height: '8px'
                 }}>
-                  <path d="M2 6 C 55 2, 165 2, 218 5" stroke="#2D5A8C" strokeWidth="1" fill="none" pathLength="1" strokeDasharray="1" strokeDashoffset="0" />
+                  <path d="M2 6 C 55 2, 165 2, 218 5" stroke="#2D5A8C" strokeWidth="3.5" fill="none" pathLength="1" strokeDasharray="1" strokeDashoffset="0" />
                 </svg>
-              </span> que define cómo escala tu negocio. No un trámite: tu activo más valioso.
+              </span> que define cómo escala tu negocio.{' '}
+              <span style={{ color: '#2D5A8C' }}>Es tu activo más valioso.</span>
             </h1>
 
             {/* Paragraph */}

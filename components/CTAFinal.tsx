@@ -10,12 +10,12 @@ export default function CTAFinal() {
     <section className="bg-ink text-white py-20 md:py-28">
       <div className="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-8">
         {/* Logo Signature */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-8 md:mb-8">
           <Image
             src="/images/lathrop-logo-light.png"
             width={462}
             height={160}
-            className="h-8 w-auto opacity-70"
+            className="h-12 md:h-12 w-auto opacity-70"
             alt="Lathrop Marcas"
           />
         </div>

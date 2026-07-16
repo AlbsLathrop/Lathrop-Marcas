@@ -14,7 +14,7 @@ export default function Footer() {
               src="/images/lathrop-logo-light.png"
               width={462}
               height={160}
-              className="h-7 w-auto"
+              className="h-10 md:h-10 w-auto"
               alt="Lathrop Marcas"
             />
           </a>
