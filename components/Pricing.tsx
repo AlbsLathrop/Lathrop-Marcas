@@ -4,201 +4,166 @@ export default function Pricing() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
+  const plans = [
+    {
+      badge: 'Punto de Partida',
+      title: 'Informe Marcario',
+      thesis: 'Saber antes de invertir.',
+      note: 'Entrega en 3–5 días hábiles · Se acredita al contratar el servicio completo.',
+      ideal: 'Antes de invertir en el proceso completo',
+      items: [
+        'Búsqueda en software especializado',
+        'Identificación de marcas idénticas o similares',
+        'Detección de uso en web y redes sociales',
+        'Análisis de riesgo marcario técnico',
+        'Conclusiones de abogado especialista',
+        'Recomendación clara y accionable'
+      ],
+      cta: 'Solicitar informe →',
+      highlight: false
+    },
+    {
+      badge: 'Más Solicitado',
+      title: 'Registro de Marca',
+      thesis: 'De la búsqueda al título.',
+      note: 'Alcance y clases definidos según tu modelo de negocio.',
+      ideal: 'Ecommerce y servicios con proyección nacional',
+      items: [
+        'Todo lo del Informe Marcario',
+        'Estrategia de clases Niza',
+        'Redacción y presentación ante INAPI',
+        'Seguimiento completo del expediente',
+        'Respuesta a requerimientos',
+        'Defensa ante oposiciones',
+        'Vigilancia marcaria 12 meses',
+        'Garantía de segundo intento'
+      ],
+      cta: 'Iniciar el proceso →',
+      highlight: true
+    },
+    {
+      badge: 'Recomendado',
+      title: 'Protección Integral',
+      thesis: 'Gestión y defensa continua.',
+      note: 'A la medida de tu portafolio de marcas.',
+      ideal: 'Marcas con alta inversión en Ads o planes de expansión regional',
+      items: [
+        'Todo lo del Registro de Marca',
+        'Vigilancia marcaria continua 24 meses',
+        'Alertas de marcas similares',
+        'Asesoría en cesiones y licencias',
+        'Estrategia de expansión internacional',
+        'Primera renovación acompañada'
+      ],
+      cta: 'Solicitar propuesta →',
+      highlight: false
+    }
+  ]
+
   return (
-    <section id="pricing" className="bg-ink py-16 md:py-24 text-white">
+    <section id="pricing" className="bg-ink py-28 md:py-24 text-white">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="text-center space-y-6 mb-12 md:mb-20">
           <p className="label-badge text-azure">La Inversión</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold">
-            Claridad total antes de empezar.
+          <h2 className="heading-2 text-white text-wrap balance">
+            Cada caso se cotiza a la medida de su complejidad.
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            Cada etapa tiene un costo claro y un resultado concreto. Sin
-            sorpresas, sin letra chica.
+          <p className="section-subtitle text-gray-300 mx-auto">
+            Empezamos por entender el tuyo y te enviamos una propuesta clara.
           </p>
         </div>
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* Card 1 - Informe */}
-          <div className="bg-ink-light rounded-xl p-8 border border-white/10 flex flex-col">
-            <div className="space-y-6 flex-1">
-              <div>
-                <span className="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium uppercase tracking-wider rounded-full">
-                  Punto de Partida
-                </span>
-                <h3 className="text-2xl font-serif font-bold mt-4">
-                  Informe Marcario
-                </h3>
-                <p className="text-sm text-gray-300 mt-2">
-                  Se descuenta del servicio completo si contratas
-                </p>
+          {plans.map((plan, idx) => (
+            <div
+              key={idx}
+              className={`rounded-xl p-8 flex flex-col transition-all duration-300 ${
+                plan.highlight
+                  ? 'md:scale-105 relative z-10'
+                  : ''
+              }`}
+              style={plan.highlight ? {
+                background: '#0f2040',
+                border: '1px solid rgba(59,130,246,0.4)',
+                boxShadow: '0 0 0 1px rgba(59,130,246,0.2), 0 24px 48px rgba(0,0,0,0.4)'
+              } : {
+                background: '#0a1a2f',
+                border: '1px solid rgba(255,255,255,0.1)'
+              }}
+            >
+              <div className="space-y-6 flex-1 min-h-96">
+                {/* Header */}
+                <div>
+                  <span className={`inline-block px-3 py-1 text-xs font-medium uppercase tracking-widest rounded-full ${
+                    plan.highlight
+                      ? 'bg-azure-bright text-white'
+                      : 'bg-white/10 text-white'
+                  }`}>
+                    {plan.badge}
+                  </span>
+                  <h3 className="text-2xl font-serif font-bold mt-4 text-white">
+                    {plan.title}
+                  </h3>
+                </div>
+
+                {/* Thesis - Display */}
+                <div>
+                  <p className="font-serif font-medium text-2xl md:text-3xl text-white leading-snug italic">
+                    {plan.thesis}
+                  </p>
+                </div>
+
+                {/* Note */}
+                <div>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                    {plan.note}
+                  </p>
+                </div>
+
+                {/* Ideal para */}
+                <div className="border-t border-white/10 pt-6">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-white mb-2">
+                    Ideal para:
+                  </p>
+                  <p className="text-base leading-relaxed">
+                    {plan.ideal}
+                  </p>
+                </div>
+
+                {/* Incluye */}
+                <div className="space-y-3 border-t border-white/10 pt-6 flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-white">INCLUYE:</p>
+                  <ul className="space-y-2 text-sm">
+                    {plan.items.map((item, i) => (
+                      <li key={i} style={{ color: 'rgba(255,255,255,0.85)' }}>
+                        ✓ {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <p className="text-4xl font-bold">$79.000</p>
-                <p className="text-sm text-gray-400">
-                  Entrega en 3–5 días hábiles
-                </p>
-              </div>
-
-              <div className="space-y-3 border-t border-white/10 pt-6">
-                <p className="text-sm font-semibold text-gray-300">
-                  Ideal para:
-                </p>
-                <p className="text-base leading-relaxed">
-                  Antes de invertir en el proceso completo
-                </p>
-              </div>
-
-              <div className="space-y-3 border-t border-white/10 pt-6">
-                <p className="text-sm font-semibold text-gray-300">INCLUYE:</p>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Búsqueda en software especializado</li>
-                  <li>✓ Identificación de marcas idénticas o similares</li>
-                  <li>✓ Detección de uso en web y redes sociales</li>
-                  <li>✓ Análisis de riesgo marcario técnico</li>
-                  <li>✓ Conclusiones de abogado especialista</li>
-                  <li>✓ Recomendación clara y accionable</li>
-                </ul>
-              </div>
-
+              {/* CTA */}
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full py-3 bg-white text-ink font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center"
-                style={{ boxShadow: '0 4px 12px rgba(10,22,40,0.15)' }}
+                className={`block w-full py-3 font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center text-base mt-6 ${
+                  plan.highlight
+                    ? 'bg-azure text-white'
+                    : 'bg-white text-ink'
+                }`}
               >
-                Solicitar informe →
+                {plan.cta}
               </a>
             </div>
-          </div>
-
-          {/* Card 2 - Registro (Highlighted) */}
-          <div
-            className="rounded-xl p-8 transform md:scale-105 relative z-10 flex flex-col"
-            style={{
-              background: '#0f2040',
-              border: '1px solid rgba(59,130,246,0.4)',
-              boxShadow: '0 0 0 1px rgba(59,130,246,0.2), 0 24px 48px rgba(0,0,0,0.4)'
-            }}
-          >
-            <div className="space-y-6 text-white flex-1">
-              <div>
-                <span className="inline-block px-3 py-1 text-xs font-medium uppercase tracking-widest rounded-full" style={{
-                  background: '#1d4ed8',
-                  color: 'white'
-                }}>
-                  Más Solicitado
-                </span>
-                <h3 className="text-2xl font-serif font-bold mt-4 text-white">
-                  Registro de Marca
-                </h3>
-                <p className="text-sm mt-2" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                  (1 clase) + tasas INAPI aparte
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-4xl font-bold text-white">$319.000</p>
-                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                  Clase adicional: $90.000
-                </p>
-              </div>
-
-              <div className="space-y-3 border-t" style={{ borderColor: 'rgba(59,130,246,0.3)' }}>
-                <p className="text-sm font-semibold text-white">Ideal para:</p>
-                <p className="text-base leading-relaxed text-gray-100">
-                  Ecommerce y servicios con proyección nacional
-                </p>
-              </div>
-
-              <div className="space-y-3 border-t" style={{ borderColor: 'rgba(59,130,246,0.3)' }}>
-                <p className="text-sm font-semibold text-white">INCLUYE:</p>
-                <ul className="space-y-2 text-sm">
-                  <li style={{ color: '#60a5fa' }}>✓ Todo lo del Informe Marcario</li>
-                  <li style={{ color: '#60a5fa' }}>✓ Estrategia de clases Niza</li>
-                  <li style={{ color: '#60a5fa' }}>✓ Redacción y presentación ante INAPI</li>
-                  <li style={{ color: '#60a5fa' }}>✓ Seguimiento completo del expediente</li>
-                  <li style={{ color: '#60a5fa' }}>✓ Respuesta a requerimientos</li>
-                  <li style={{ color: '#60a5fa' }}>✓ Defensa ante oposiciones</li>
-                  <li style={{ color: '#60a5fa' }}>✓ Vigilancia marcaria 12 meses</li>
-                  <li style={{ color: '#60a5fa' }}>✓ Garantía de segundo intento</li>
-                </ul>
-              </div>
-
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full py-3 font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center"
-                style={{
-                  background: '#1d4ed8',
-                  color: 'white'
-                }}
-              >
-                Iniciar el proceso →
-              </a>
-            </div>
-          </div>
-
-          {/* Card 3 - Protección Integral */}
-          <div className="bg-ink-light rounded-xl p-8 border border-white/10 flex flex-col">
-            <div className="space-y-6 flex-1">
-              <div>
-                <span className="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium uppercase tracking-wider rounded-full">
-                  Recomendado
-                </span>
-                <h3 className="text-2xl font-serif font-bold mt-4">
-                  Protección Integral
-                </h3>
-                <p className="text-sm text-gray-300 mt-2">
-                  Honorarios según complejidad del caso
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-4xl font-bold">Solicitar propuesta</p>
-              </div>
-
-              <div className="space-y-3 border-t border-white/10 pt-6">
-                <p className="text-sm font-semibold text-gray-300">
-                  Ideal para:
-                </p>
-                <p className="text-base leading-relaxed">
-                  Marcas con alta inversión en Ads o planes de expansión
-                  regional
-                </p>
-              </div>
-
-              <div className="space-y-3 border-t border-white/10 pt-6">
-                <p className="text-sm font-semibold text-gray-300">INCLUYE:</p>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Todo lo del Registro de Marca</li>
-                  <li>✓ Vigilancia marcaria 24 meses</li>
-                  <li>✓ Alertas de marcas similares</li>
-                  <li>✓ Asesoría en cesiones y licencias</li>
-                  <li>✓ Estrategia internacional</li>
-                  <li>✓ Primera renovación acompañada</li>
-                </ul>
-              </div>
-
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full py-3 bg-white text-ink font-medium rounded-lg hover:bg-gray-200 transition-colors text-center"
-              >
-                Solicitar propuesta →
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Vigilancia Section */}
-        <div className="bg-ink-light rounded-2xl p-8 md:p-12 border border-white/10">
+        <div className="bg-ink-soft rounded-2xl p-8 md:p-12 border border-white/10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left */}
             <div className="space-y-6">
@@ -228,18 +193,15 @@ export default function Pricing() {
               </ul>
 
               <p className="text-sm text-gray-400 pt-4">
-                *No incluye tasas oficiales ni procesos judiciales.
+                *Las tasas oficiales de INAPI se detallan en cada propuesta.
               </p>
             </div>
 
-            {/* Right - Pricing Options */}
+            {/* Right - Plan Options */}
             <div className="space-y-4">
               {/* Option 1 */}
-              <div className="rounded-xl p-6 border" style={{
-                background: 'rgba(255,255,255,0.05)',
-                borderColor: 'rgba(255,255,255,0.1)'
-              }}>
-                <p className="text-3xl font-bold text-white mb-2">$8.000</p>
+              <div className="rounded-xl p-6 border border-white/10" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                <p className="text-base font-semibold text-white mb-2">Plan mensual</p>
                 <p className="text-gray-300 mb-4 text-sm">Cancela cuando quieras</p>
                 <a
                   href={whatsappLink}
@@ -252,26 +214,24 @@ export default function Pricing() {
                 </a>
               </div>
 
-              {/* Option 2 - Highlighted */}
+              {/* Option 2 */}
               <div className="rounded-xl p-6 border" style={{
-                background: '#1d4ed8',
-                borderColor: 'rgba(29,78,216,0.5)',
-                boxShadow: '0 8px 32px rgba(29,78,216,0.3)'
+                background: '#2D5A8C',
+                borderColor: 'rgba(61,122,180,0.5)',
+                boxShadow: '0 8px 32px rgba(45,90,140,0.3)'
               }}>
-                <span className="inline-block px-3 py-1 text-xs font-medium uppercase tracking-widest rounded-full mb-3" style={{
-                  background: 'rgba(255,255,255,0.2)',
-                  color: 'white'
-                }}>
-                  Mejor Opción
-                </span>
-                <p className="text-3xl font-bold text-white mb-2">$72.000</p>
-                <p className="text-white/80 mb-4 text-sm">Ahorras 2 meses - 25% descuento</p>
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-base font-semibold text-white">Plan anual</p>
+                  <span className="inline-block px-2 py-1 bg-gold/20 text-gold text-xs font-medium uppercase rounded">
+                    Mejor opción
+                  </span>
+                </div>
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-2.5 bg-white text-blue-900 font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center text-sm"
-                  style={{ boxShadow: '0 4px 12px rgba(255,255,255,0.2)' }}
+                  className="block w-full py-2.5 bg-white text-ink font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 text-center text-sm"
+                  style={{ boxShadow: '0 4px 12px rgba(255,255,255,0.15)' }}
                 >
                   Hablar por WhatsApp →
                 </a>
