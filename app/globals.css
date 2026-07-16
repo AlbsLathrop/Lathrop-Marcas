@@ -270,3 +270,73 @@
 .risk-item.in .risk-ico .seal {
   opacity: 0.9;
 }
+
+/* Stack Interactive */
+.stack-item {
+  position: relative;
+  background: #fff;
+  border: 1px solid #E8E4DB;
+  border-radius: 9px;
+  padding: 14px 20px 14px 28px;
+  font-size: 0.92rem;
+  color: #3A4553;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.stack-item::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3A4553;
+  transition: all 0.25s ease;
+}
+
+.stack-item:hover {
+  transform: translateX(5px);
+  border-color: #3E7CB1;
+  box-shadow: 0 6px 16px rgba(45, 90, 140, 0.18);
+}
+
+.stack-item:hover::before {
+  background: #3E7CB1;
+  box-shadow: 0 0 0 4px rgba(62, 124, 177, 0.16);
+}
+
+.stack-base {
+  position: relative;
+  background: linear-gradient(160deg, #0B1A2F, #14263D);
+  border: 1.5px solid #2D5A8C;
+  border-radius: 11px;
+  padding: 24px 22px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(45, 90, 140, 0.28);
+  margin-top: 8px;
+}
+
+.stack-base::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 14px;
+  background: #2D5A8C;
+}
+
+.stack-base::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #3E7CB1, transparent);
+  border-radius: 11px 11px 0 0;
+}

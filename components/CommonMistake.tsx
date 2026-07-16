@@ -63,7 +63,7 @@ export default function CommonMistake() {
 
             <a
               href="#planes"
-              className="inline-block px-7 py-3.5 bg-bone text-ink border border-bone-line rounded-lg font-medium hover:border-azure hover:bg-white transition-all"
+              className="inline-block px-7 py-3.5 bg-ink text-white rounded-lg font-medium hover:bg-azure transition-all"
             >
               Asegurar mi marca →
             </a>

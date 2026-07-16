@@ -112,7 +112,7 @@ export default function Risk() {
               {risk.svg}
 
               {/* Title (.n class) */}
-              <h3 className="n text-lg font-semibold uppercase tracking-widest mb-3" style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
+              <h3 className="n text-lg font-semibold uppercase tracking-widest mb-3" style={{ fontSize: '13px', color: '#5B9BD1', minHeight: '2.8em', lineHeight: 1.5, display: 'flex', alignItems: 'flex-end' }}>
                 {risk.title}
               </h3>
 
