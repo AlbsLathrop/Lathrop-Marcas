@@ -8,9 +8,8 @@ const VIEWPORTS = [
   { name: '375px', width: 375, height: 667 },
 ];
 const SECTIONS = [
-  { name: 'Hero', selector: 'section:nth-of-type(1)' },
   { name: 'Pricing', selector: '#pricing' },
-  { name: 'AboutFirm', selector: 'section:nth-of-type(2)' },
+  { name: 'CommonMistake', selector: 'section:nth-of-type(3)' },
 ];
 
 async function takeScreenshots() {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Navbar() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
@@ -23,16 +24,17 @@ export default function Navbar() {
           : 'bg-bone border-b border-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-1">
-          <span className="font-serif text-xl md:text-2xl font-medium text-ink" style={{ letterSpacing: '0.05em' }}>
-            lathrop.
-          </span>
-          <span className="font-serif text-xl md:text-2xl font-medium text-ink" style={{ letterSpacing: '0.05em' }}>
-            marcas
-          </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-azure mt-1"></span>
+        <a href="/" className="flex items-center">
+          <Image
+            src="/images/lathrop-logo.png"
+            width={462}
+            height={160}
+            priority
+            className="h-6 w-auto"
+            alt="Lathrop Marcas"
+          />
         </a>
 
         {/* WhatsApp Button */}

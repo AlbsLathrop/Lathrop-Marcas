@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image'
+
 export default function Footer() {
   return (
     <footer className="bg-ink text-white py-12 md:py-16">
@@ -7,15 +9,15 @@ export default function Footer() {
         {/* Top Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-8 border-b border-white/10">
           {/* Logo */}
-          <div className="flex items-center gap-1">
-            <span className="font-serif text-xl md:text-2xl font-bold">
-              lathrop.
-            </span>
-            <span className="font-serif text-xl md:text-2xl font-bold">
-              marcas
-            </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-azure mt-1"></span>
-          </div>
+          <a href="/" className="flex items-center">
+            <Image
+              src="/images/lathrop-logo-light.png"
+              width={462}
+              height={160}
+              className="h-7 w-auto"
+              alt="Lathrop Marcas"
+            />
+          </a>
 
           {/* Links */}
           <nav className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">

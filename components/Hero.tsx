@@ -5,68 +5,54 @@ export default function Hero() {
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   return (
-    <section className="bg-cream py-16 md:py-24 relative overflow-hidden">
-      {/* Grid pattern background */}
-      <div className="grid-pattern absolute inset-0 opacity-30"></div>
-
-      <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+    <section className="bg-bone py-16 md:py-24 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column */}
           <div className="space-y-6 md:space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full border border-gray-200">
-              <span className="w-1.5 h-1.5 rounded-full bg-azure"></span>
-              <span className="text-xs md:text-sm font-medium text-text-muted uppercase tracking-wider">
-                Especialista en Activos Intangibles · Chile
+            <div className="flex items-center gap-2">
+              <span className="inline-block font-mono text-xs font-medium text-graphite uppercase tracking-widest">
+                ● Especialista en propiedad industrial · Chile
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="font-serif font-bold text-ink" style={{
-              fontSize: 'clamp(28px, 8vw, 44px)',
-              lineHeight: 1.15,
-              letterSpacing: '-0.02em',
-              textWrap: 'balance'
-            }}>
+            <h1 className="heading-large">
               El registro de marca es una{' '}
-              <span className="italic text-azure" style={{ whiteSpace: 'nowrap' }}>decisión técnica</span> que
-              impacta el crecimiento de tu negocio.
-              <br />
-              No un mero trámite.
+              <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
+                decisión técnica
+                <svg viewBox="0 0 220 10" preserveAspectRatio="none" style={{
+                  position: 'absolute',
+                  bottom: '-2px',
+                  left: 0,
+                  width: '100%',
+                  height: '8px'
+                }}>
+                  <path d="M2 6 C 55 2, 165 2, 218 5" stroke="#2D5A8C" strokeWidth="1" fill="none" pathLength="1" strokeDasharray="1" strokeDashoffset="0" />
+                </svg>
+              </span> que define cómo escala tu negocio. No un trámite: tu activo más valioso.
             </h1>
 
             {/* Paragraph */}
-            <p className="section-subtitle">
-              Para negocios que ya facturan y necesitan resolver su marca de
-              forma técnica y definitiva.
+            <p className="text-lg leading-relaxed text-graphite max-w-56ch" style={{ textWrap: 'pretty' }}>
+              Para negocios que ya facturan y quieren proteger lo que construyeron para seguir creciendo con respaldo.
             </p>
 
             {/* Protection Badges */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-4">
-              <div className="flex items-center gap-2 px-4 py-2.5 bg-ink/6 border border-ink/12 rounded-full" style={{ borderRadius: '999px' }}>
-                <svg
-                  className="w-5 h-5 text-azure flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-                </svg>
-                <div className="text-xs md:text-sm">
-                  <p className="font-medium text-ink">Protección Activa</p>
-                  <p className="text-text-muted">Vigilancia Marcaria</p>
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-azure flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p className="font-medium text-ink text-sm">Protección Activa</p>
+                  <p className="text-graphite text-xs">Vigilancia marcaria</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2.5 bg-ink/6 border border-ink/12 rounded-full" style={{ borderRadius: '999px' }}>
-                <svg
-                  className="w-5 h-5 text-azure flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-                </svg>
-                <div className="text-xs md:text-sm">
-                  <p className="font-medium text-ink">Garantía de 2° Intento</p>
-                  <p className="text-text-muted">Incluido en Base</p>
+              <div className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-azure flex-shrink-0 mt-0.5"></div>
+                <div>
+                  <p className="font-medium text-ink text-sm">Garantía de 2º Intento</p>
+                  <p className="text-graphite text-xs">Incluido en base</p>
                 </div>
               </div>
             </div>
@@ -89,52 +75,56 @@ export default function Hero() {
             </div>
 
             {/* Micro Stats */}
-            <div className="flex items-center justify-start gap-8 pt-8 border-t border-gray-200">
+            <div className="flex items-center justify-start gap-8 pt-8 border-t border-bone-line">
               <div className="space-y-1">
-                <p className="text-2xl md:text-3xl font-bold text-ink">+250</p>
-                <p className="text-xs md:text-sm text-gray-500">Marcas asesoradas</p>
+                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">+250</p>
+                <p className="font-mono text-xs text-graphite">Activos gestionados</p>
               </div>
-              <div className="w-px h-8 bg-gray-200"></div>
+              <div className="w-px h-8 bg-bone-line"></div>
               <div className="space-y-1">
-                <p className="text-2xl md:text-3xl font-bold text-ink">4.9/5</p>
-                <p className="text-xs md:text-sm text-gray-500">Google Reviews</p>
+                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">4.9/5</p>
+                <p className="font-mono text-xs text-graphite">Google Reviews</p>
               </div>
-              <div className="w-px h-8 bg-gray-200"></div>
+              <div className="w-px h-8 bg-bone-line"></div>
               <div className="space-y-1">
-                <p className="text-2xl md:text-3xl font-bold text-ink">24h</p>
-                <p className="text-xs md:text-sm text-gray-500">Respuesta</p>
+                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">24h</p>
+                <p className="font-mono text-xs text-graphite">Respuesta</p>
               </div>
             </div>
           </div>
 
           {/* Right Column - Portrait Card */}
           <div className="flex flex-col items-center md:items-end">
-            <div className="w-full max-w-sm">
+            <div className="w-full max-w-sm relative">
+              {/* Corner Brackets */}
+              <div className="absolute -top-3 -left-3 w-4 h-4 border-t border-l border-azure z-10"></div>
+              <div className="absolute -top-3 -right-3 w-4 h-4 border-t border-r border-azure z-10"></div>
+              <div className="absolute -bottom-3 -left-3 w-4 h-4 border-b border-l border-azure z-10"></div>
+              <div className="absolute -bottom-3 -right-3 w-4 h-4 border-b border-r border-azure z-10"></div>
+
               {/* Card Container */}
               <div
-                className="bg-ink overflow-hidden aspect-[340/420] flex items-center justify-center relative"
+                className="bg-ink overflow-hidden aspect-[340/420] flex flex-col items-center justify-center relative"
                 style={{
-                  borderRadius: '24px',
-                  boxShadow: '0 0 0 1px rgba(59,130,246,0.3), 0 24px 48px rgba(10,22,40,0.4)'
+                  borderRadius: '8px'
                 }}
               >
-                {/* Fallback: AL Initials */}
-                {/* Image would go here: <Image src="/images/alberto-lathrop.jpg" alt="Alberto Lathrop" fill objectFit="cover" /> */}
+                {/* Silhouette / AL Initials */}
                 <div className="text-center">
-                  <p className="font-serif text-7xl md:text-8xl font-bold" style={{ color: 'rgba(59,130,246,0.25)' }}>
+                  <p className="font-serif text-7xl md:text-8xl font-bold" style={{ color: 'rgba(45,90,140,0.3)' }}>
                     AL
                   </p>
                 </div>
               </div>
 
               {/* Badge under card */}
-              <div className="text-center mt-6 space-y-2">
-                <p className="inline-block px-3 py-1 bg-cream rounded-full text-xs font-medium text-ink uppercase tracking-wider">
-                  Abogado Marcario
+              <div className="text-center mt-8 space-y-1">
+                <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">
+                  Propiedad Industrial
                 </p>
-                <p className="text-lg font-bold text-ink">Alberto Lathrop</p>
-                <p className="text-sm text-text-muted">
-                  Abogado Marcario · Fundador
+                <p className="text-base font-serif font-medium text-ink">Alberto Lathrop</p>
+                <p className="text-sm text-graphite">
+                  Abogado especialista en marcas · Fundador
                 </p>
               </div>
             </div>

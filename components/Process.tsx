@@ -1,181 +1,73 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react'
-
 export default function Process() {
-  const [visibleItems, setVisibleItems] = useState<number[]>([])
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
-
-  useEffect(() => {
-    const observers = itemRefs.current.map((ref, index) => {
-      if (!ref) return null
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) => {
-              if (!prev.includes(index)) {
-                return [...prev, index]
-              }
-              return prev
-            })
-          }
-        },
-        { threshold: 0.2 }
-      )
-      observer.observe(ref)
-      return observer
-    })
-
-    return () => {
-      observers.forEach((obs) => obs?.disconnect())
-    }
-  }, [])
-
   const steps = [
-    {
-      number: '1',
-      title: 'Búsqueda de disponibilidad',
-      time: '[1–3 días hábiles]',
-      description:
-        'Analizamos el registro nacional y antecedentes relevantes para determinar si tu signo es distintivo y registrable ante el INAPI. Detectamos conflictos antes de que generen fricción comercial.',
-    },
-    {
-      number: '2',
-      title: 'Estrategia de clases Niza',
-      time: '[1–2 días hábiles]',
-      description:
-        'Definimos las clases correctas según tu modelo de negocio actual y tu plan de expansión. Una estrategia mal diseñada es una de las decisiones técnicas más costosas.',
-    },
-    {
-      number: '3',
-      title: 'Solicitud ante el INAPI',
-      time: '[Mismo día de aprobación interna]',
-      description:
-        'Redactamos y presentamos la solicitud con la documentación exigible en Chile. Nos encargamos del expediente: tú sigues operando.',
-    },
-    {
-      number: '4',
-      title: 'Seguimiento del expediente',
-      time: '[Durante todo el trámite]',
-      badge: 'PROCESO AUTOMATIZADO',
-      description:
-        'Monitoreamos cada etapa, respondemos requerimientos de forma y fondo, y te informamos con transparencia.',
-    },
-    {
-      number: '5',
-      title: 'Vigilancia del registro',
-      time: '[Continuo]',
-      badge: 'VIGILANCIA POR IA ACTIVA',
-      description:
-        'Supervisamos publicaciones y movimientos en el entorno del INAPI para anticipar riesgos sobre tu signo. Priorizamos por impacto en tu operación.',
-    },
-    {
-      number: '6',
-      title: 'Título de marca en tu poder',
-      time: '[Plazo según expediente INAPI]',
-      description:
-        'Con el título emitido, tu activo intangible queda protegido por diez años renovables en Chile. Te acompañamos en renovaciones y cambios de titular.',
-    },
+    { num: 'Paso 1', title: 'Búsqueda de disponibilidad', time: '1–3 días hábiles', desc: 'Analizamos el registro nacional y antecedentes para determinar si tu signo es distintivo y registrable. Detectamos conflictos antes de que generen fricción comercial.' },
+    { num: 'Paso 2', title: 'Estrategia de clases Niza', time: '1–2 días hábiles', desc: 'Definimos las clases correctas según tu modelo de negocio y tu plan de expansión. Una estrategia mal diseñada es una de las decisiones técnicas más costosas.' },
+    { num: 'Paso 3', title: 'Solicitud ante el INAPI', time: 'Mismo día de aprobación interna', desc: 'Redactamos y presentamos la solicitud con la documentación exigible en Chile. Nos encargamos del expediente: tú sigues operando.' },
+    { num: 'Paso 4', title: 'Seguimiento del expediente', time: 'Durante todo el trámite', badge: 'Proceso automatizado', desc: 'Monitoreamos cada etapa, respondemos requerimientos de forma y fondo, y te informamos sin que tengas que perseguir el estado.' },
+    { num: 'Paso 5', title: 'Vigilancia del registro', time: 'Continuo', badge: 'Vigilancia por IA activa', desc: 'Supervisamos publicaciones y movimientos en el entorno del INAPI para anticipar riesgos sobre tu signo. Priorizamos por impacto en tu operación.' },
+    { num: 'Paso 6', title: 'Título de marca en tu poder', time: 'Plazo según expediente', desc: 'Con el título emitido, tu activo queda protegido por diez años renovables. Te acompañamos en renovaciones y cambios de titular.' },
   ]
 
   return (
-    <section id="proceso" className="bg-cream py-16 md:py-24">
+    <section id="proceso" className="bg-bone py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
-          {/* Left Column - Sticky */}
-          <div className="space-y-8 md:sticky md:top-32 md:h-fit">
-            <div className="space-y-4">
-              <p className="label-badge">El Proceso</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
-                De cero a marca registrada.
-              </h2>
-            </div>
+        {/* Header */}
+        <div className="mb-16">
+          <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest mb-3">El Proceso</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink mb-6 leading-tight">
+            De cero a marca registrada.
+          </h2>
+          <p className="text-lg text-graphite max-w-56ch">
+            Sin sorpresas, sin fricción comercial. Cada etapa tiene un responsable claro: nosotros.
+          </p>
+        </div>
 
-            <p className="section-subtitle">
-              Sin sorpresas, sin fricción comercial. Cada etapa tiene responsable
-              claro: nosotros.
-            </p>
-
-            {/* Info Card */}
-            <div className="bg-white border rounded-xl p-6 md:p-8" style={{
-              borderColor: 'rgba(10,22,40,0.1)',
-              borderLeft: '3px solid #1d4ed8',
-              boxShadow: '0 4px 16px rgba(0,0,0,0.06)'
-            }}>
-              <p className="font-semibold text-ink mb-3" style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#1d4ed8' }}>
-                PLAZOS INAPI
-              </p>
-              <p className="font-semibold text-ink mb-2">
-                Variable por expediente
-              </p>
-              <p className="text-sm md:text-base text-text-muted leading-relaxed">
-                Depende de clase, antecedentes y observaciones. Lo fijo es
-                nuestro estándar de trabajo y seguimiento.
-              </p>
-            </div>
+        {/* Process Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left: Info Box */}
+          <div className="bg-white border border-bone-line rounded-lg p-6 md:p-8 h-fit">
+            <p className="font-mono text-xs text-azure uppercase tracking-widest mb-2">Plazos INAPI</p>
+            <h4 className="text-lg font-serif font-bold text-ink mb-2">Variable por expediente</h4>
+            <p className="text-sm text-graphite">Depende de clase, antecedentes y observaciones. Lo fijo es nuestro estándar de trabajo y seguimiento.</p>
           </div>
 
-          {/* Right Column - Steps */}
-          <div className="space-y-4">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                ref={(el) => {
-                  itemRefs.current[index] = el
-                }}
-                className={`bg-white border border-gray-200 rounded-xl p-6 md:p-8 transition-all duration-700 ${
-                  visibleItems.includes(index)
-                    ? 'opacity-100 translate-x-0'
-                    : 'opacity-0 translate-x-8'
-                }`}
-                style={{
-                  transitionDelay: visibleItems.includes(index)
-                    ? `${index * 100}ms`
-                    : '0ms',
-                }}
-              >
-                <div className="flex items-start gap-4">
-                  {/* Step Number - Ring Style */}
-                  <div
-                    className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs"
-                    style={{
-                      background: 'transparent',
-                      border: '1.5px solid #1d4ed8',
-                      color: '#1d4ed8'
-                    }}
-                  >
-                    {step.number}
-                  </div>
+          {/* Right: Steps with Spine */}
+          <div className="relative pl-8">
+            {/* Spine vertical line */}
+            <div className="absolute left-4 top-0 bottom-0 w-px bg-bone-line"></div>
+
+            {/* Steps */}
+            <div className="space-y-8">
+              {steps.map((step, idx) => (
+                <div key={idx} className="relative">
+                  {/* Node circle */}
+                  <div className="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-azure border-2 border-bone"></div>
 
                   {/* Content */}
-                  <div className="flex-1 space-y-3">
-                    <h3 className="font-semibold text-ink text-lg">
+                  <div>
+                    <p className="font-mono text-xs text-azure font-medium uppercase tracking-widest mb-1">
+                      {step.num}
+                    </p>
+                    <h3 className="text-lg font-serif font-bold text-ink mb-2">
                       {step.title}
                     </h3>
-
-                    {step.badge && (
-                      <div className="inline-block px-2.5 py-1 text-xs font-medium uppercase tracking-wider rounded-full" style={{
-                        background: 'rgba(59,130,246,0.1)',
-                        color: '#3b82f6'
-                      }}>
-                        {step.badge}
-                      </div>
-                    )}
-
-                    <div className="inline-block px-2.5 py-1 text-xs font-medium rounded-full" style={{
-                      background: 'rgba(59,130,246,0.1)',
-                      color: '#3b82f6'
-                    }}>
-                      {step.time}
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="font-mono text-xs text-graphite">{step.time}</span>
+                      {step.badge && (
+                        <span className="font-mono text-xs text-azure uppercase tracking-widest border border-bone-line rounded px-2 py-1">
+                          {step.badge}
+                        </span>
+                      )}
                     </div>
-
-                    <p className="text-sm md:text-base text-text-muted leading-relaxed">
-                      {step.description}
+                    <p className="text-sm text-graphite leading-relaxed">
+                      {step.desc}
                     </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
