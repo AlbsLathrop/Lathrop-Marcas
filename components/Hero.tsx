@@ -105,25 +105,50 @@ export default function Hero() {
 
               {/* Card Container */}
               <div
-                className="bg-ink overflow-hidden aspect-[340/420] flex flex-col items-center justify-center relative"
+                className="portrait bg-ink overflow-hidden aspect-[340/420] flex flex-col items-center justify-center relative"
                 style={{
                   borderRadius: '8px'
                 }}
               >
-                {/* Silhouette / AL Initials */}
-                <div className="text-center">
-                  <p className="font-serif text-7xl md:text-8xl font-bold" style={{ color: 'rgba(45,90,140,0.3)' }}>
-                    AL
+                {/* Photo */}
+                <img
+                  src="/images/alberto-lathrop.jpg"
+                  alt="Alberto Lathrop"
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 22%',
+                    filter: 'grayscale(1) contrast(1.02)'
+                  }}
+                />
+
+                {/* Scrim Gradient */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to bottom, rgba(11,26,47,0.4) 0%, transparent 30%, transparent 70%, rgba(11,26,47,0.6) 100%)',
+                    zIndex: 1,
+                    pointerEvents: 'none'
+                  }}
+                ></div>
+
+                {/* Name & Title - z-index 2 */}
+                <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', pointerEvents: 'none' }}>
+                  <p className="font-serif text-2xl md:text-3xl font-bold text-white">
+                    Alberto Lathrop
                   </p>
                 </div>
               </div>
 
               {/* Badge under card */}
-              <div className="text-center mt-8 space-y-1">
+              <div className="portrait-cap text-center mt-8 space-y-1" style={{ position: 'relative', zIndex: 2 }}>
                 <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">
                   Propiedad Industrial
                 </p>
-                <p className="text-base font-serif font-medium text-ink">Alberto Lathrop</p>
                 <p className="text-sm text-graphite">
                   Abogado especialista en marcas · Fundador
                 </p>
