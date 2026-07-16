@@ -83,7 +83,7 @@ export default function Hero() {
               </div>
               <div className="w-px h-8 bg-bone-line"></div>
               <div className="space-y-1">
-                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">4.9/5</p>
+                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">4.8/5</p>
                 <p className="font-mono text-xs text-graphite">Google Reviews</p>
               </div>
               <div className="w-px h-8 bg-bone-line"></div>

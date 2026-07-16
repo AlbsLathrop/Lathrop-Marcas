@@ -35,7 +35,7 @@ export default function Reviews() {
 
         {/* Rating Header */}
         <div className="flex items-baseline gap-3 mb-12">
-          <span className="text-4xl font-serif font-bold text-ink">4.9/5</span>
+          <span className="text-4xl font-serif font-bold text-ink">4.8/5</span>
           <span className="text-gold text-lg tracking-wider">★★★★★</span>
           <span className="font-mono text-sm text-graphite">en Google · +250 marcas gestionadas</span>
         </div>
@@ -69,7 +69,7 @@ export default function Reviews() {
 
         {/* View All Link */}
         <div className="text-center">
-          <a href="#" className="inline-flex items-center gap-2 text-ink font-medium hover:text-azure transition-colors">
+          <a href="https://maps.app.goo.gl/5JEzPc6exAVvHPUTA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-ink font-medium hover:text-azure transition-colors">
             Ver todas las opiniones en Google →
           </a>
         </div>
