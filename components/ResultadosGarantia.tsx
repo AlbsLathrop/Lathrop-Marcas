@@ -8,11 +8,14 @@ export default function ResultadosGarantia() {
     <section className="bg-ink text-white py-20 md:py-28 relative">
       <div className="max-w-6xl mx-auto px-4 md:px-8 text-center">
         {/* Seal icon */}
-        <div className="flex justify-center mb-8">
-          <svg width="60" height="60" viewBox="0 0 60 60" className="opacity-40">
-            <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <path d="M30 12 L36 20 L45 22 L38 29 L39 38 L30 34 L21 38 L22 29 L15 22 L24 20 Z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-          </svg>
+        <div className="guarantee flex justify-center mb-8">
+          <div className="gtee-mark">
+            <svg viewBox="0 0 96 96">
+              <circle cx="48" cy="48" r="35" />
+              <circle className="ring" cx="48" cy="48" r="28" stroke="#3E7CB1" fill="none" strokeWidth="1" strokeDasharray="2.5 5.5" />
+              <path className="chk" d="M37 48.5 L45 56.5 L60 38" stroke="#EAF2FA" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
         </div>
 
         <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight mb-6">

@@ -57,8 +57,8 @@ export default function Pricing() {
           </div>
 
           {/* Card 2: Registro (Featured) */}
-          <div className="bg-ink-soft border border-azure rounded-lg p-8 flex flex-col relative md:scale-105 md:z-10" style={{ boxShadow: '0 0 0 1px rgba(45,90,140,.4), 0 24px 60px -20px rgba(45,90,140,.55)' }}>
-            <div className="absolute -top-3 left-8 bg-brass text-ink px-3 py-1 rounded text-xs font-mono font-bold uppercase tracking-widest">
+          <div className="bg-ink-soft border border-azure rounded-lg p-8 flex flex-col relative md:scale-105 md:z-10" style={{ boxShadow: '0 0 0 1px rgba(45,90,140,.4), 0 24px 60px -20px rgba(45,90,140,.55)', overflow: 'visible' }}>
+            <div className="absolute text-xs font-mono font-bold uppercase tracking-widest bg-brass text-ink rounded" style={{ top: '-12px', left: '28px', padding: '5px 12px', borderRadius: '4px' }}>
               Más solicitado
             </div>
             <div className="mb-6 pt-4">
