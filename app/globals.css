@@ -227,4 +227,46 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .risk-ico [pathLength] {
+    stroke-dashoffset: 0 !important;
+    transition: none !important;
+  }
+
+  .risk-ico .seal {
+    opacity: 0.9 !important;
+    transition: none !important;
+  }
+}
+
+.risk-ico {
+  width: 38px;
+  height: 38px;
+  display: block;
+  margin-bottom: 16px;
+  fill: none;
+  stroke: #3E7CB1;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+
+.risk-ico [pathLength] {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.85s ease 0.15s;
+}
+
+.risk-ico .seal {
+  opacity: 0;
+  transition: opacity 0.5s ease 0.7s;
+}
+
+.risk-item.in .risk-ico [pathLength] {
+  stroke-dashoffset: 0;
+}
+
+.risk-item.in .risk-ico .seal {
+  opacity: 0.9;
 }
