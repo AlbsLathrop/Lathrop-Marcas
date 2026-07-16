@@ -31,8 +31,8 @@ export default function Hero() {
                 }}>
                   <path d="M2 6 C 55 2, 165 2, 218 5" stroke="#2D5A8C" strokeWidth="3.5" fill="none" pathLength="1" strokeDasharray="1" strokeDashoffset="0" />
                 </svg>
-              </span> que define cómo escala tu negocio.{' '}
-              <span style={{ color: '#2D5A8C' }}>Es tu activo más valioso.</span>
+              </span> que define cómo escala tu negocio. No un trámite:{' '}
+              <span style={{ color: '#2D5A8C' }}>tu activo más valioso.</span>
             </h1>
 
             {/* Paragraph */}
