@@ -16,6 +16,7 @@ const config: Config = {
         'bone-line': '#E8E4DB',
         graphite: '#3A4553',
         gold: '#B08D4F',
+        brass: '#C6A15B',
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'serif'],
