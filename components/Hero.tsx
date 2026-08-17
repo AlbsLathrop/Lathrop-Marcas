@@ -1,8 +1,8 @@
 "use client";
 
 export default function Hero() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
-  const whatsappLink = `https://wa.me/${whatsappNumber}`
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '61402163749'
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%2C%20vengo%20de%20lathropmarcas.cl%20y%20quiero%20proteger%20mi%20marca.`
 
   return (
     <section className="bg-bone relative overflow-hidden" style={{ padding: '56px 0 100px' }}>

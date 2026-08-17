@@ -27,7 +27,7 @@ export default function Services() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-12 md:mb-16">
-          <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Lo que hacemos</p>
+          <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Lo que hago</p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
             Protección en tres frentes.
           </h2>

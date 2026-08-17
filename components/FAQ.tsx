@@ -54,8 +54,8 @@ export default function FAQ() {
             </div>
 
             <p className="section-subtitle">
-              Si tu caso no encaja aquí, lo decimos. Las primeras conversaciones
-              están sujetas a calificación: trabajamos con dueños de negocio que
+              Si tu caso no encaja aquí, te lo digo. Las primeras conversaciones
+              están sujetas a calificación: trabajo con dueños de negocio que
               ya operan y necesitan orden en su propiedad industrial.
             </p>
           </div>

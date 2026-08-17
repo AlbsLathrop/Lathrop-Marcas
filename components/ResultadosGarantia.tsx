@@ -1,8 +1,8 @@
 "use client";
 
 export default function ResultadosGarantia() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
-  const whatsappLink = `https://wa.me/${whatsappNumber}`
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '61402163749'
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%2C%20vengo%20de%20lathropmarcas.cl%20y%20quiero%20proteger%20mi%20marca.`
 
   return (
     <section className="bg-ink text-white py-20 md:py-28 relative">
@@ -23,7 +23,7 @@ export default function ResultadosGarantia() {
         </h2>
 
         <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-8">
-          No trabajamos por procesos que se cierran en expediente. Trabajamos por marcas que se registran. Si el INAPI rechaza, volvemos a presentar sin cobrar honorarios de nuevo. Sin excusas, sin condiciones.
+          No trabajo por procesos que se cierran en expediente. Trabajo por marcas que se registran. Si el INAPI rechaza, vuelvo a presentar sin cobrar honorarios de nuevo. Sin excusas, sin condiciones.
         </p>
 
         <a

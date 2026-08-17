@@ -3,8 +3,8 @@
 import Image from 'next/image'
 
 export default function CTAFinal() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '56912345678'
-  const whatsappLink = `https://wa.me/${whatsappNumber}`
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '61402163749'
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%2C%20vengo%20de%20lathropmarcas.cl%20y%20quiero%20proteger%20mi%20marca.`
 
   return (
     <section className="bg-ink text-white py-20 md:py-28">
