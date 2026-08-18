@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image'
+import LeadForm from './LeadForm'
 
 export default function CTAFinal() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '61402163749'
@@ -49,6 +50,16 @@ export default function CTAFinal() {
             <span>→</span>
           </a>
           <p className="text-sm text-gray-400">Respuesta dentro de 24 h hábiles</p>
+        </div>
+
+        {/* Alternative Lead Form */}
+        <div className="pt-8 border-t border-white/10 space-y-6">
+          <p className="text-sm text-gray-300">
+            ¿Prefieres que te contacte yo? Déjame tus datos:
+          </p>
+          <div className="flex justify-center">
+            <LeadForm />
+          </div>
         </div>
       </div>
     </section>
