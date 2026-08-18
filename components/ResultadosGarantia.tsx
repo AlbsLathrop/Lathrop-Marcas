@@ -2,7 +2,7 @@
 
 export default function ResultadosGarantia() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '61402163749'
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%2C%20vengo%20de%20lathropmarcas.cl%20y%20quiero%20proteger%20mi%20marca.`
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20empezar%20el%20proceso%20de%20registro.`
 
   return (
     <section className="bg-ink text-white py-20 md:py-28 relative">

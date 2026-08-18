@@ -2,7 +2,13 @@
 
 export default function Pricing() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '61402163749'
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%2C%20vengo%20de%20lathropmarcas.cl%20y%20quiero%20proteger%20mi%20marca.`
+  const whatsappLinks = {
+    informeMarcario: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20solicitar%20un%20informe%20marcario.`,
+    registro: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20iniciar%20el%20registro%20de%20mi%20marca.`,
+    proteccion: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20una%20propuesta%20de%20protecci%C3%B3n%20integral.`,
+    vigilanciaMensual: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20informaci%C3%B3n%20sobre%20vigilancia%20mensual.`,
+    vigilanciaAnual: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20informaci%C3%B3n%20sobre%20vigilancia%20anual.`,
+  }
 
   return (
     <section id="planes" className="bg-ink text-white py-20 md:py-28">
@@ -47,7 +53,7 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+            <a href={whatsappLinks.informeMarcario} target="_blank" rel="noopener noreferrer" onClick={() => {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
@@ -85,7 +91,7 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+            <a href={whatsappLinks.registro} target="_blank" rel="noopener noreferrer" onClick={() => {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
@@ -119,7 +125,7 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+            <a href={whatsappLinks.proteccion} target="_blank" rel="noopener noreferrer" onClick={() => {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
@@ -158,7 +164,7 @@ export default function Pricing() {
               <div className="border border-white/15 rounded p-4">
                 <p className="font-serif font-bold text-lg text-bone mb-1">Plan mensual</p>
                 <p className="text-sm text-white/60">Cancela cuando quieras</p>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+                <a href={whatsappLinks.vigilanciaMensual} target="_blank" rel="noopener noreferrer" onClick={() => {
                   if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                     (window as any).fbq('track', 'Lead');
                   }
@@ -172,7 +178,7 @@ export default function Pricing() {
                 </span>
                 <p className="font-serif font-bold text-lg text-bone mb-1 pt-2">Plan anual</p>
                 <p className="text-sm text-white/60">Cobertura continua todo el año</p>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => {
+                <a href={whatsappLinks.vigilanciaAnual} target="_blank" rel="noopener noreferrer" onClick={() => {
                   if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                     (window as any).fbq('track', 'Lead');
                   }
