@@ -40,7 +40,7 @@ export default function VideoModal({ videoId, isOpen, onClose }: VideoModalProps
       aria-labelledby="video-modal-title"
     >
       <div
-        className="relative bg-white rounded-lg overflow-hidden shadow-2xl"
+        className="relative bg-white rounded-[8px] overflow-hidden shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',

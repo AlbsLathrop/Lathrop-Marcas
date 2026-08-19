@@ -34,12 +34,12 @@ export default function VideoTestimonials() {
   };
 
   return (
-    <section className="bg-bone py-20 md:py-28">
+    <section className="bg-white py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-16">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Testimonios en video</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-ink leading-tight">
             Clientes que ya pasaron por esto.
           </h2>
         </div>
@@ -54,7 +54,7 @@ export default function VideoTestimonials() {
               aria-label={`Ver testimonio de ${video.name}`}
             >
               {/* Video Frame */}
-              <div className="vid-frame relative w-full aspect-video bg-ink rounded-lg overflow-hidden mb-4">
+              <div className="vid-frame relative w-full aspect-video bg-ink rounded-[8px] overflow-hidden mb-4">
                 {/* Thumbnail Image */}
                 <Image
                   src={`https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`}
@@ -94,14 +94,14 @@ export default function VideoTestimonials() {
 
               {/* Content */}
               <div className="space-y-2">
-                <h3 className="text-lg font-serif font-bold text-ink">
+                <h3 className="text-lg font-display font-bold text-ink">
                   {video.name}
                 </h3>
                 <p className="text-sm text-graphite leading-relaxed">
                   {video.description}
                 </p>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="font-mono text-xs text-azure uppercase tracking-widest border border-bone-line rounded px-2 py-1">
+                  <span className="font-mono text-xs text-azure uppercase tracking-widest border border-slate-200 rounded px-2 py-1">
                     {video.tag}
                   </span>
                   <span className="text-sm font-medium text-ink group-hover:text-azure transition-colors">

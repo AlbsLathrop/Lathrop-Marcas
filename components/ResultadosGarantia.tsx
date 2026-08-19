@@ -10,12 +10,12 @@ export default function ResultadosGarantia() {
         <div className="max-w-3xl mx-auto">
           <div className="relative bg-white/5 border border-brass rounded-xl p-8 md:p-12">
             {/* Badge */}
-            <div className="absolute -top-3 left-6 bg-brass text-ink text-xs font-mono font-bold uppercase px-3 py-1.5 rounded">
+            <div className="absolute -top-3 left-6 bg-azure text-white text-xs font-mono font-bold uppercase px-3 py-1.5 rounded">
               Segundo intento sin honorarios
             </div>
 
             {/* Content */}
-            <h2 className="text-3xl md:text-4xl font-serif font-bold leading-tight mb-6 text-left">
+            <h2 className="text-3xl md:text-4xl font-display font-bold leading-tight mb-6 text-left">
               Garantía: si rechazan, no pagas honorarios de nuevo.
             </h2>
 
@@ -37,7 +37,7 @@ export default function ResultadosGarantia() {
                   (window as any).fbq('track', 'Lead');
                 }
               }}
-              className="inline-flex items-center gap-2 px-8 md:px-10 py-3.5 bg-brass text-ink rounded-lg font-semibold text-base transition-all duration-200 hover:bg-opacity-90 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 md:px-10 py-3.5 bg-azure text-white rounded-[8px] font-semibold text-base transition-all duration-200 hover:bg-opacity-90 hover:-translate-y-0.5"
             >
               Empecemos →
             </a>

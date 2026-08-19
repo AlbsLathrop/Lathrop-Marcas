@@ -94,12 +94,12 @@ export default function Risk() {
   ];
 
   const RiskCard = ({ risk }: { risk: any }) => (
-    <div className="p-6 md:p-8 rounded-lg bg-gray-100 border border-blue-200 flex flex-col h-full hover:shadow-sm transition-shadow">
+    <div className="p-6 md:p-8 rounded-[8px] bg-gray-100 border border-blue-200 flex flex-col h-full hover:shadow-sm transition-shadow">
       {/* Icon */}
       <div className="mb-4">{risk.icon}</div>
 
       {/* Title */}
-      <h3 className="text-lg font-serif font-bold text-ink mb-2 leading-tight">
+      <h3 className="text-lg font-display font-bold text-ink mb-2 leading-tight">
         {risk.title}
       </h3>
 
@@ -116,10 +116,10 @@ export default function Risk() {
         {/* Header */}
         <div className="space-y-6 mb-16">
           <p className="label-badge text-azure">El Riesgo de No Actuar</p>
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold text-ink leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-bold text-ink leading-tight">
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-2xl text-pretty">
+          <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-[68ch] text-pretty">
             Da lo mismo cuántos años lleves usándolo. Si no está inscrito, no es tuyo.
           </p>
         </div>
@@ -135,7 +135,7 @@ export default function Risk() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12 md:mb-16">
           {/* Left Column — Services */}
           <div>
-            <div className="inline-flex items-center px-3 py-1.5 bg-brass text-ink rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
               Si ofreces servicios
             </div>
             <div className="space-y-4 md:space-y-6">
@@ -147,7 +147,7 @@ export default function Risk() {
 
           {/* Right Column — Products */}
           <div>
-            <div className="inline-flex items-center px-3 py-1.5 bg-brass text-ink rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
               Si vendes productos
             </div>
             <div className="space-y-4 md:space-y-6">
@@ -160,7 +160,7 @@ export default function Risk() {
 
         {/* Closing statement */}
         <div className="border-l-4 border-azure pl-6 py-4">
-          <p className="text-lg md:text-xl font-serif font-bold text-ink leading-tight">
+          <p className="text-lg md:text-xl font-display font-bold text-ink leading-tight">
             Registrar cuesta lo mismo hoy que en tres años. Cambiar el nombre, no.
           </p>
         </div>

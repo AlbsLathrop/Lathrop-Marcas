@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Space_Grotesk, Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppLeadTracker from '@/components/WhatsAppLeadTracker'
 
-const playfair = Playfair_Display({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-playfair',
-  weight: ['400', '500', '600'],
+  variable: '--font-space-grotesk',
+  weight: ['600', '700'],
 })
 
 const inter = Inter({
@@ -74,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${inter.variable}`}
+      className={`${spaceGrotesk.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
       <head>

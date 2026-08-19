@@ -6,12 +6,12 @@ export default function Process() {
   ]
 
   return (
-    <section id="proceso" className="bg-bone py-12 md:py-28">
+    <section id="proceso" className="bg-white py-12 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-12 md:mb-16">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest mb-3">El Proceso</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-ink mb-6 leading-tight">
             De cero a marca registrada.
           </h2>
           <p className="text-lg text-graphite max-w-56ch text-pretty">
@@ -20,12 +20,12 @@ export default function Process() {
         </div>
 
         {/* PLAZOS Band — Two-part layout */}
-        <div className="bg-white border border-bone-line rounded-lg px-6 md:px-8 py-4 md:py-5 mb-12 md:mb-16">
+        <div className="bg-white border border-slate-200 rounded-[8px] px-6 md:px-8 py-4 md:py-5 mb-12 md:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left: Label and timeframe */}
             <div>
               <p className="font-mono text-xs text-azure uppercase tracking-widest mb-1">Plazos INAPI</p>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-ink">8 a 14 meses</h3>
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-ink">8 a 14 meses</h3>
             </div>
             {/* Right: Description */}
             <div>
@@ -43,7 +43,7 @@ export default function Process() {
                 <p className="font-mono text-xs text-azure font-medium uppercase tracking-widest mb-2">
                   {step.num}
                 </p>
-                <h3 className="text-lg font-serif font-bold text-ink mb-3">
+                <h3 className="text-lg font-display font-bold text-ink mb-3">
                   {step.title}
                 </h3>
                 <p className="text-sm text-graphite leading-relaxed">
@@ -70,7 +70,7 @@ export default function Process() {
                 <p className="font-mono text-xs text-azure font-medium uppercase tracking-widest mb-2">
                   {step.num}
                 </p>
-                <h3 className="text-lg font-serif font-bold text-ink mb-3">
+                <h3 className="text-lg font-display font-bold text-ink mb-3">
                   {step.title}
                 </h3>
                 <p className="text-sm text-graphite leading-relaxed">

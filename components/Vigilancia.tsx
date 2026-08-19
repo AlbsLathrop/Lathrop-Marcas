@@ -8,14 +8,14 @@ export default function Vigilancia() {
   }
 
   return (
-    <section className="bg-bone py-8 md:py-16">
+    <section className="bg-white py-8 md:py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-6 mb-16">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">
             Servicio aparte
           </p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-ink leading-tight">
             Vigilancia para escalar con la marca limpia.
           </h2>
           <p className="text-lg leading-relaxed text-graphite max-w-56ch">
@@ -24,7 +24,7 @@ export default function Vigilancia() {
         </div>
 
         {/* Vigilancia Card */}
-        <div className="bg-white border border-bone-line rounded-lg p-8 md:p-12 mb-8">
+        <div className="bg-white border border-slate-200 rounded-[8px] p-8 md:p-12 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left */}
             <div>
@@ -46,22 +46,22 @@ export default function Vigilancia() {
 
             {/* Right - Plans */}
             <div className="flex flex-col gap-4">
-              <div className="border border-bone-line rounded p-4 bg-bone/30">
-                <p className="font-serif font-bold text-lg text-ink mb-1">Plan mensual</p>
+              <div className="border border-slate-200 rounded p-4 bg-white/30">
+                <p className="font-display font-bold text-lg text-ink mb-1">Plan mensual</p>
                 <p className="text-sm text-graphite">Cancela cuando quieras</p>
                 <a href={whatsappLinks.vigilanciaMensual} target="_blank" rel="noopener noreferrer" onClick={() => {
                   if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                     (window as any).fbq('track', 'Lead');
                   }
-                }} className="w-full mt-4 py-2.5 border border-bone-line text-ink text-center rounded font-medium text-sm hover:bg-bone transition-all block">
+                }} className="w-full mt-4 py-2.5 border border-slate-200 text-ink text-center rounded font-medium text-sm hover:bg-white transition-all block">
                   Hablar por WhatsApp →
                 </a>
               </div>
               <div className="border-2 border-brass rounded p-4 relative shadow-md" style={{ overflow: 'visible' }}>
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-4 bg-brass text-ink text-xs font-mono font-bold uppercase px-2 py-1 rounded">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-4 bg-azure text-white text-xs font-mono font-bold uppercase px-2 py-1 rounded">
                   Mejor opción
                 </span>
-                <p className="font-serif font-bold text-lg text-ink mb-1 pt-2">Plan anual</p>
+                <p className="font-display font-bold text-lg text-ink mb-1 pt-2">Plan anual</p>
                 <p className="text-sm text-graphite">Cobertura continua todo el año</p>
                 <a href={whatsappLinks.vigilanciaAnual} target="_blank" rel="noopener noreferrer" onClick={() => {
                   if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {

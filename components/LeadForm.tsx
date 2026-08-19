@@ -96,7 +96,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={`space-y-3 ${variant === 'dark' ? 'max-w-xl md:max-w-2xl' : 'max-w-md'}`}>
+    <form onSubmit={handleSubmit} className={`space-y-3 ${variant === 'dark' ? 'max-w-xl md:max-w-[68ch]' : 'max-w-md'}`}>
       {/* Nombre */}
       <div>
         <label htmlFor="nombre" className={`block text-sm font-medium mb-1 ${variant === 'dark' ? 'text-white' : 'text-graphite'}`}>
@@ -110,7 +110,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           onChange={handleChange}
           required
           placeholder="Tu nombre"
-          className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
         />
       </div>
 
@@ -127,7 +127,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           onChange={handleChange}
           required
           placeholder="Nombre de tu marca"
-          className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
         />
       </div>
 
@@ -143,7 +143,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           value={formData.rubro}
           onChange={handleChange}
           placeholder="Ej: ecommerce, servicios, etc."
-          className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
         />
       </div>
 
@@ -156,10 +156,10 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           <button
             type="button"
             onClick={() => handleFacturaClick('si')}
-            className={`flex-1 px-4 py-2.5 rounded-lg font-medium transition-all ${
+            className={`flex-1 px-4 py-2.5 rounded-[8px] font-medium transition-all ${
               formData.factura === 'si'
                 ? 'bg-azure text-white border border-azure'
-                : 'bg-bone border border-bone-line text-ink hover:border-azure'
+                : 'bg-white border border-slate-200 text-ink hover:border-azure'
             }`}
           >
             Sí
@@ -167,10 +167,10 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           <button
             type="button"
             onClick={() => handleFacturaClick('no')}
-            className={`flex-1 px-4 py-2.5 rounded-lg font-medium transition-all ${
+            className={`flex-1 px-4 py-2.5 rounded-[8px] font-medium transition-all ${
               formData.factura === 'no'
                 ? 'bg-azure text-white border border-azure'
-                : 'bg-bone border border-bone-line text-ink hover:border-azure'
+                : 'bg-white border border-slate-200 text-ink hover:border-azure'
             }`}
           >
             No
@@ -192,7 +192,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
             value={formData.telefono}
             onChange={handleChange}
             placeholder="+56 9 1234 5678"
-            className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
           />
         </div>
 
@@ -208,7 +208,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
             value={formData.email}
             onChange={handleChange}
             placeholder="tu@email.com"
-            className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
           />
         </div>
       </div>
@@ -218,7 +218,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-3 rounded-lg font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-gray-100"
+          className="w-full px-4 py-3 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-gray-100"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
@@ -226,7 +226,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-3 rounded-lg font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90"
+          className="w-full px-4 py-3 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>

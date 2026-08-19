@@ -6,20 +6,20 @@ export const metadata = {
 export default function Privacidad() {
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-8 py-20 md:py-28">
-      <h1 className="text-4xl md:text-5xl font-serif font-bold text-ink mb-8">
+      <h1 className="text-4xl md:text-5xl font-display font-bold text-ink mb-8">
         Política de Privacidad
       </h1>
 
       <div className="prose prose-lg max-w-none text-graphite space-y-6">
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">1. Responsable del Tratamiento</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">1. Responsable del Tratamiento</h2>
           <p>
             Alberto Lathrop (en adelante, "Empresa") es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio web.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">2. Datos Recopilados</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">2. Datos Recopilados</h2>
           <p>
             Recopilamos datos personales que usted proporciona voluntariamente a través de formularios, consultas por WhatsApp o correo electrónico, incluyendo:
           </p>
@@ -32,7 +32,7 @@ export default function Privacidad() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">3. Finalidad del Tratamiento</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">3. Finalidad del Tratamiento</h2>
           <p>
             Sus datos se utilizan exclusivamente para:
           </p>
@@ -45,7 +45,7 @@ export default function Privacidad() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">4. Base Legal</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">4. Base Legal</h2>
           <p>
             El tratamiento de sus datos se fundamenta en:
           </p>
@@ -57,14 +57,14 @@ export default function Privacidad() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">5. Seguridad de los Datos</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">5. Seguridad de los Datos</h2>
           <p>
             Implementamos medidas técnicas y organizativas para proteger sus datos contra acceso no autorizado, pérdida o alteración. Sin embargo, no garantizamos seguridad absoluta en la transmisión de datos por internet.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">6. Derechos del Titular</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">6. Derechos del Titular</h2>
           <p>
             Conforme a la Ley 19.628, usted tiene derecho a:
           </p>
@@ -80,21 +80,21 @@ export default function Privacidad() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">7. Cookies y Rastreo</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">7. Cookies y Rastreo</h2>
           <p>
             Este sitio utiliza Google Analytics y WhatsApp para análisis y comunicación. No utilizamos cookies de seguimiento intrusivas. Usted puede desactivar cookies en su navegador.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">8. Cambios en Esta Política</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">8. Cambios en Esta Política</h2>
           <p>
             Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento. Los cambios se publicarán en esta página.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-serif font-bold text-ink mb-4">9. Contacto</h2>
+          <h2 className="text-2xl font-display font-bold text-ink mb-4">9. Contacto</h2>
           <p>
             Para consultas sobre privacidad: <strong>alathrop@abogapymes.cl</strong>
           </p>

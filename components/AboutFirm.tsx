@@ -23,7 +23,7 @@ export default function AboutFirm() {
         <p className="label-badge text-azure-bright mb-8">Sobre la Firma</p>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-12">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-12">
           Vas a hablar conmigo, no con un asistente.
         </h2>
 
@@ -67,7 +67,7 @@ export default function AboutFirm() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/20 rounded overflow-hidden">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white/5 p-6 md:p-8 border-r border-white/10 last:border-r-0">
-              <h3 className="text-lg font-serif font-bold text-white mb-3">
+              <h3 className="text-lg font-display font-bold text-white mb-3">
                 {feature.label}
               </h3>
               <p className="text-white/70">

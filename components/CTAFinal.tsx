@@ -22,7 +22,7 @@ export default function CTAFinal() {
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
           Revisemos tu caso antes de que alguien más lo haga por ti.
         </h2>
 
@@ -42,7 +42,7 @@ export default function CTAFinal() {
                 (window as any).fbq('track', 'Lead');
               }
             }}
-            className="inline-flex items-center gap-2 px-8 md:px-12 py-4 md:py-5 bg-white text-ink rounded-lg font-semibold text-base md:text-lg transition-all duration-200 hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-8 md:px-12 py-4 md:py-5 bg-white text-ink rounded-[8px] font-semibold text-base md:text-lg transition-all duration-200 hover:-translate-y-1"
             style={{ boxShadow: '0 12px 32px rgba(255,255,255,0.25)' }}
           >
             Hablar por WhatsApp

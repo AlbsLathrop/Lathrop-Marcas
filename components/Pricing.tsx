@@ -16,7 +16,7 @@ export default function Pricing() {
           <p className="font-mono text-xs font-medium text-azure-bright uppercase tracking-widest">
             Los planes
           </p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">
             Claridad total antes de empezar.
           </h2>
           <p className="text-lg leading-relaxed text-white/70 max-w-56ch">
@@ -27,11 +27,11 @@ export default function Pricing() {
         {/* 3 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Card 1: Informe Marcario */}
-          <div className="bg-white/10 border border-white/20 rounded-lg p-8 flex flex-col shadow-sm">
+          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col shadow-sm">
             <div className="mb-6">
               <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mb-2">Punto de partida</p>
-              <h3 className="text-xl font-serif font-bold text-white mb-4">Informe Marcario</h3>
-              <p className="text-2xl font-serif font-bold leading-tight text-azure-bright mb-2">Saber antes de invertir.</p>
+              <h3 className="text-xl font-display font-bold text-white mb-4">Informe Marcario</h3>
+              <p className="text-2xl font-display font-bold leading-tight text-azure-bright mb-2">Saber antes de invertir.</p>
               <p className="text-sm text-white/70 mb-4">Entrega en 3–5 días hábiles · Se acredita al contratar el servicio completo.</p>
               <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-white">Ideal para</b><br />Evaluar el riesgo antes de invertir en el proceso completo.</p>
             </div>
@@ -61,13 +61,13 @@ export default function Pricing() {
           </div>
 
           {/* Card 2: Registro (Featured) */}
-          <div className="bg-white/10 border-2 border-brass rounded-lg p-8 flex flex-col relative md:scale-105 md:z-10 shadow-lg" style={{ overflow: 'visible' }}>
-            <div className="absolute text-xs font-mono font-bold uppercase tracking-widest bg-brass text-ink rounded left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0" style={{ top: '-12px', padding: '5px 12px', borderRadius: '4px' }}>
+          <div className="bg-white/10 border-2 border-brass rounded-[8px] p-8 flex flex-col relative md:scale-105 md:z-10 shadow-lg" style={{ overflow: 'visible' }}>
+            <div className="absolute text-xs font-mono font-bold uppercase tracking-widest bg-azure text-white rounded left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0" style={{ top: '-12px', padding: '5px 12px', borderRadius: '4px' }}>
               Más solicitado
             </div>
             <div className="mb-6 pt-4">
-              <h3 className="text-xl font-serif font-bold text-white mb-4">Registro de Marca</h3>
-              <p className="text-2xl font-serif font-bold leading-tight text-brass mb-2">De la búsqueda al título.</p>
+              <h3 className="text-xl font-display font-bold text-white mb-4">Registro de Marca</h3>
+              <p className="text-2xl font-display font-bold leading-tight text-brass mb-2">De la búsqueda al título.</p>
               <p className="text-sm text-white/70 mb-4">Alcance y clases definidos según tu modelo de negocio.</p>
               <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-white">Ideal para</b><br />Negocios que ya operan con clientes y nombre propio.</p>
             </div>
@@ -93,17 +93,17 @@ export default function Pricing() {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
-            }} className="w-full py-2.5 bg-brass text-ink text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all font-bold">
+            }} className="w-full py-2.5 bg-azure text-white text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all font-bold">
               Iniciar el proceso →
             </a>
           </div>
 
           {/* Card 3: Protección Integral */}
-          <div className="bg-white/10 border border-white/20 rounded-lg p-8 flex flex-col shadow-sm">
+          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col shadow-sm">
             <div className="mb-6">
               <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mb-2">Recomendado</p>
-              <h3 className="text-xl font-serif font-bold text-white mb-4">Protección Integral</h3>
-              <p className="text-2xl font-serif font-bold leading-tight text-azure-bright mb-2">Gestión y defensa continua.</p>
+              <h3 className="text-xl font-display font-bold text-white mb-4">Protección Integral</h3>
+              <p className="text-2xl font-display font-bold leading-tight text-azure-bright mb-2">Gestión y defensa continua.</p>
               <p className="text-sm text-white/70 mb-4">A la medida de tu portafolio de marcas.</p>
               <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-white">Ideal para</b><br />Marcas con varias líneas, sucursales o planes de expansión.</p>
             </div>

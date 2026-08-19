@@ -427,3 +427,35 @@
   max-width: 320px;
   margin-left: auto;
 }
+
+/* Scroll animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-up.visible {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    opacity: 1;
+    animation: none;
+  }
+
+  .fade-in-up.visible {
+    animation: none;
+  }
+}

@@ -7,7 +7,7 @@ export default function Hero() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20registrar%20mi%20marca.`
 
   return (
-    <section className="bg-bone relative overflow-hidden" style={{ padding: 'clamp(24px, 5vw, 56px) 0 clamp(40px, 8vw, 100px)' }}>
+    <section className="bg-white relative overflow-hidden" style={{ padding: 'clamp(24px, 5vw, 56px) 0 clamp(40px, 8vw, 100px)' }}>
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'start', position: 'relative' }}>
           {/* Left Column */}
@@ -75,7 +75,7 @@ export default function Hero() {
                     (window as any).fbq('track', 'Lead');
                   }
                 }}
-                className="inline-flex items-center gap-1 px-7 md:px-8 py-3.5 md:py-4 bg-ink text-white rounded-lg font-medium text-base md:text-lg hover:bg-azure-dark transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                className="inline-flex items-center gap-1 px-7 md:px-8 py-3.5 md:py-4 bg-ink text-white rounded-[8px] font-medium text-base md:text-lg hover:bg-azure-dark transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ boxShadow: '0 8px 24px rgba(10,22,40,0.25)' }}
               >
                 Hablar por WhatsApp
@@ -87,14 +87,14 @@ export default function Hero() {
             </div>
 
             {/* Micro Stats */}
-            <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-8 pt-4 md:pt-8 border-t border-bone-line">
+            <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-8 pt-4 md:pt-8 border-t border-slate-200">
               <div className="space-y-1">
-                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">4.8/5</p>
+                <p className="text-2xl md:text-3xl font-display font-bold text-ink">4.8/5</p>
                 <p className="font-mono text-xs text-graphite">Google Reviews</p>
               </div>
-              <div className="w-px h-8 bg-bone-line hidden sm:block"></div>
+              <div className="w-px h-8 bg-white-line hidden sm:block"></div>
               <div className="space-y-1">
-                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">24h</p>
+                <p className="text-2xl md:text-3xl font-display font-bold text-ink">24h</p>
                 <p className="font-mono text-xs text-graphite">Respuesta</p>
               </div>
             </div>

@@ -31,7 +31,7 @@ export default function WrittenCases() {
   return (
     <div className="cases grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {cases.map((caseItem, idx) => (
-        <div key={idx} className="case bg-white border border-bone-line rounded-lg p-8 md:p-7 relative overflow-hidden transition-all duration-300 flex flex-col" style={{
+        <div key={idx} className="case bg-white border border-slate-200 rounded-[8px] p-8 md:p-7 relative overflow-hidden transition-all duration-300 flex flex-col" style={{
           background: '#fff',
           borderRadius: '8px',
           padding: '30px 28px',

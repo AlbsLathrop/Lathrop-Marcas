@@ -7,14 +7,14 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="bg-bone py-12 md:py-28">
+    <section id="faq" className="bg-white py-12 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {/* Left Column - Sticky */}
           <div className="lg:sticky lg:top-24 lg:self-start h-fit space-y-8">
             <div className="space-y-4">
               <p className="label-badge">Preguntas Frecuentes</p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-ink leading-tight">
                 Preguntas frecuentes sobre el registro de marcas
               </h2>
             </div>
@@ -24,8 +24,8 @@ export default function FAQ() {
             </p>
 
             {/* Contact Block */}
-            <div className="pt-8 border-t border-bone-line space-y-4">
-              <h3 className="text-lg font-serif font-bold text-ink">
+            <div className="pt-8 border-t border-slate-200 space-y-4">
+              <h3 className="text-lg font-display font-bold text-ink">
                 ¿Tu duda no está acá?
               </h3>
               <p className="text-sm text-graphite leading-relaxed">
@@ -40,7 +40,7 @@ export default function FAQ() {
                     (window as any).fbq('track', 'Lead');
                   }
                 }}
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-ink text-white rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-ink text-white rounded-[8px] font-medium text-sm hover:bg-opacity-90 transition-all"
               >
                 Hablar por WhatsApp →
               </a>
@@ -52,7 +52,7 @@ export default function FAQ() {
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg overflow-hidden transition-colors duration-200"
+                className="border border-gray-200 rounded-[8px] overflow-hidden transition-colors duration-200"
                 style={{ borderColor: openIndex === index ? 'rgba(59,130,246,0.3)' : 'rgb(229,231,235)' }}
               >
                 <button

@@ -26,7 +26,7 @@ export default function Reviews() {
         {/* Header */}
         <div className="space-y-4 mb-12">
           <p className="font-mono text-xs font-medium text-brass uppercase tracking-widest">Reseñas</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">
             Lo que dicen quienes ya registraron.
           </h2>
         </div>
@@ -34,7 +34,7 @@ export default function Reviews() {
         {/* Rating Summary - Reduced size, horizontal layout */}
         <div className="flex items-center gap-4 mb-16">
           <div className="flex items-center gap-2">
-            <span className="text-2xl md:text-3xl font-serif font-bold text-white">4.8/5</span>
+            <span className="text-2xl md:text-3xl font-display font-bold text-white">4.8/5</span>
             <span className="text-brass text-lg">★★★★★</span>
           </div>
           <span className="font-sans text-sm text-white/70">en Google</span>
@@ -43,7 +43,7 @@ export default function Reviews() {
         {/* Reviews Grid — Card Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {reviews.map((review, idx) => (
-            <div key={idx} className="flex flex-col p-6 md:p-8 rounded-lg" style={{
+            <div key={idx} className="flex flex-col p-6 md:p-8 rounded-[8px]" style={{
               background: 'rgba(255, 255, 255, 0.05)',
               border: '1px solid rgba(198, 161, 91, 0.2)',
             }}>
@@ -76,7 +76,7 @@ export default function Reviews() {
             href="https://maps.app.goo.gl/5JEzPc6exAVvHPUTA"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-brass text-brass font-medium rounded-lg hover:bg-brass hover:text-ink transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-brass text-brass font-medium rounded-[8px] hover:bg-brass hover:text-ink transition-all"
           >
             Ver todas las opiniones en Google →
           </a>
