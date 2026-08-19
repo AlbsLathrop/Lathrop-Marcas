@@ -39,11 +39,11 @@ export default function AboutFirm() {
             </p>
 
             {/* Blockquote */}
-            <div className="border-l-4 border-azure pl-6 py-4">
+            <div className="border-t border-b border-azure-bright/30 py-6">
               <p className="italic text-lg md:text-xl leading-relaxed text-white/90">
                 «Registrar una marca sin estrategia de clases es como firmar un contrato sin leerlo.»
               </p>
-              <p className="text-azure font-semibold mt-4 text-sm uppercase tracking-widest">
+              <p className="text-azure-bright font-semibold mt-4 text-sm uppercase tracking-widest">
                 — Alberto Lathrop
               </p>
             </div>
