@@ -62,7 +62,7 @@ export default function Risk() {
     },
     {
       title: 'Tu nombre está en la fachada',
-      description: 'Señalética, uniformes, boletas, contratos. Cambiarlo no es editar una web.',
+      description: 'Señalética, uniformes, boletas, contratos. Y tendrás que cambiar tu Instagram y tu web, perdiendo todo lo que construiste ahí.',
       icon: (
         <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 34V8L20 2L30 8V34Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -114,9 +114,9 @@ export default function Risk() {
   ];
 
   const RiskCard = ({ risk }: { risk: any }) => (
-    <div className="p-6 md:p-8 rounded-[8px] bg-gray-100 border border-blue-200 flex flex-col h-full hover:shadow-sm transition-shadow">
+    <div className="p-6 md:p-8 rounded-[8px] bg-gray-100 border border-slate-200 flex flex-col h-full card-hover">
       {/* Icon */}
-      <div className="mb-4">{risk.icon}</div>
+      <div className="mb-4 text-azure">{risk.icon}</div>
 
       {/* Title */}
       <h3 className="text-lg font-display font-bold text-ink mb-2 leading-tight">
@@ -184,30 +184,29 @@ export default function Risk() {
           </div>
         </div>
 
-        {/* Block B — Two columns with headers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12 md:mb-16">
-          {/* Left Column — Services */}
-          <div>
-            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
+        {/* Block B — Two columns with headers and aligned rows */}
+        <div className="mb-12 md:mb-16">
+          {/* Badges row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-6">
+            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest">
               Si ofreces servicios
             </div>
-            <div className="space-y-4 md:space-y-6">
-              {blockBServices.map((risk, index) => (
-                <RiskCard key={index} risk={risk} />
-              ))}
+            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest">
+              Si vendes productos
             </div>
           </div>
 
-          {/* Right Column — Products */}
-          <div>
-            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
-              Si vendes productos
-            </div>
-            <div className="space-y-4 md:space-y-6">
-              {blockBProducts.map((risk, index) => (
-                <RiskCard key={index} risk={risk} />
-              ))}
-            </div>
+          {/* Cards grid - 2 columns, auto rows */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 auto-rows-fr">
+            {/* Services cards */}
+            {blockBServices.map((risk, index) => (
+              <RiskCard key={`services-${index}`} risk={risk} />
+            ))}
+
+            {/* Products cards */}
+            {blockBProducts.map((risk, index) => (
+              <RiskCard key={`products-${index}`} risk={risk} />
+            ))}
           </div>
         </div>
 

@@ -27,7 +27,7 @@ export default function Pricing() {
         {/* 3 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Card 1: Informe Marcario */}
-          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col shadow-sm">
+          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col card-hover">
             <div className="mb-6">
               <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mb-2">Punto de partida</p>
               <h3 className="text-xl font-display font-bold text-white mb-4">Informe Marcario</h3>
@@ -93,13 +93,13 @@ export default function Pricing() {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
-            }} className="w-full py-2.5 bg-azure text-white text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all font-bold">
+            }} className="w-full py-2.5 bg-azure text-white btn-primary-hover text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all font-bold">
               Iniciar el proceso →
             </a>
           </div>
 
           {/* Card 3: Protección Integral */}
-          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col shadow-sm">
+          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col card-hover">
             <div className="mb-6">
               <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mb-2">Recomendado</p>
               <h3 className="text-xl font-display font-bold text-white mb-4">Protección Integral</h3>

@@ -110,7 +110,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           onChange={handleChange}
           required
           placeholder="Tu nombre"
-          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field"
         />
       </div>
 
@@ -127,7 +127,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           onChange={handleChange}
           required
           placeholder="Nombre de tu marca"
-          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field"
         />
       </div>
 
@@ -143,7 +143,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           value={formData.rubro}
           onChange={handleChange}
           placeholder="Ej: ecommerce, servicios, etc."
-          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field"
         />
       </div>
 
@@ -192,7 +192,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
             value={formData.telefono}
             onChange={handleChange}
             placeholder="+56 9 1234 5678"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field"
           />
         </div>
 
@@ -208,7 +208,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
             value={formData.email}
             onChange={handleChange}
             placeholder="tu@email.com"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field"
           />
         </div>
       </div>
