@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="bg-bone relative overflow-hidden" style={{ padding: '56px 0 100px' }}>
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ display: 'grid', gridTemplateColumns: '1.15fr 0.85fr', gap: '64px', alignItems: 'center', position: 'relative' }}>
+        <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'center', position: 'relative' }}>
           {/* Left Column */}
           <div className="space-y-6 md:space-y-8">
             {/* Badge */}
@@ -81,17 +81,17 @@ export default function Hero() {
             </div>
 
             {/* Micro Stats */}
-            <div className="flex items-center justify-start gap-8 pt-8 border-t border-bone-line">
+            <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-8 pt-8 border-t border-bone-line">
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-serif font-bold text-ink">+250</p>
                 <p className="font-mono text-xs text-graphite">Activos gestionados</p>
               </div>
-              <div className="w-px h-8 bg-bone-line"></div>
+              <div className="w-px h-8 bg-bone-line hidden sm:block"></div>
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-serif font-bold text-ink">4.8/5</p>
                 <p className="font-mono text-xs text-graphite">Google Reviews</p>
               </div>
-              <div className="w-px h-8 bg-bone-line"></div>
+              <div className="w-px h-8 bg-bone-line hidden sm:block"></div>
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-serif font-bold text-ink">24h</p>
                 <p className="font-mono text-xs text-graphite">Respuesta</p>

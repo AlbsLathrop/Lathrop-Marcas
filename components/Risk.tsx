@@ -186,7 +186,7 @@ export default function Risk() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column — Services */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-6" style={{ color: '#5B9BD1' }}>
+            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-6" style={{ color: '#5B9BD1' }}>
               SI OFRECES SERVICIOS
             </h3>
             <div className="space-y-6">
@@ -198,7 +198,7 @@ export default function Risk() {
 
           {/* Right Column — Products */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-6" style={{ color: '#C6A15B' }}>
+            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-6" style={{ color: '#C6A15B' }}>
               SI VENDES PRODUCTOS
             </h3>
             <div className="space-y-6">

@@ -104,7 +104,7 @@ export default function FAQ() {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="label-badge">Preguntas Frecuentes</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
                 Preguntas frecuentes sobre el registro de marcas
               </h2>
             </div>

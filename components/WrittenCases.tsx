@@ -61,13 +61,13 @@ export default function WrittenCases() {
             className="case-tag"
             style={{
               fontFamily: 'JetBrains Mono, monospace',
-              fontSize: '9px',
+              fontSize: '12px',
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
               color: '#2D5A8C',
               border: '1px solid #E8E4DB',
               borderRadius: '4px',
-              padding: '3px 9px',
+              padding: '4px 10px',
               display: 'inline-block',
               marginBottom: '16px',
             }}

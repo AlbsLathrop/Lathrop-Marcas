@@ -403,13 +403,20 @@
   }
 }
 
-/* Hero Grid Alignment - Desktop */
+/* Hero Grid Alignment - Mobile First */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 64px;
+  grid-template-columns: 1fr;
+  gap: 32px;
   align-items: center;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+  }
 }
 
 .portrait-frame {
