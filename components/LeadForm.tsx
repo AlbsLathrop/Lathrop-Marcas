@@ -96,10 +96,10 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3 max-w-md">
+    <form onSubmit={handleSubmit} className={`space-y-3 ${variant === 'dark' ? 'max-w-xl md:max-w-2xl' : 'max-w-md'}`}>
       {/* Nombre */}
       <div>
-        <label htmlFor="nombre" className="block text-sm font-medium text-graphite mb-1">
+        <label htmlFor="nombre" className={`block text-sm font-medium mb-1 ${variant === 'dark' ? 'text-white' : 'text-graphite'}`}>
           Nombre *
         </label>
         <input
@@ -116,7 +116,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
 
       {/* Marca */}
       <div>
-        <label htmlFor="marca" className="block text-sm font-medium text-graphite mb-1">
+        <label htmlFor="marca" className={`block text-sm font-medium mb-1 ${variant === 'dark' ? 'text-white' : 'text-graphite'}`}>
           Marca *
         </label>
         <input
@@ -133,7 +133,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
 
       {/* Rubro */}
       <div>
-        <label htmlFor="rubro" className="block text-sm font-medium text-graphite mb-1">
+        <label htmlFor="rubro" className={`block text-sm font-medium mb-1 ${variant === 'dark' ? 'text-white' : 'text-graphite'}`}>
           Rubro
         </label>
         <input
@@ -149,7 +149,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
 
       {/* ¿Ya vendes? */}
       <div>
-        <label className="block text-sm font-medium text-graphite mb-2">
+        <label className={`block text-sm font-medium mb-2 ${variant === 'dark' ? 'text-white' : 'text-graphite'}`}>
           ¿Ya vendes?
         </label>
         <div className="flex gap-3">
@@ -178,36 +178,39 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         </div>
       </div>
 
-      {/* Teléfono */}
-      <div>
-        <label htmlFor="telefono" className="block text-sm font-medium text-graphite mb-1">
-          Teléfono
-        </label>
-        <input
-          type="tel"
-          id="telefono"
-          name="telefono"
-          value={formData.telefono}
-          onChange={handleChange}
-          placeholder="+56 9 1234 5678"
-          className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
-        />
-      </div>
+      {/* Teléfono y Email - Lado a lado en desktop */}
+      <div className="flex flex-col md:flex-row gap-3">
+        {/* Teléfono */}
+        <div className="flex-1">
+          <label htmlFor="telefono" className={`block text-sm font-medium mb-1 ${variant === 'dark' ? 'text-white' : 'text-graphite'}`}>
+            Teléfono
+          </label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            value={formData.telefono}
+            onChange={handleChange}
+            placeholder="+56 9 1234 5678"
+            className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          />
+        </div>
 
-      {/* Email */}
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-graphite mb-1">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="tu@email.com"
-          className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
-        />
+        {/* Email */}
+        <div className="flex-1">
+          <label htmlFor="email" className={`block text-sm font-medium mb-1 ${variant === 'dark' ? 'text-white' : 'text-graphite'}`}>
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="tu@email.com"
+            className="w-full px-4 py-2.5 border border-bone-line rounded-lg bg-white text-ink placeholder-graphite/50 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent transition-all"
+          />
+        </div>
       </div>
 
       {/* Submit Button */}
@@ -215,7 +218,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-2.5 rounded-lg font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-opacity-90"
+          className="w-full px-4 py-3 rounded-lg font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-gray-100"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
@@ -223,7 +226,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-2.5 rounded-lg font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90"
+          className="w-full px-4 py-3 rounded-lg font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
