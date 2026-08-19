@@ -5,7 +5,6 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppLeadTracker from '@/components/WhatsAppLeadTracker'
-import FAQSchema from '@/components/FAQSchema'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -82,9 +81,6 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-        {/* FAQ Schema - Server-side rendered for indexability */}
-        <FAQSchema />
 
         {/* Meta Pixel */}
         <Script

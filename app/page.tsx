@@ -15,10 +15,12 @@ import Pricing from '@/components/Pricing'
 import WhyUs from '@/components/WhyUs'
 import FAQ from '@/components/FAQ'
 import CTAFinal from '@/components/CTAFinal'
+import FAQSchemaClient from '@/components/FAQSchemaClient'
 
 export default function Home() {
   return (
     <>
+      <FAQSchemaClient />
       <Hero />
       <ClientLogos />
       <AboutFirm />
