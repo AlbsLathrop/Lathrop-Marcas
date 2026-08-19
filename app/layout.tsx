@@ -105,6 +105,26 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
+
+        {/* Organization Schema */}
+        <Script
+          id="org-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LegalService',
+              name: 'Lathrop Marcas',
+              url: 'https://lathropmarcas.cl',
+              areaServed: {
+                '@type': 'Place',
+                name: 'Chile',
+              },
+              serviceType: 'Asesoría en Propiedad Industrial',
+              description: 'Asesoría técnica en registro de marcas ante el INAPI. Para negocios de servicios y productos que ya operan y necesitan proteger su nombre con criterio técnico.',
+            }),
+          }}
+        />
       </head>
       <body>
         <Navbar />

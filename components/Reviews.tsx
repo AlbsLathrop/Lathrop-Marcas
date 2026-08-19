@@ -43,7 +43,7 @@ export default function Reviews() {
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {reviews.map((review, idx) => (
-            <div key={idx} className="bg-white border border-solid border-bone-line rounded-lg p-6">
+            <div key={idx} className="bg-white border border-solid border-bone-line rounded-lg p-6 flex flex-col h-full">
               {/* Stars */}
               <div className="text-gold text-base tracking-wider mb-4">
                 {'★'.repeat(review.stars)}

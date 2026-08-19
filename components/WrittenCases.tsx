@@ -6,8 +6,8 @@ export default function WrittenCases() {
       tag: 'Apelación ante el TDPI',
       name: 'Gonzalo Correa · Ruta Outdoor',
       description:
-        'Llegó después de que otra abogada le cobrara caro, lo dejara sin seguimiento a los tres meses y el INAPI rechazara su marca por similitud con otra. Tomé el caso, apelé ante el TDPI y di vuelta el fallo.',
-      result: 'Su marca quedó registrada.',
+        'Llegó después de que otra abogada le cobrara barato, lo dejara sin seguimiento a los tres meses y el INAPI rechazara su marca por similitud con otra. Tomé el caso, apelé ante el TDPI y di vuelta el fallo.',
+      result: 'Su marca quedó registrada',
       resultHighlight: 'registrada',
     },
     {
@@ -31,7 +31,7 @@ export default function WrittenCases() {
   return (
     <div className="cases grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {cases.map((caseItem, idx) => (
-        <div key={idx} className="case bg-white border border-bone-line rounded-lg p-8 md:p-7 relative overflow-hidden transition-all duration-300" style={{
+        <div key={idx} className="case bg-white border border-bone-line rounded-lg p-8 md:p-7 relative overflow-hidden transition-all duration-300 flex flex-col" style={{
           background: '#fff',
           borderRadius: '8px',
           padding: '30px 28px',
@@ -94,6 +94,7 @@ export default function WrittenCases() {
               fontSize: '0.95rem',
               color: '#3A4553',
               marginBottom: '20px',
+              flex: 1,
             }}
           >
             {caseItem.description}
@@ -111,6 +112,7 @@ export default function WrittenCases() {
               color: '#0B1A2F',
               borderTop: '1px solid #E8E4DB',
               paddingTop: '16px',
+              flexWrap: 'wrap',
             }}
           >
             <span

@@ -1,44 +1,100 @@
 "use client";
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqs = [
     {
-      question: '¿Cuánto demora un registro de marca en Chile ante el INAPI?',
+      question: '¿Cuánto cuesta registrar una marca en Chile?',
       answer:
-        'El plazo depende de la complejidad del expediente, la clase y si aparecen antecedentes u observaciones. No hay un número fijo: lo que sí controlamos es la calidad de la solicitud y la respuesta a cada requerimiento para no alargar etapas evitables. En el informe marcario o al iniciar el proceso te explicamos el escenario real de tu signo.',
+        'Hay dos costos distintos y conviene no mezclarlos. Las tasas oficiales del INAPI son fijas y las cobra el Estado: 1 UTM por clase al presentar la solicitud y 2 UTM por clase cuando la marca se concede. Aparte van los honorarios del abogado, que dependen de la complejidad del caso. En la propuesta te llegan separados.',
     },
     {
-      question:
-        '¿Por qué es una decisión técnica y no un trámite administrativo?',
+      question: '¿Cuánto demora registrar una marca en el INAPI?',
       answer:
-        'Clases de Niza, redacción del signo, alcance del titular y estrategia frente a antecedentes definen qué tan útil es tu título en la práctica. Una solicitud mal planteada puede dejarte expuesto en canales digitales, contratos o expansión. Eso es criterio de propiedad industrial, no rellenar formularios.',
+        'Depende del expediente. Si nadie se opone y el INAPI no formula observaciones, es el escenario más rápido. Una oposición o una observación de fondo agrega meses. Es la razón por la que la búsqueda previa importa: los plazos se alargan por conflictos que se podían anticipar.',
     },
     {
-      question: '¿Qué pasa si ya existe una marca parecida a la mía?',
+      question: '¿Cómo sé si una marca ya está registrada?',
       answer:
-        'Primero, mapa de riesgo con búsqueda profesional y criterio de confundibilidad. Después: oposición, negociación de convivencia o ajuste de estrategia según el caso. El dueño de negocio necesita una recomendación clara, no una lista de trámites posibles.',
+        'El INAPI tiene una búsqueda pública, pero muestra coincidencias exactas y deja fuera lo que más problema causa: nombres parecidos, marcas que sin ser idénticas son confundibles, y registros en clases relacionadas. Ese análisis es el que determina si vale la pena presentar.',
     },
     {
-      question:
-        '¿Alcanza con registrar solo en Chile o conviene el extranjero?',
+      question: '¿Puedo registrar el nombre que ya estoy usando?',
       answer:
-        'El registro en Chile protege el territorio nacional. Si vendes online, licencias o expansión regional están en el plan, conviene alinear Chile con Madrid o vías directas por país. La decisión es de negocio; yo la traduzco a plan de PI.',
+        'En general sí, siempre que sea distintivo y que nadie lo haya inscrito antes en tu rubro. Usarlo hace años no te da prioridad frente a quien lo inscriba primero. Si ya lo usas y no está registrado, es más urgente, no menos.',
     },
     {
-      question: '¿Cómo impacta la marca registrada en la valuación del negocio?',
+      question: '¿Qué pasa si alguien registra mi nombre antes que yo?',
       answer:
-        'Un activo intangible con título vigente ordena balances, due diligence e inversiones. En venta, fusión o ronda, la marca registrada reduce fricción comercial y sube confianza. Sin registro, el valor queda en narrativa, no en documento.',
+        'Puede exigirte que dejes de usarlo, aunque lleves años operando. Hay caminos para defenderse según el caso, pero todos son más caros y más lentos que haber registrado a tiempo.',
     },
     {
-      question: '¿Solo registro inicial o también renovaciones y cambios?',
+      question: '¿Se puede registrar una marca sin abogado?',
       answer:
-        'Ciclo completo: solicitud, seguimiento, renovaciones (cada diez años en Chile), vigilancia, cesiones y licencias. El acompañamiento es continuo para quien ya factura y no puede permitirse sorpresas en el registro.',
+        'Legalmente sí. El problema no es presentar, es qué presentas: elegir mal las clases, redactar mal la cobertura o no detectar una marca anterior confundible lleva a un rechazo. Y el rechazo no devuelve las tasas pagadas.',
+    },
+    {
+      question: '¿Qué son las clases de Niza y cuántas necesito?',
+      answer:
+        'Es la clasificación internacional que agrupa productos y servicios en 45 categorías. Tu marca queda protegida solo en las clases donde la inscribes. La decisión de cuántas y cuáles es estratégica: pocas te dejan desprotegido, demasiadas encarecen sin agregar cobertura útil.',
+    },
+    {
+      question: '¿Cuánto dura el registro de una marca?',
+      answer:
+        'Diez años desde la concesión, renovables indefinidamente por períodos iguales. La renovación tiene plazo: si se deja vencer, la marca caduca y el nombre queda disponible para que lo tome cualquiera.',
+    },
+    {
+      question: '¿Puedo registrar solo el logo, o conviene también el nombre?',
+      answer:
+        'Son protecciones distintas. El nombre solo (marca denominativa) protege las palabras en cualquier tipografía. El logo (figurativa o mixta) protege esa imagen puntual. Si rediseñas el logo, la protección del nombre sigue; al revés no funciona igual.',
+    },
+    {
+      question: '¿Qué pasa si el INAPI rechaza mi marca?',
+      answer:
+        'Depende del motivo. Si es una observación de forma o de fondo, se contesta dentro de plazo. Si hay rechazo, se puede apelar ante el TDPI. He dado vuelta fallos en esa instancia. Lo que no se puede es dejar pasar los plazos: ahí se acaba el expediente.',
+    },
+    {
+      question: '¿Necesito tener empresa para registrar una marca?',
+      answer:
+        'No. Puede registrar una persona natural con RUT o una empresa. Sí conviene pensar a nombre de quién queda, porque el titular es quien tiene el derecho y cambiarlo después es un trámite aparte.',
+    },
+    {
+      question: '¿Sirve registrar la marca en Chile si vendo al extranjero?',
+      answer:
+        'El registro chileno protege en Chile. Si vendes o planeas vender fuera, hay que mirar los países donde operas, y existen vías que permiten extender la protección desde la solicitud chilena dentro de cierto plazo.',
     },
   ]
+
+  // Generate JSON-LD structured data
+  useEffect(() => {
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    }
+
+    // Add or update the script tag
+    let scriptTag = document.getElementById('faq-schema') as HTMLScriptElement | null
+    if (!scriptTag) {
+      scriptTag = document.createElement('script') as HTMLScriptElement
+      scriptTag.id = 'faq-schema'
+      scriptTag.type = 'application/ld+json'
+      scriptTag.textContent = JSON.stringify(faqSchema)
+      document.head.appendChild(scriptTag)
+    } else {
+      scriptTag.textContent = JSON.stringify(faqSchema)
+    }
+  }, [])
 
   return (
     <section id="faq" className="bg-bone py-20 md:py-28">
@@ -49,14 +105,12 @@ export default function FAQ() {
             <div className="space-y-4">
               <p className="label-badge">Preguntas Frecuentes</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
-                Criterio senior antes de firmar nada.
+                Preguntas frecuentes sobre el registro de marcas
               </h2>
             </div>
 
             <p className="section-subtitle">
-              Si tu caso no encaja aquí, te lo digo. Las primeras conversaciones
-              están sujetas a calificación: trabajo con dueños de negocio que
-              ya operan y necesitan orden en su propiedad industrial.
+              Las dudas que más me llegan, respondidas sin vueltas.
             </p>
           </div>
 

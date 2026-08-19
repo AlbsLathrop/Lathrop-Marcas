@@ -20,8 +20,8 @@ export default function Navbar() {
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-bone/80 backdrop-blur-lg border-b border-bone-line'
-          : 'bg-bone border-b border-transparent'
+          ? 'bg-white/95 backdrop-blur-lg border-b border-bone-line'
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">

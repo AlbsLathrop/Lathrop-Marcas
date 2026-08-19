@@ -3,14 +3,15 @@
 import { useEffect, useRef } from 'react';
 
 export default function Risk() {
-  const riskRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const blockARefs = useRef<(HTMLDivElement | null)[]>([]);
+  const blockBRefsLeft = useRef<(HTMLDivElement | null)[]>([]);
+  const blockBRefsRight = useRef<(HTMLDivElement | null)[]>([]);
 
-  const risks = [
+  const blockA = [
     {
-      title: 'Pérdida del nombre comercial',
+      title: 'La marca es de quien la inscribe',
       description:
-        'Un tercero puede registrar tu nombre antes que tú y forzarte a rehacerlo todo: marca, web, redes y el capital comercial que construiste durante años. En Chile la marca es de quien la inscribe, no de quien la usa.',
-      tag: null,
+        'No la protege el uso, ni los años, ni tener el nombre en el SII. En Chile la protege el registro, y nada más.',
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
           <path pathLength="1" d="M13 36 V6" />
@@ -20,53 +21,9 @@ export default function Risk() {
       ),
     },
     {
-      title: 'La reputación no se transfiere',
+      title: 'El que te copia está cerca',
       description:
-        'Años de reseñas en Google, recomendaciones y boca a boca están atados a un nombre. Si tienes que cambiarlo, esa ficha empieza de cero: mismo equipo, misma calidad, cero estrellas. Para un negocio que vive de que lo recomienden, ese es el activo más caro de reconstruir.',
-      tag: 'Servicios',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M8 20 Q8 12 16 12 Q24 12 24 20" />
-          <path pathLength="1" d="M6 28 Q6 18 20 18 Q34 18 34 28" />
-          <circle pathLength="1" cx="20" cy="8" r="2" />
-        </svg>
-      ),
-    },
-    {
-      title: 'El nombre también está en el mundo físico',
-      description:
-        'Fachada, señalética, uniformes, boletas, contratos y convenios. Cambiar de nombre no es actualizar un sitio web: es rehacer un local y avisarle a cada cliente que sigues siendo tú. El costo crece con cada mes que sigues operando.',
-      tag: 'Local',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M10 34 V8 L20 2 L30 8 V34 Z" />
-          <path pathLength="1" d="M20 2 V34" />
-          <path pathLength="1" d="M14 16 H26" />
-          <path pathLength="1" d="M14 24 H26" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Canales de venta bloqueados',
-      description:
-        'Mercado Libre Tienda Oficial, distribuidores y cadenas de retail exigen título de marca vigente o al menos solicitud en trámite. Sin eso, cada canal nuevo tiene un freno legal antes de empezar a vender.',
-      tag: 'Productos',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M5 20 H17" />
-          <path pathLength="1" d="M17 20 L28 10" />
-          <path pathLength="1" d="M17 20 H29" />
-          <path pathLength="1" d="M17 20 L28 30" />
-          <circle pathLength="1" cx="17" cy="20" r="2.3" />
-          <path pathLength="1" d="M34 6 V34" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Competencia directa con nombre parecido',
-      description:
-        'El riesgo real no es un tercero anónimo: es alguien de tu mismo rubro que abre cerca con un nombre casi igual y te desvía clientes que creían estar contratándote a ti. Con la marca registrada eso se detiene. Sin ella, no.',
-      tag: null,
+        'No es un tercero anónimo en internet: es alguien de tu rubro que abre con un nombre casi igual y te desvía clientes que creían estar contratándote a ti.',
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
           <circle pathLength="1" cx="14" cy="14" r="8" />
@@ -79,7 +36,67 @@ export default function Risk() {
     },
   ];
 
-  useEffect(() => {
+  const blockBServices = [
+    {
+      title: 'Las reseñas no se mudan',
+      description:
+        'Años de estrellas en Google atadas a un nombre. Si tienes que cambiarlo, esa ficha parte de cero: mismo equipo, misma calidad, sin reputación.',
+      svg: (
+        <svg className="risk-ico" viewBox="0 0 40 40">
+          <path pathLength="1" d="M8 20 Q8 12 16 12 Q24 12 24 20" />
+          <path pathLength="1" d="M6 28 Q6 18 20 18 Q34 18 34 28" />
+          <circle pathLength="1" cx="20" cy="8" r="2" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Tu nombre está en la fachada',
+      description:
+        'Señalética, uniformes, boletas, contratos y convenios. Cambiarlo no es editar una web: es rehacer un local y avisarle a cada cliente que sigues siendo tú.',
+      svg: (
+        <svg className="risk-ico" viewBox="0 0 40 40">
+          <path pathLength="1" d="M10 34 V8 L20 2 L30 8 V34 Z" />
+          <path pathLength="1" d="M20 2 V34" />
+          <path pathLength="1" d="M14 16 H26" />
+          <path pathLength="1" d="M14 24 H26" />
+        </svg>
+      ),
+    },
+  ];
+
+  const blockBProducts = [
+    {
+      title: 'Mercado Libre te frena',
+      description:
+        'Tienda Oficial exige título de marca vigente o al menos solicitud en trámite. Sin eso, el canal queda bloqueado hasta que resuelvas el registro.',
+      svg: (
+        <svg className="risk-ico" viewBox="0 0 40 40">
+          <path pathLength="1" d="M5 20 H17" />
+          <path pathLength="1" d="M17 20 L28 10" />
+          <path pathLength="1" d="M17 20 H29" />
+          <path pathLength="1" d="M17 20 L28 30" />
+          <circle pathLength="1" cx="17" cy="20" r="2.3" />
+          <path pathLength="1" d="M34 6 V34" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Retail y distribuidores lo piden',
+      description:
+        'Cada cadena y cada distribuidor nuevo pide acreditar la marca. Sin registro, cada canal que abres tiene un freno legal antes de vender el primer producto.',
+      svg: (
+        <svg className="risk-ico" viewBox="0 0 40 40">
+          <path pathLength="1" d="M10 34 L10 8" />
+          <path pathLength="1" d="M30 34 L30 8" />
+          <path pathLength="1" d="M10 14 L30 14" />
+          <path pathLength="1" d="M10 22 L30 22" />
+          <path pathLength="1" d="M10 30 L30 30" />
+        </svg>
+      ),
+    },
+  ];
+
+  const setupObserver = (refs: React.MutableRefObject<(HTMLDivElement | null)[]>) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -90,89 +107,106 @@ export default function Risk() {
       { threshold: 0.2 }
     );
 
-    riskRefs.current.forEach((ref) => {
+    refs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
+    return observer;
+  };
+
+  useEffect(() => {
+    const obs1 = setupObserver(blockARefs);
+    const obs2 = setupObserver(blockBRefsLeft);
+    const obs3 = setupObserver(blockBRefsRight);
+
     return () => {
-      riskRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
+      [obs1, obs2, obs3].forEach((obs) => {
+        obs.disconnect();
       });
     };
   }, []);
+
+  const RiskCard = ({ risk, index, refArray }: { risk: any; index: number; refArray: React.MutableRefObject<(HTMLDivElement | null)[]> }) => (
+    <div
+      ref={(el) => {
+        refArray.current[index] = el;
+      }}
+      className="risk-item p-8 md:p-10 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group flex flex-col h-full"
+      style={{
+        background: 'rgba(255,255,255,0.04)',
+        backdropFilter: 'blur(20px) saturate(180%)',
+        border: '1px solid rgba(255,255,255,0.08)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
+        borderTop: '2px solid rgba(59,130,246,0.4)',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = 'rgba(59,130,246,0.3)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
+      }}
+    >
+      {/* SVG Icon */}
+      <div className="mb-4">{risk.svg}</div>
+
+      {/* Title */}
+      <h3 className="text-xl font-serif font-bold text-white mb-3 leading-tight">
+        {risk.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-base text-gray-200 leading-relaxed flex-grow">
+        {risk.description}
+      </p>
+    </div>
+  );
 
   return (
     <section className="bg-ink text-white py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="space-y-6 mb-12 md:mb-16">
+        <div className="space-y-6 mb-16">
           <p className="label-badge text-azure-bright">El Riesgo de No Actuar</p>
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight">
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed text-white/70">
-            Cada día que operas sin marca registrada es un día en que cualquiera puede inscribir tu nombre y obligarte a dejar de usarlo. No importa cuántos años lleves construyéndolo.
+          <p className="text-lg md:text-xl leading-relaxed text-white/70 max-w-2xl">
+            Da lo mismo cuántos años lleves usándolo. Si no está inscrito, no es tuyo.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {risks.map((risk, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                riskRefs.current[index] = el;
-              }}
-              className="risk-item p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group flex flex-col"
-              style={{
-                background: 'rgba(255,255,255,0.04)',
-                backdropFilter: 'blur(20px) saturate(180%)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
-                borderTop: '2px solid rgba(59,130,246,0.4)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(59,130,246,0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
-              }}
-            >
-              {/* Tag */}
-              {risk.tag && (
-                <div
-                  style={{
-                    fontFamily: 'JetBrains Mono, monospace',
-                    fontSize: '9px',
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    color: '#5B9BD1',
-                    border: '1px solid rgba(255,255,255,0.2)',
-                    borderRadius: '4px',
-                    padding: '3px 9px',
-                    display: 'inline-block',
-                    marginBottom: '12px',
-                    width: 'fit-content',
-                  }}
-                >
-                  {risk.tag}
-                </div>
-              )}
-
-              {/* SVG Icon */}
-              {risk.svg}
-
-              {/* Title */}
-              <h3 className="text-lg font-semibold uppercase tracking-widest mb-3" style={{ fontSize: '13px', color: '#5B9BD1', minHeight: '2.8em', lineHeight: 1.5, display: 'flex', alignItems: 'flex-end' }}>
-                {risk.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-base md:text-lg text-gray-100 leading-relaxed flex-grow">
-                {risk.description}
-              </p>
-            </div>
+        {/* Block A — Two wide cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {blockA.map((risk, index) => (
+            <RiskCard key={index} risk={risk} index={index} refArray={blockARefs} />
           ))}
+        </div>
+
+        {/* Block B — Two columns with headers */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Column — Services */}
+          <div>
+            <h3 className="text-2xl font-serif font-bold mb-6" style={{ color: '#5B9BD1' }}>
+              SI OFRECES SERVICIOS
+            </h3>
+            <div className="space-y-6">
+              {blockBServices.map((risk, index) => (
+                <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsLeft} />
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column — Products */}
+          <div>
+            <h3 className="text-2xl font-serif font-bold mb-6" style={{ color: '#C6A15B' }}>
+              SI VENDES PRODUCTOS
+            </h3>
+            <div className="space-y-6">
+              {blockBProducts.map((risk, index) => (
+                <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsRight} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
