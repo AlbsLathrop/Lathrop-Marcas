@@ -6,8 +6,6 @@ export default function Pricing() {
     informeMarcario: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20solicitar%20un%20informe%20marcario.`,
     registro: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20iniciar%20el%20registro%20de%20mi%20marca.`,
     proteccion: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20una%20propuesta%20de%20protecci%C3%B3n%20integral.`,
-    vigilanciaMensual: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20informaci%C3%B3n%20sobre%20vigilancia%20mensual.`,
-    vigilanciaAnual: `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20informaci%C3%B3n%20sobre%20vigilancia%20anual.`,
   }
 
   return (
@@ -135,65 +133,6 @@ export default function Pricing() {
           </div>
         </div>
 
-        {/* Vigilancia Section */}
-        <div className="bg-white border border-bone-line rounded-lg p-8 md:p-12 mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Left */}
-            <div>
-              <p className="font-mono text-xs text-azure uppercase tracking-widest mb-3">Servicio aparte</p>
-              <h3 className="text-2xl md:text-3xl font-serif font-bold text-ink mb-4">Vigilancia para escalar con la marca limpia.</h3>
-              <p className="text-graphite mb-6">Monitoreo continuo del registro para detectar marcas que puedan afectarte y actuar antes de que sea tarde.</p>
-              <ul className="space-y-2 mb-8">
-                {[
-                  'Alertas si alguien intenta registrar marca parecida',
-                  'Monitoreo continuo en INAPI',
-                  'Defensa administrativa incluida (hasta 3 oposiciones/año)',
-                  'Servicio activo mientras tu suscripción esté vigente'
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-ink">
-                    <span className="text-azure flex-shrink-0 mt-1">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-xs text-graphite">No incluye tasas oficiales ni procesos judiciales.</p>
-            </div>
-
-            {/* Right - Plans */}
-            <div className="flex flex-col gap-4">
-              <div className="border border-bone-line rounded p-4 bg-bone/30">
-                <p className="font-serif font-bold text-lg text-ink mb-1">Plan mensual</p>
-                <p className="text-sm text-graphite">Cancela cuando quieras</p>
-                <a href={whatsappLinks.vigilanciaMensual} target="_blank" rel="noopener noreferrer" onClick={() => {
-                  if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
-                    (window as any).fbq('track', 'Lead');
-                  }
-                }} className="w-full mt-4 py-2.5 border border-bone-line text-ink text-center rounded font-medium text-sm hover:bg-bone transition-all block">
-                  Hablar por WhatsApp →
-                </a>
-              </div>
-              <div className="border-2 border-brass rounded p-4 relative shadow-md" style={{ overflow: 'visible' }}>
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-4 bg-brass text-ink text-xs font-mono font-bold uppercase px-2 py-1 rounded">
-                  Mejor opción
-                </span>
-                <p className="font-serif font-bold text-lg text-ink mb-1 pt-2">Plan anual</p>
-                <p className="text-sm text-graphite">Cobertura continua todo el año</p>
-                <a href={whatsappLinks.vigilanciaAnual} target="_blank" rel="noopener noreferrer" onClick={() => {
-                  if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
-                    (window as any).fbq('track', 'Lead');
-                  }
-                }} className="w-full mt-4 py-2.5 bg-ink text-white text-center rounded font-medium text-sm hover:opacity-90 transition-all block">
-                  Hablar por WhatsApp →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer Note */}
-        <p className="text-center text-xs text-graphite mt-8">
-          Las tasas oficiales de INAPI se detallan en cada propuesta.
-        </p>
       </div>
     </section>
   )

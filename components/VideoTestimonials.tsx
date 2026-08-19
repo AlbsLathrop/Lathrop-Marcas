@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import WrittenCases from './WrittenCases';
 import VideoModal from './VideoModal';
 
 export default function VideoTestimonials() {
@@ -39,24 +38,11 @@ export default function VideoTestimonials() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-16">
-          <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Casos reales</p>
+          <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Testimonios en video</p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
-            Negocios reales. Procesos técnicos reales.
+            Clientes que ya pasaron por esto.
           </h2>
-          <p className="text-lg md:text-xl text-graphite leading-relaxed max-w-2xl text-pretty">
-            No son casos hipotéticos: negocios que ya operaban y necesitaban resolver su marca.
-          </p>
         </div>
-
-        {/* Written Cases */}
-        <div className="mb-12">
-          <WrittenCases />
-        </div>
-
-        {/* Testimonios en video label */}
-        <p className="font-mono text-xs font-medium text-graphite uppercase tracking-widest mb-8">
-          Testimonios en video
-        </p>
 
         {/* Videos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
