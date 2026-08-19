@@ -57,7 +57,7 @@ export default function CTAFinal() {
             ¿Prefieres que te contacte yo? Déjame tus datos:
           </p>
           <div className="flex justify-center">
-            <LeadForm />
+            <LeadForm variant="dark" />
           </div>
         </div>
       </div>

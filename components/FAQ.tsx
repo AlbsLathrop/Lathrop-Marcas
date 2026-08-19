@@ -22,6 +22,29 @@ export default function FAQ() {
             <p className="section-subtitle">
               Las dudas que más me llegan, respondidas sin vueltas.
             </p>
+
+            {/* Contact Block */}
+            <div className="pt-8 border-t border-bone-line space-y-4">
+              <h3 className="text-lg font-serif font-bold text-ink">
+                ¿Tu duda no está acá?
+              </h3>
+              <p className="text-sm text-graphite leading-relaxed">
+                Escríbeme y te respondo yo.
+              </p>
+              <a
+                href="https://wa.me/61402163749?text=Hola%20Alberto%2C%20tengo%20una%20duda%20sobre%20el%20registro%20de%20mi%20marca."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                    (window as any).fbq('track', 'Lead');
+                  }
+                }}
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-ink text-white rounded-lg font-medium text-sm hover:bg-opacity-90 transition-all"
+              >
+                Hablar por WhatsApp →
+              </a>
+            </div>
           </div>
 
           {/* Right Column - Accordion */}

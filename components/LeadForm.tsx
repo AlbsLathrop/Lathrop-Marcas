@@ -11,7 +11,11 @@ interface FormData {
   email: string;
 }
 
-export default function LeadForm() {
+interface LeadFormProps {
+  variant?: 'light' | 'dark';
+}
+
+export default function LeadForm({ variant = 'light' }: LeadFormProps) {
   const [formData, setFormData] = useState<FormData>({
     nombre: '',
     marca: '',
@@ -210,7 +214,11 @@ export default function LeadForm() {
       <button
         type="submit"
         disabled={isLoading || !formData.nombre || !formData.marca}
-        className="w-full px-4 py-2.5 bg-white text-ink rounded-lg font-medium text-sm transition-all hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+        className={`w-full px-4 py-2.5 rounded-lg font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
+          variant === 'dark'
+            ? 'bg-ink text-white hover:bg-opacity-90'
+            : 'bg-white text-ink hover:bg-gray-50'
+        }`}
       >
         {isLoading ? 'Enviando...' : 'Enviar datos'}
       </button>
