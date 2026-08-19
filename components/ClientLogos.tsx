@@ -78,15 +78,18 @@ export default function ClientLogos() {
                     height: '38px',
                     maxWidth: '150px',
                     objectFit: 'contain',
-                    opacity: 0.58,
-                    transition: 'opacity 0.3s ease',
+                    opacity: 0.8,
+                    filter: 'grayscale(100%) brightness(0.7)',
+                    transition: 'opacity 0.3s ease, filter 0.3s ease',
                   }}
                   className="hover:opacity-100"
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLImageElement).style.opacity = '1';
+                    (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(0%) brightness(1)';
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.opacity = '0.58';
+                    (e.currentTarget as HTMLImageElement).style.opacity = '0.8';
+                    (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(100%) brightness(0.7)';
                   }}
                 />
               </div>

@@ -21,42 +21,42 @@ export default function Services() {
   ]
 
   return (
-    <section id="servicios" className="bg-bone py-20 md:py-28">
+    <section id="servicios" className="bg-ink text-white py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-12 md:mb-16">
-          <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Lo que hago</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
+          <p className="font-mono text-xs font-medium text-brass uppercase tracking-widest">Lo que hago</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
             Protección en tres frentes.
           </h2>
-          <p className="text-lg text-graphite max-w-56ch">
+          <p className="text-lg text-white/70 max-w-56ch">
             Cada servicio está diseñado para dueños de negocio que entienden que su marca es una decisión técnica, no un trámite.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-bone-line border border-bone-line rounded overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded overflow-hidden">
           {services.map((service, idx) => (
-            <div key={idx} className="bg-bone p-6 md:p-8 transition-colors hover:bg-white">
+            <div key={idx} className="bg-ink p-6 md:p-8 transition-colors hover:bg-white/5">
               {/* Number + Title */}
-              <p className="font-mono text-xs text-azure font-medium uppercase tracking-widest mb-2">
+              <p className="font-mono text-xs text-brass font-medium uppercase tracking-widest mb-2">
                 {service.number}
               </p>
-              <h3 className="text-lg md:text-xl font-serif font-bold text-ink mb-3">
+              <h3 className="text-lg md:text-xl font-serif font-bold text-white mb-3">
                 {service.title}
               </h3>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-1 mb-4">
                 {service.tags.map((tag, i) => (
-                  <span key={i} className="font-mono text-xs text-azure uppercase tracking-widest border border-bone-line rounded px-2 py-1">
+                  <span key={i} className="font-mono text-xs text-brass uppercase tracking-widest border border-white/20 rounded px-2 py-1">
                     {tag}
                   </span>
                 ))}
               </div>
 
               {/* Description */}
-              <p className="text-sm text-graphite leading-relaxed">
+              <p className="text-sm text-white/70 leading-relaxed">
                 {service.description}
               </p>
             </div>

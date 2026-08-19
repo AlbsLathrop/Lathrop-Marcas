@@ -92,7 +92,7 @@ export default function LeadForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
+    <form onSubmit={handleSubmit} className="space-y-3 max-w-md">
       {/* Nombre */}
       <div>
         <label htmlFor="nombre" className="block text-sm font-medium text-graphite mb-1">
