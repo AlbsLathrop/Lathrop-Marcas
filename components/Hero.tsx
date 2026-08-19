@@ -21,21 +21,30 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="heading-large">
-              Cada día que operas sin registrar tu marca, arriesgas todo lo que construiste.
+              Cada día que operas sin registrar tu marca, arriesgas{' '}
+              <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
+                todo lo que construiste
+                <svg viewBox="0 0 220 10" preserveAspectRatio="none" style={{
+                  position: 'absolute',
+                  bottom: '-2px',
+                  left: 0,
+                  width: '100%',
+                  height: '8px'
+                }}>
+                  <path d="M2 6 C 55 2, 165 2, 218 5" stroke="#2D5A8C" strokeWidth="3.5" fill="none" pathLength="1" strokeDasharray="1" strokeDashoffset="0" />
+                </svg>
+              </span>.
             </h1>
+
+            {/* Legal Assertion - Moved up */}
+            <p className="text-base md:text-lg font-medium" style={{ color: '#2D5A8C' }}>
+              En Chile la marca es de quien la registra primero.
+            </p>
 
             {/* Paragraph */}
             <p className="text-lg leading-relaxed text-graphite max-w-56ch" style={{ textWrap: 'pretty' }}>
               Clientes, reputación, tu nombre en la fachada, los canales que quieres abrir. Todo cuelga de un nombre que todavía no es legalmente tuyo.
             </p>
-
-            {/* Legal Assertion */}
-            <div className="flex gap-4 items-start py-4">
-              <div className="w-1 h-12 bg-brass flex-shrink-0"></div>
-              <p className="text-base md:text-lg font-medium text-ink">
-                En Chile la marca es de quien la registra primero.
-              </p>
-            </div>
 
             {/* Protection Badges */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
