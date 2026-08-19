@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 
 export default function CommonMistake() {
-  const refs = useRef<(HTMLDivElement | null)[]>([]);
+  const stageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,105 +13,117 @@ export default function CommonMistake() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
 
-    refs.current.forEach((ref) => {
+    stageRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      refs.current.forEach((ref) => {
+      stageRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
   }, []);
 
+  const stages = [
+    {
+      title: 'Partes solo, con tu nombre',
+      support: 'La marca todavía es una idea.',
+      width: '20%',
+    },
+    {
+      title: 'El nombre empieza a traer clientes',
+      support: 'Reseñas, recomendaciones, tu nombre en la puerta.',
+      width: '40%',
+    },
+    {
+      title: 'Alguien más trabaja bajo tu nombre',
+      support: 'Equipo, sucursal, distribuidor, franquicia.',
+      width: '60%',
+    },
+    {
+      title: 'Tu nombre vale más que tú',
+      support: 'Es lo que compra, financia o negocia un tercero.',
+      width: '100%',
+    },
+  ];
+
   return (
     <section className="bg-bone py-10 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="space-y-8 mb-12">
-          <p className="label-badge text-azure">El error más común</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
-            Inviertes en todo lo que hace crecer tu negocio.{' '}
-            <span style={{ color: '#2D5A8C' }}>¿Y en lo que lo sostiene?</span>
+        {/* Header */}
+        <div className="space-y-4 mb-16">
+          <p className="label-badge text-azure">¿En qué etapa estás?</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight mb-6">
+            No es cuánto tiempo llevas. Es hasta dónde quieres llegar.
           </h2>
+          <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-2xl">
+            Tu marca no se vuelve importante con los años. Se vuelve importante cuando tu nombre empieza a hacer trabajo que antes hacías tú.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column */}
-          <div className="space-y-6">
-            <p className="text-lg md:text-xl leading-relaxed text-graphite">
-              Ads, cursos, mentorías, sitio web. Inviertes en todo lo que escala tu negocio, pero hay una base que sostiene toda esa inversión y que nadie protege: tu marca.
-            </p>
+        {/* Growth Staircase */}
+        <div className="relative pl-8 md:pl-12 mb-12">
+          {/* Vertical axis line */}
+          <div className="absolute left-3 md:left-4 top-0 bottom-0 w-px bg-bone-line"></div>
 
-            <div
-              ref={(el) => {
-                refs.current[0] = el;
-              }}
-              className="in border-l-4 border-azure pl-6 py-4 transition-all duration-500"
-              style={{
-                opacity: 1,
-                transform: 'translateY(0)',
-              }}
-            >
-              <p className="text-lg md:text-xl font-serif font-bold text-ink leading-tight">
-                Suma todo lo que llevas invertido en que ese nombre signifique algo. Registrarlo cuesta una fracción de eso.
-              </p>
-            </div>
-
-            <a
-              href="#planes"
-              className="inline-block px-7 py-3.5 bg-ink text-white rounded-lg font-medium hover:bg-azure transition-all"
-            >
-              Asegurar mi marca →
-            </a>
-          </div>
-
-          {/* Right Column - Stack */}
-          <div
-            ref={(el) => {
-              refs.current[1] = el;
-            }}
-            className="in space-y-3 transition-all duration-500"
-            style={{
-              opacity: 1,
-              transform: 'translateY(0)',
-            }}
-          >
-            <p className="font-mono text-xs font-medium text-graphite uppercase tracking-widest text-center mb-6">
-              En lo que inviertes hoy
-            </p>
-
-            {['Publicidad y Ads', 'Cursos y mentorías', 'Sitio web y branding', 'Local, equipo y operación'].map((item) => (
+          {/* Stages */}
+          <div className="space-y-8">
+            {stages.map((stage, idx) => (
               <div
-                key={item}
-                className="bg-white border border-bone-line rounded-lg py-6 px-4 text-center font-medium text-graphite"
+                key={idx}
+                ref={(el) => {
+                  stageRefs.current[idx] = el;
+                }}
+                className="in transition-all duration-500"
+                style={{
+                  opacity: 1,
+                  transform: 'translateY(0)',
+                }}
               >
-                {item}
+                {/* Node point */}
+                <div className="absolute -left-2.5 md:-left-3.5 top-1.5 w-5 h-5 rounded-full bg-brass border-4 border-bone shadow-sm"></div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-lg md:text-xl font-serif font-bold text-ink mb-2">
+                    {stage.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-graphite mb-3">
+                    {stage.support}
+                  </p>
+
+                  {/* Progress bar */}
+                  <div className="h-1.5 bg-bone-line rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-brass transition-all duration-700"
+                      style={{
+                        width: stage.width,
+                      }}
+                    ></div>
+                  </div>
+                </div>
               </div>
             ))}
-
-            {/* Base Block */}
-            <div className="bg-ink text-white rounded-lg py-6 px-4 text-center pt-8 relative">
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '-12px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '1px',
-                  height: '12px',
-                  background: '#2D5A8C',
-                }}
-              ></div>
-              <p className="font-serif font-bold text-xl text-bone">Tu marca registrada</p>
-              <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mt-2">
-                La base que sostiene todo lo demás
-              </p>
-            </div>
           </div>
         </div>
+
+        {/* Closing statement */}
+        <div className="border-l-4 border-azure pl-6 py-4 mb-8 bg-white/50 rounded-r">
+          <p className="text-lg md:text-xl font-serif font-bold text-ink leading-tight">
+            Registrar cuesta lo mismo en cualquiera de estas etapas. Cambiar el nombre, no.
+          </p>
+        </div>
+
+        {/* CTA */}
+        <a
+          href="#planes"
+          className="inline-block px-7 py-3.5 bg-ink text-white rounded-lg font-medium hover:bg-azure transition-all"
+        >
+          Asegurar mi marca →
+        </a>
       </div>
     </section>
   );
