@@ -1,11 +1,8 @@
 export default function Process() {
   const steps = [
-    { num: 'Paso 1', title: 'Búsqueda de disponibilidad', time: '1–3 días hábiles', desc: 'Analizo el registro nacional para determinar si tu signo es distintivo y registrable, y detecto conflictos antes de que te cuesten caro.' },
-    { num: 'Paso 2', title: 'Estrategia de clases Niza', time: '1–2 días hábiles', desc: 'Defino las clases correctas según tu modelo de negocio y tu plan de expansión. Elegirlas mal es de los errores más costosos.' },
-    { num: 'Paso 3', title: 'Solicitud ante el INAPI', time: 'Mismo día de aprobación interna', desc: 'Redacto y presento la solicitud con la documentación exigible en Chile. Me encargo del expediente: tú sigues operando.' },
-    { num: 'Paso 4', title: 'Seguimiento del expediente', time: 'Durante todo el trámite', desc: 'Monitoreo cada etapa, respondo requerimientos de forma y fondo, y te informo sin que tengas que perseguir el estado.' },
-    { num: 'Paso 5', title: 'Vigilancia del registro', time: 'Continuo', desc: 'Superviso los movimientos del INAPI para anticipar riesgos sobre tu marca.' },
-    { num: 'Paso 6', title: 'Título de marca en tu poder', time: 'Plazo según expediente', desc: 'Con el título emitido, tu activo queda protegido por diez años renovables. Te acompaño en renovaciones y cambios de titular.' },
+    { num: 'Etapa 01', title: 'Antes de presentar', desc: 'Analizo el registro, detecto conflictos y defino en qué clases va tu marca. Es donde se decide si el expediente va a caminar o a chocar.' },
+    { num: 'Etapa 02', title: 'Durante el trámite', desc: 'Presento la solicitud y hago el seguimiento completo. Si el INAPI formula observaciones o alguien se opone, defiendo tu marca. Tú sigues operando: no tienes que perseguir nada.' },
+    { num: 'Etapa 03', title: 'Después del título', desc: 'Tu marca queda protegida por diez años renovables. Te acompaño en renovaciones y en la vigilancia del registro.' },
   ]
 
   return (
@@ -23,7 +20,7 @@ export default function Process() {
         </div>
 
         {/* PLAZOS Band — Full width horizontal */}
-        <div className="bg-white border border-bone-line rounded-lg p-6 md:p-8 mb-12 md:mb-16">
+        <div className="bg-white border border-bone-line rounded-lg p-4 md:p-6 mb-12 md:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
             <div>
               <p className="font-mono text-xs text-azure uppercase tracking-widest mb-2">Plazos INAPI</p>
@@ -49,16 +46,13 @@ export default function Process() {
                 <h3 className="text-lg font-serif font-bold text-ink mb-3">
                   {step.title}
                 </h3>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="font-mono text-xs text-graphite">{step.time}</span>
-                </div>
                 <p className="text-sm text-graphite leading-relaxed">
                   {step.desc}
                 </p>
               </div>
 
-              {/* Connector (right arrow) — Only between items in the same row */}
-              {(idx === 0 || idx === 1 || idx === 3 || idx === 4) && (
+              {/* Connector (right arrow) — Between etapas */}
+              {(idx === 0 || idx === 1) && (
                 <div className="text-brass text-lg font-medium mb-4 text-right pr-4">
                   →
                 </div>
@@ -79,16 +73,13 @@ export default function Process() {
                 <h3 className="text-lg font-serif font-bold text-ink mb-3">
                   {step.title}
                 </h3>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="font-mono text-xs text-graphite">{step.time}</span>
-                </div>
                 <p className="text-sm text-graphite leading-relaxed">
                   {step.desc}
                 </p>
               </div>
 
               {/* Connector (down arrow) */}
-              {idx < 5 && (
+              {idx < 2 && (
                 <div className="flex justify-center text-brass text-lg font-medium py-2">
                   ↓
                 </div>
