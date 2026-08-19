@@ -24,7 +24,7 @@ export default function AboutFirm() {
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight mb-12">
-          Vas a hablar conmigo, no con un ejecutivo de cuentas.
+          Vas a hablar conmigo, no con un asistente.
         </h2>
 
         {/* Two Column Layout */}

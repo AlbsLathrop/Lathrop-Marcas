@@ -12,56 +12,89 @@ export default function Process() {
     <section id="proceso" className="bg-bone py-12 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-12 md:mb-16">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest mb-3">El Proceso</p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink mb-6 leading-tight">
             De cero a marca registrada.
           </h2>
-          <p className="text-lg text-graphite max-w-56ch">
+          <p className="text-lg text-graphite max-w-56ch text-pretty">
             Sin sorpresas, sin fricción comercial. Cada etapa tiene un responsable claro: yo.
           </p>
         </div>
 
-        {/* Process Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left: Info Box */}
-          <div className="bg-white border border-bone-line rounded-lg p-6 md:p-8 h-fit md:sticky md:top-24 md:self-start">
-            <p className="font-mono text-xs text-azure uppercase tracking-widest mb-2">Plazos INAPI</p>
-            <h3 className="text-lg font-serif font-bold text-ink mb-2">8 a 14 meses</h3>
-            <p className="text-sm text-graphite">El rango depende de la clase, de si alguien se opone y de las observaciones que formule el INAPI. Lo que sí es fijo: mi seguimiento del expediente durante todo el trámite.</p>
-          </div>
-
-          {/* Right: Steps with Spine */}
-          <div className="relative pl-8">
-            {/* Spine vertical line */}
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-bone-line"></div>
-
-            {/* Steps */}
-            <div className="space-y-8">
-              {steps.map((step, idx) => (
-                <div key={idx} className="relative">
-                  {/* Node circle */}
-                  <div className="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-azure border-2 border-bone"></div>
-
-                  {/* Content */}
-                  <div>
-                    <p className="font-mono text-xs text-azure font-medium uppercase tracking-widest mb-1">
-                      {step.num}
-                    </p>
-                    <h3 className="text-lg font-serif font-bold text-ink mb-2">
-                      {step.title}
-                    </h3>
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="font-mono text-xs text-graphite">{step.time}</span>
-                    </div>
-                    <p className="text-sm text-graphite leading-relaxed">
-                      {step.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
+        {/* PLAZOS Band — Full width horizontal */}
+        <div className="bg-white border border-bone-line rounded-lg p-6 md:p-8 mb-12 md:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+            <div>
+              <p className="font-mono text-xs text-azure uppercase tracking-widest mb-2">Plazos INAPI</p>
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-ink">8 a 14 meses</h3>
+            </div>
+            <div>
+              <p className="text-sm text-graphite">El rango depende de la clase, de si alguien se opone y de las observaciones que formule el INAPI. Lo que sí es fijo: mi seguimiento del expediente durante todo el trámite.</p>
             </div>
           </div>
+        </div>
+
+        {/* Steps Grid — 3x2 in desktop, single column in mobile */}
+        <div className="hidden md:grid md:grid-cols-3 md:gap-8 lg:gap-12">
+          {steps.map((step, idx) => (
+            <div key={idx} className="flex flex-col">
+              {/* Step Card */}
+              <div className="flex-grow mb-4">
+                <p className="font-mono text-xs text-azure font-medium uppercase tracking-widest mb-2">
+                  {step.num}
+                </p>
+                <h3 className="text-lg font-serif font-bold text-ink mb-3">
+                  {step.title}
+                </h3>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="font-mono text-xs text-graphite">{step.time}</span>
+                </div>
+                <p className="text-sm text-graphite leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+
+              {/* Connector (right arrow) — Only between items in the same row */}
+              {(idx === 0 || idx === 1 || idx === 3 || idx === 4) && (
+                <div className="text-brass text-lg font-medium mb-4 text-right pr-4">
+                  →
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile — Single column with down arrows */}
+        <div className="md:hidden space-y-4">
+          {steps.map((step, idx) => (
+            <div key={idx}>
+              {/* Step Card */}
+              <div>
+                <p className="font-mono text-xs text-azure font-medium uppercase tracking-widest mb-2">
+                  {step.num}
+                </p>
+                <h3 className="text-lg font-serif font-bold text-ink mb-3">
+                  {step.title}
+                </h3>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="font-mono text-xs text-graphite">{step.time}</span>
+                </div>
+                <p className="text-sm text-graphite leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+
+              {/* Connector (down arrow) */}
+              {idx < 5 && (
+                <div className="flex justify-center text-brass text-lg font-medium py-2">
+                  ↓
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

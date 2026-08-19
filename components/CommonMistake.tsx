@@ -59,52 +59,81 @@ export default function CommonMistake() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight mb-6">
             No es cuánto tiempo llevas. Es hasta dónde quieres llegar.
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-2xl">
+          <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-2xl text-pretty">
             Tu marca no se vuelve importante con los años. Se vuelve importante cuando tu nombre empieza a hacer trabajo que antes hacías tú.
           </p>
         </div>
 
-        {/* Growth Staircase */}
-        <div className="relative pl-8 md:pl-12 mb-12">
-          {/* Vertical axis line */}
-          <div className="absolute left-3 md:left-4 top-0 bottom-0 w-px bg-bone-line"></div>
-
-          {/* Stages */}
-          <div className="space-y-8">
+        {/* Growth Staircase — Card Layout */}
+        <div className="mb-12">
+          {/* Desktop: Horizontal cards with connectors */}
+          <div className="hidden md:flex gap-6 items-center justify-between mb-12">
             {stages.map((stage, idx) => (
-              <div
-                key={idx}
-                ref={(el) => {
-                  stageRefs.current[idx] = el;
-                }}
-                className="in transition-all duration-500"
-                style={{
-                  opacity: 1,
-                  transform: 'translateY(0)',
-                }}
-              >
-                {/* Node point */}
-                <div className="absolute -left-2.5 md:-left-3.5 top-1.5 w-5 h-5 rounded-full bg-brass border-4 border-bone shadow-sm"></div>
-
-                {/* Content */}
-                <div>
-                  <h3 className="text-lg md:text-xl font-serif font-bold text-ink mb-2">
+              <div key={idx} className="flex items-center flex-1">
+                {/* Card */}
+                <div
+                  ref={(el) => {
+                    stageRefs.current[idx] = el;
+                  }}
+                  className="flex-1 p-6 rounded-lg transition-all duration-500"
+                  style={{
+                    background: idx === 3 ? 'rgba(198, 161, 91, 0.1)' : 'rgba(255, 255, 255, 0.4)',
+                    border: idx === 3 ? '1.5px solid #C6A15B' : '1px solid rgba(198, 161, 91, 0.2)',
+                  }}
+                >
+                  <p className="font-mono text-xs font-medium text-graphite uppercase tracking-widest mb-2">
+                    0{idx + 1}
+                  </p>
+                  <h3 className="text-base md:text-lg font-serif font-bold text-ink mb-2">
                     {stage.title}
                   </h3>
-                  <p className="text-sm md:text-base text-graphite mb-3">
+                  <p className="text-sm text-graphite">
                     {stage.support}
                   </p>
-
-                  {/* Progress bar */}
-                  <div className="h-1.5 bg-graphite/20 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-brass transition-all duration-700"
-                      style={{
-                        width: stage.width,
-                      }}
-                    ></div>
-                  </div>
                 </div>
+
+                {/* Connector (chevron to the right) */}
+                {idx < 3 && (
+                  <div className="flex-shrink-0 mx-2 text-brass text-xl font-medium">
+                    →
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile: Vertical cards with connectors */}
+          <div className="md:hidden space-y-4">
+            {stages.map((stage, idx) => (
+              <div key={idx}>
+                {/* Card */}
+                <div
+                  ref={(el) => {
+                    stageRefs.current[idx] = el;
+                  }}
+                  className="p-5 rounded-lg transition-all duration-500"
+                  style={{
+                    background: idx === 3 ? 'rgba(198, 161, 91, 0.1)' : 'rgba(255, 255, 255, 0.4)',
+                    border: idx === 3 ? '1.5px solid #C6A15B' : '1px solid rgba(198, 161, 91, 0.2)',
+                  }}
+                >
+                  <p className="font-mono text-xs font-medium text-graphite uppercase tracking-widest mb-2">
+                    0{idx + 1}
+                  </p>
+                  <h3 className="text-base font-serif font-bold text-ink mb-2">
+                    {stage.title}
+                  </h3>
+                  <p className="text-sm text-graphite">
+                    {stage.support}
+                  </p>
+                </div>
+
+                {/* Connector (chevron down) */}
+                {idx < 3 && (
+                  <div className="flex justify-center text-brass text-lg font-medium py-1">
+                    ↓
+                  </div>
+                )}
               </div>
             ))}
           </div>

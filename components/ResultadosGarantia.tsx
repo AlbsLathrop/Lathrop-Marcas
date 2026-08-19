@@ -16,11 +16,15 @@ export default function ResultadosGarantia() {
 
             {/* Content */}
             <h2 className="text-3xl md:text-4xl font-serif font-bold leading-tight mb-6 text-left">
-              Mi garantía es sobre mi trabajo, no sobre el INAPI.
+              Garantía: si rechazan, no pagas honorarios de nuevo.
             </h2>
 
-            <p className="text-base md:text-lg text-white/80 mb-8 text-left leading-relaxed">
-              Ningún abogado honesto te puede prometer que tu marca va a quedar registrada: eso lo decide el examinador. Lo que sí te garantizo es lo que depende de mí. Si el INAPI observa o rechaza, vuelvo a presentar sin cobrarte honorarios de nuevo, y sigo siendo yo el que lleva tu expediente.
+            <p className="text-base md:text-lg text-white/80 mb-4 text-left leading-relaxed">
+              Ningún abogado honesto te puede prometer que tu marca va a quedar registrada: eso lo decide el examinador. Lo que sí te garantizo es lo que depende de mí. Si el INAPI rechaza, vuelvo a presentar sin cobrarte honorarios de nuevo.
+            </p>
+
+            <p className="text-sm text-white/50 mb-8 text-left leading-relaxed">
+              Las tasas oficiales del INAPI se pagan aparte en cada presentación.
             </p>
 
             {/* CTA Button */}

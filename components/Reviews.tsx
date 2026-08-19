@@ -31,24 +31,29 @@ export default function Reviews() {
           </h2>
         </div>
 
-        {/* Rating Header - Centered and Prominent */}
-        <div className="flex flex-col items-center gap-2 mb-16">
-          <span className="text-5xl md:text-6xl font-serif font-bold text-white">4.8/5</span>
-          <span className="text-brass text-2xl tracking-wider">★★★★★</span>
+        {/* Rating Summary - Reduced size, horizontal layout */}
+        <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl md:text-3xl font-serif font-bold text-white">4.8/5</span>
+            <span className="text-brass text-lg">★★★★★</span>
+          </div>
           <span className="font-sans text-sm text-white/70">en Google</span>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        {/* Reviews Grid — Card Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {reviews.map((review, idx) => (
-            <div key={idx} className="flex flex-col">
-              {/* Opening Quote */}
-              <div className="text-6xl font-serif text-brass/20 leading-none mb-3">
-                "
+            <div key={idx} className="flex flex-col p-6 md:p-8 rounded-lg" style={{
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid rgba(198, 161, 91, 0.2)',
+            }}>
+              {/* Five Stars */}
+              <div className="text-brass text-lg mb-4 tracking-wider">
+                ★★★★★
               </div>
 
-              {/* Text - Larger */}
-              <p className="text-lg text-white leading-relaxed mb-6 flex-grow font-sans">
+              {/* Text */}
+              <p className="text-base md:text-lg text-white leading-relaxed mb-6 flex-grow font-sans">
                 {review.text}
               </p>
 

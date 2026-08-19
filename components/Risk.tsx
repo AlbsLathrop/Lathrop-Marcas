@@ -9,9 +9,9 @@ export default function Risk() {
 
   const blockA = [
     {
-      title: 'Ni el uso ni los años te dan el derecho',
+      title: 'Alguien puede inscribir tu nombre antes que tú',
       description:
-        'No la protege el uso, ni los años que lleves, ni tener el nombre en el SII ni el dominio .cl. Ninguno de esos papeles te da la marca.',
+        'No necesita conocerte ni haberte visto nunca. Basta con que lo inscriba primero. Recuperarlo después es lento, caro y no siempre se puede.',
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
           <path pathLength="1" d="M13 36 V6" />
@@ -21,9 +21,9 @@ export default function Risk() {
       ),
     },
     {
-      title: 'El que te copia está cerca',
+      title: 'Sin registro, no tienes con qué defenderte',
       description:
-        'No es un tercero anónimo en internet: es alguien de tu rubro que abre con un nombre casi igual y te desvía clientes que creían estar contratándote a ti.',
+        'Si mañana alguien abre con tu nombre o uno casi igual, no hay nada que presentar. La ley protege al que inscribió, no al que llegó antes.',
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
           <circle pathLength="1" cx="14" cy="14" r="8" />
@@ -31,6 +31,17 @@ export default function Risk() {
           <path pathLength="1" d="M20 20 L30 30" />
           <path pathLength="1" d="M14 6 V22" />
           <path pathLength="1" d="M26 18 V34" />
+        </svg>
+      ),
+    },
+    {
+      title: 'El que te copia está cerca',
+      description:
+        'No es un tercero anónimo en internet: es alguien de tu rubro que abre con un nombre casi igual y te desvía clientes que creían estar contratándote a ti.',
+      svg: (
+        <svg className="risk-ico" viewBox="0 0 40 40">
+          <path pathLength="1" d="M10 20 L25 10 M25 10 L25 25 M25 10 L35 20" />
+          <path pathLength="1" d="M12 22 Q20 30 28 32" />
         </svg>
       ),
     },
@@ -170,13 +181,13 @@ export default function Risk() {
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight">
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed text-white/70 max-w-2xl">
+          <p className="text-lg md:text-xl leading-relaxed text-white/70 max-w-2xl text-pretty">
             Da lo mismo cuántos años lleves usándolo. Si no está inscrito, no es tuyo.
           </p>
         </div>
 
-        {/* Block A — Two wide cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12 md:mb-16">
+        {/* Block A — Three cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
           {blockA.map((risk, index) => (
             <RiskCard key={index} risk={risk} index={index} refArray={blockARefs} />
           ))}
@@ -186,9 +197,9 @@ export default function Risk() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* Left Column — Services */}
           <div>
-            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-4 md:mb-6" style={{ color: '#5B9BD1' }}>
-              SI OFRECES SERVICIOS
-            </h3>
+            <div className="inline-flex items-center px-3 py-1.5 bg-brass text-ink rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
+              Si ofreces servicios
+            </div>
             <div className="space-y-4 md:space-y-6">
               {blockBServices.map((risk, index) => (
                 <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsLeft} />
@@ -198,9 +209,9 @@ export default function Risk() {
 
           {/* Right Column — Products */}
           <div>
-            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-4 md:mb-6" style={{ color: '#C6A15B' }}>
-              SI VENDES PRODUCTOS
-            </h3>
+            <div className="inline-flex items-center px-3 py-1.5 bg-brass text-ink rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
+              Si vendes productos
+            </div>
             <div className="space-y-4 md:space-y-6">
               {blockBProducts.map((risk, index) => (
                 <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsRight} />

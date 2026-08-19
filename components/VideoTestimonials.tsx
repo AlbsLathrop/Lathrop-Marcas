@@ -43,7 +43,7 @@ export default function VideoTestimonials() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
             Negocios reales. Procesos técnicos reales.
           </h2>
-          <p className="text-lg md:text-xl text-graphite leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-xl text-graphite leading-relaxed max-w-2xl text-pretty">
             No son casos hipotéticos: negocios que ya operaban y necesitaban resolver su marca.
           </p>
         </div>
