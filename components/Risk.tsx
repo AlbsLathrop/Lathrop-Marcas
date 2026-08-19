@@ -38,13 +38,14 @@ export default function Risk() {
 
   const blockBServices = [
     {
-      title: 'Tus reseñas no se mudan',
-      description: 'Años de estrellas en Google atadas a un nombre. Si lo cambias, esa ficha parte de cero.',
+      title: 'Tus clientes te buscan por tu nombre',
+      description: 'Si otro abre con uno casi igual, esas búsquedas y recomendaciones se van a su puerta, no a la tuya.',
       icon: (
         <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 20Q8 12 16 12Q24 12 24 20" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
-          <path d="M6 28Q6 18 20 18Q34 18 34 28" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
-          <circle cx="20" cy="8" r="2" fill="#2D5A8C"/>
+          <circle cx="15" cy="15" r="8" stroke="#2D5A8C" strokeWidth="1.5"/>
+          <path d="M21 21L28 28" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M15 12V18" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M12 15H18" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       ),
     },
