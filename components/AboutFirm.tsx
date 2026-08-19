@@ -10,13 +10,13 @@ export default function AboutFirm() {
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-ink leading-tight">
-            El análisis de riesgo marcario no es un servicio secundario.
+            Vas a hablar conmigo, no con un ejecutivo de cuentas.
           </h2>
 
           {/* Paragraphs */}
           <div className="space-y-6 max-w-3xl">
             <p className="text-lg md:text-xl leading-relaxed text-graphite">
-              La diferencia con mi servicio es que cada marca es el activo más importante de la empresa: exige criterio técnico y especializado, no atención genérica y rápida.
+              Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Yo analizo tu marca, defino en qué clases va, la presento y la defiendo si alguien se opone. La misma persona de principio a fin.
             </p>
             <p className="text-lg md:text-xl leading-relaxed text-graphite">
               Trabajo con dueños de negocio que entienden que su nombre es{' '}

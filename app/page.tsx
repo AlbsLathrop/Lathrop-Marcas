@@ -23,9 +23,9 @@ export default function Home() {
       <FAQSchemaClient />
       <Hero />
       <ClientLogos />
-      <AboutFirm />
       <CommonMistake />
       <Risk />
+      <AboutFirm />
       <VideoTestimonials />
       <Reviews />
       <LeadFormSection />

@@ -11,7 +11,7 @@ export default function Risk() {
     {
       title: 'Ni el uso ni los años te dan el derecho',
       description:
-        'No la protege el uso, ni los años, ni tener el nombre en el SII. En Chile la protege el registro, y nada más.',
+        'No la protege el uso, ni los años que lleves, ni tener el nombre en el SII ni el dominio .cl. Ninguno de esos papeles te da la marca.',
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
           <path pathLength="1" d="M13 36 V6" />

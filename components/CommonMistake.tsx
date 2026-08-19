@@ -56,8 +56,7 @@ export default function CommonMistake() {
               }}
             >
               <p className="text-lg md:text-xl font-serif font-bold text-ink leading-tight">
-                Es asegurar la base de{' '}
-                <span style={{ color: '#2D5A8C' }}>tu empresa</span> antes de seguir subiendo.
+                Suma todo lo que llevas invertido en que ese nombre signifique algo. Registrarlo cuesta una fracción de eso.
               </p>
             </div>
 

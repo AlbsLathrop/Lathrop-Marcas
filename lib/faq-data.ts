@@ -7,7 +7,7 @@ export const faqData = [
   {
     question: '¿Cuánto demora registrar una marca en el INAPI?',
     answer:
-      'Depende del expediente. Si nadie se opone y el INAPI no formula observaciones, es el escenario más rápido. Una oposición o una observación de fondo agrega meses. Es la razón por la que la búsqueda previa importa: los plazos se alargan por conflictos que se podían anticipar.',
+      'Entre 8 y 14 meses en la mayoría de los casos, contando desde que se presenta la solicitud hasta que se emite el título. El rango se mueve según la clase, si alguien se opone y si el INAPI formula observaciones. Un expediente limpio va por el lado corto; una oposición lo empuja al largo. La búsqueda previa importa justamente por eso: los plazos se alargan por conflictos que se podían anticipar.',
   },
   {
     question: '¿Cómo sé si una marca ya está registrada?',
