@@ -1,5 +1,3 @@
-"use client";
-
 export default function WhyUs() {
   const features = [
     {
@@ -34,9 +32,9 @@ export default function WhyUs() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded overflow-hidden">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-ink p-6 md:p-8">
-              <h4 className="text-lg font-serif font-bold text-bone mb-3">
+              <h3 className="text-lg font-serif font-bold text-bone mb-3">
                 {feature.label}
-              </h4>
+              </h3>
               <p className="text-white/70">
                 {feature.desc}
               </p>

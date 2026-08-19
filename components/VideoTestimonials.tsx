@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import WrittenCases from './WrittenCases';
 import VideoModal from './VideoModal';
 
@@ -69,12 +70,13 @@ export default function VideoTestimonials() {
               {/* Video Frame */}
               <div className="vid-frame relative w-full aspect-video bg-ink rounded-lg overflow-hidden mb-4">
                 {/* Thumbnail Image */}
-                <img
+                <Image
                   src={`https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`}
                   alt={video.name}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   style={{
-                    width: '100%',
-                    height: '100%',
                     objectFit: 'cover',
                     filter: 'grayscale(1)',
                     transition: 'filter 0.3s ease, transform 0.3s ease',

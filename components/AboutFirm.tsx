@@ -1,5 +1,3 @@
-"use client";
-
 export default function AboutFirm() {
   return (
     <section className="bg-bone py-16 md:py-24">

@@ -1,5 +1,3 @@
-"use client";
-
 import LeadForm from './LeadForm';
 
 export default function LeadFormSection() {

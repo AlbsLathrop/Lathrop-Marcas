@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image'
+
 export default function Hero() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '61402163749'
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20registrar%20mi%20marca.`
@@ -106,14 +108,13 @@ export default function Hero() {
                 }}
               >
                 {/* Photo */}
-                <img
+                <Image
                   src="/images/alberto-lathrop.jpg"
                   alt="Alberto Lathrop"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 320px"
                   style={{
-                    position: 'absolute',
-                    inset: 0,
-                    width: '100%',
-                    height: '100%',
                     objectFit: 'cover',
                     objectPosition: 'center 22%',
                     filter: 'grayscale(1) contrast(1.02)',
