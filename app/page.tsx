@@ -3,7 +3,6 @@
 import Hero from '@/components/Hero'
 import ClientLogos from '@/components/ClientLogos'
 import AboutFirm from '@/components/AboutFirm'
-import CommonMistake from '@/components/CommonMistake'
 import Risk from '@/components/Risk'
 import VideoTestimonials from '@/components/VideoTestimonials'
 import Reviews from '@/components/Reviews'
@@ -21,7 +20,6 @@ export default function Home() {
       <FAQSchemaClient />
       <Hero />
       <ClientLogos />
-      <CommonMistake />
       <Risk />
       <AboutFirm />
       <VideoTestimonials />

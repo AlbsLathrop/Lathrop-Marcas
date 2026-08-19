@@ -19,17 +19,17 @@ export default function Process() {
           </p>
         </div>
 
-        {/* PLAZOS Band — Full width horizontal */}
-        <div className="bg-white border border-bone-line rounded-lg p-4 md:p-6 mb-12 md:mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+        {/* PLAZOS Band — Two-part layout */}
+        <div className="bg-white border border-bone-line rounded-lg px-6 md:px-8 py-4 md:py-5 mb-12 md:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Left: Label and timeframe */}
             <div>
-              <p className="font-mono text-xs text-azure uppercase tracking-widest mb-2">Plazos INAPI</p>
+              <p className="font-mono text-xs text-azure uppercase tracking-widest mb-1">Plazos INAPI</p>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-ink">8 a 14 meses</h3>
             </div>
+            {/* Right: Description */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-serif font-bold text-ink">8 a 14 meses</h3>
-            </div>
-            <div>
-              <p className="text-sm text-graphite">El rango depende de la clase, de si alguien se opone y de las observaciones que formule el INAPI. Lo que sí es fijo: mi seguimiento del expediente durante todo el trámite.</p>
+              <p className="text-sm text-graphite leading-relaxed">El rango depende de la clase, de si alguien se opone y de las observaciones que formule el INAPI. Lo que sí es fijo: mi seguimiento del expediente durante todo el trámite.</p>
             </div>
           </div>
         </div>
