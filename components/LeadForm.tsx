@@ -143,10 +143,10 @@ export default function LeadForm() {
         />
       </div>
 
-      {/* ¿Ya facturas? */}
+      {/* ¿Ya vendes? */}
       <div>
         <label className="block text-sm font-medium text-graphite mb-2">
-          ¿Ya facturas?
+          ¿Ya vendes?
         </label>
         <div className="flex gap-3">
           <button
