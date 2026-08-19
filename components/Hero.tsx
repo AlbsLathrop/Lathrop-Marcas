@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="bg-bone relative overflow-hidden" style={{ padding: 'clamp(24px, 5vw, 56px) 0 clamp(40px, 8vw, 100px)' }}>
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'center', position: 'relative' }}>
+        <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'start', position: 'relative' }}>
           {/* Left Column */}
           <div className="space-y-3 md:space-y-6">
             {/* Badge */}
@@ -26,7 +26,7 @@ export default function Hero() {
                 todo lo que construiste
                 <svg viewBox="0 0 220 10" preserveAspectRatio="none" style={{
                   position: 'absolute',
-                  bottom: '-2px',
+                  bottom: '-8px',
                   left: 0,
                   width: '100%',
                   height: '8px'
