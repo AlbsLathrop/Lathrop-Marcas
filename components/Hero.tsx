@@ -20,7 +20,7 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className="heading-large">
+            <h1 className="heading-large md:max-w-3xl">
               Cada día que operas sin registrar tu marca, arriesgas{' '}
               <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
                 todo lo que construiste
