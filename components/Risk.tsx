@@ -131,7 +131,7 @@ export default function Risk() {
       ref={(el) => {
         refArray.current[index] = el;
       }}
-      className="risk-item p-8 md:p-10 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group flex flex-col h-full"
+      className="risk-item p-5 md:p-10 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group flex flex-col h-full"
       style={{
         background: 'rgba(255,255,255,0.04)',
         backdropFilter: 'blur(20px) saturate(180%)',
@@ -147,7 +147,7 @@ export default function Risk() {
       }}
     >
       {/* SVG Icon */}
-      <div className="mb-4">{risk.svg}</div>
+      <div className="mb-2 md:mb-4">{risk.svg}</div>
 
       {/* Title */}
       <h3 className="text-xl font-serif font-bold text-white mb-3 leading-tight">
@@ -176,20 +176,20 @@ export default function Risk() {
         </div>
 
         {/* Block A — Two wide cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12 md:mb-16">
           {blockA.map((risk, index) => (
             <RiskCard key={index} risk={risk} index={index} refArray={blockARefs} />
           ))}
         </div>
 
         {/* Block B — Two columns with headers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* Left Column — Services */}
           <div>
-            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-6" style={{ color: '#5B9BD1' }}>
+            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-4 md:mb-6" style={{ color: '#5B9BD1' }}>
               SI OFRECES SERVICIOS
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {blockBServices.map((risk, index) => (
                 <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsLeft} />
               ))}
@@ -198,10 +198,10 @@ export default function Risk() {
 
           {/* Right Column — Products */}
           <div>
-            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-6" style={{ color: '#C6A15B' }}>
+            <h3 className="text-lg sm:text-2xl font-serif font-bold mb-4 md:mb-6" style={{ color: '#C6A15B' }}>
               SI VENDES PRODUCTOS
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {blockBProducts.map((risk, index) => (
                 <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsRight} />
               ))}
