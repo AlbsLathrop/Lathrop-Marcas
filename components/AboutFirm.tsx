@@ -28,11 +28,11 @@ export default function AboutFirm() {
         </h2>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-12">
-          {/* Text Column — 2/3 width */}
-          <div className="md:col-span-2 space-y-6 max-w-prose">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-start mb-12">
+          {/* Text Column — flex width */}
+          <div className="space-y-6 max-w-prose">
             <p className="text-lg md:text-xl leading-relaxed text-white/80">
-              Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Yo analizo tu marca, defino en qué clases va, la presento y la defiendo si alguien se opone. La misma persona de principio a fin.
+              Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Yo analizo tu marca, veo si existen idénticas o similares que puedan jugar en contra, elaboro una estrategia marcaria a futuro, defino en qué clases va, la presento y la defiendo si alguien se opone o si INAPI pone obstáculos. La misma persona de principio a fin.
             </p>
             <p className="text-lg md:text-xl leading-relaxed text-white/80">
               Da lo mismo si vendes un producto o prestas un servicio: si tus clientes te encuentran por tu nombre, ese nombre hay que protegerlo.
@@ -57,7 +57,7 @@ export default function AboutFirm() {
               width={750}
               height={982}
               loading="lazy"
-              className="w-full max-w-[260px] md:max-w-[340px] object-cover object-center"
+              className="w-full max-w-[175px] md:max-w-[225px] object-cover object-center"
               style={{ aspectRatio: '750/982' }}
             />
           </div>
