@@ -216,8 +216,8 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         disabled={isLoading || !formData.nombre || !formData.marca}
         className={`w-full px-4 py-2.5 rounded-lg font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
           variant === 'dark'
-            ? 'bg-ink text-white hover:bg-opacity-90'
-            : 'bg-white text-ink hover:bg-gray-50'
+            ? 'bg-white text-ink hover:bg-opacity-90'
+            : 'bg-ink text-white hover:bg-opacity-90'
         }`}
       >
         {isLoading ? 'Enviando...' : 'Enviar datos'}

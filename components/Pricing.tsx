@@ -64,7 +64,7 @@ export default function Pricing() {
 
           {/* Card 2: Registro (Featured) */}
           <div className="bg-white border-2 border-brass rounded-lg p-8 flex flex-col relative md:scale-105 md:z-10 shadow-lg" style={{ overflow: 'visible' }}>
-            <div className="absolute text-xs font-mono font-bold uppercase tracking-widest bg-brass text-ink rounded" style={{ top: '-12px', left: '28px', padding: '5px 12px', borderRadius: '4px' }}>
+            <div className="absolute text-xs font-mono font-bold uppercase tracking-widest bg-brass text-ink rounded left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0" style={{ top: '-12px', padding: '5px 12px', borderRadius: '4px' }}>
               Más solicitado
             </div>
             <div className="mb-6 pt-4">
@@ -173,7 +173,7 @@ export default function Pricing() {
                 </a>
               </div>
               <div className="border-2 border-brass rounded p-4 relative shadow-md" style={{ overflow: 'visible' }}>
-                <span className="absolute -top-2.5 right-4 bg-brass text-ink text-xs font-mono font-bold uppercase px-2 py-1 rounded">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-4 bg-brass text-ink text-xs font-mono font-bold uppercase px-2 py-1 rounded">
                   Mejor opción
                 </span>
                 <p className="font-serif font-bold text-lg text-ink mb-1 pt-2">Plan anual</p>
@@ -182,7 +182,7 @@ export default function Pricing() {
                   if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                     (window as any).fbq('track', 'Lead');
                   }
-                }} className="w-full mt-4 py-2.5 bg-brass text-ink text-center rounded font-medium text-sm hover:opacity-90 transition-all block">
+                }} className="w-full mt-4 py-2.5 bg-ink text-white text-center rounded font-medium text-sm hover:opacity-90 transition-all block">
                   Hablar por WhatsApp →
                 </a>
               </div>
