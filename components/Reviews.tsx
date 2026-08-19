@@ -37,7 +37,7 @@ export default function Reviews() {
         <div className="flex items-baseline gap-3 mb-12">
           <span className="text-4xl font-serif font-bold text-ink">4.8/5</span>
           <span className="text-gold text-lg tracking-wider">★★★★★</span>
-          <span className="font-mono text-sm text-graphite">en Google · +250 marcas gestionadas</span>
+          <span className="font-mono text-sm text-graphite">en Google</span>
         </div>
 
         {/* Reviews Grid */}

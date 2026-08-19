@@ -23,8 +23,7 @@ export default function CTAFinal() {
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
-          Cada día que operas sin registro es un día que le regalas ventaja a
-          quien llegue después.
+          Revisemos tu caso antes de que alguien más lo haga por ti.
         </h2>
 
         {/* Subheading */}

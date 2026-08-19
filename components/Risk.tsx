@@ -9,7 +9,7 @@ export default function Risk() {
 
   const blockA = [
     {
-      title: 'La marca es de quien la inscribe',
+      title: 'Ni el uso ni los años te dan el derecho',
       description:
         'No la protege el uso, ni los años, ni tener el nombre en el SII. En Chile la protege el registro, y nada más.',
       svg: (

@@ -38,19 +38,27 @@ export default function Navbar() {
         </a>
 
         {/* Contact Button */}
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => {
-            if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
-              (window as any).fbq('track', 'Lead');
-            }
-          }}
-          className="px-5 md:px-6 py-2.5 md:py-3 bg-ink border border-azure/30 text-bone rounded-lg font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
-        >
-          Contacto
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="#planes"
+            className="font-medium text-sm md:text-base text-ink hover:text-azure transition-colors"
+          >
+            PLANES
+          </a>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
+                (window as any).fbq('track', 'Lead');
+              }
+            }}
+            className="px-5 md:px-6 py-2.5 md:py-3 bg-ink border border-azure/30 text-bone rounded-lg font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
+          >
+            Contacto
+          </a>
+        </div>
       </div>
     </nav>
   )

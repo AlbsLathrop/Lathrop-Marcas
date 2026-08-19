@@ -19,26 +19,21 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="heading-large">
-              El registro de marca es una{' '}
-              <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
-                decisión técnica
-                <svg viewBox="0 0 220 10" preserveAspectRatio="none" style={{
-                  position: 'absolute',
-                  bottom: '-2px',
-                  left: 0,
-                  width: '100%',
-                  height: '8px'
-                }}>
-                  <path d="M2 6 C 55 2, 165 2, 218 5" stroke="#2D5A8C" strokeWidth="3.5" fill="none" pathLength="1" strokeDasharray="1" strokeDashoffset="0" />
-                </svg>
-              </span> que define cómo escala tu negocio.{' '}
-              <span style={{ color: '#2D5A8C' }}>Es tu activo más valioso.</span>
+              Cada día que operas sin registrar tu marca, arriesgas todo lo que construiste.
             </h1>
 
             {/* Paragraph */}
             <p className="text-lg leading-relaxed text-graphite max-w-56ch" style={{ textWrap: 'pretty' }}>
-              Para negocios que ya facturan y quieren proteger lo que construyeron para seguir creciendo con respaldo.
+              Clientes, reputación, tu nombre en la fachada, los canales que quieres abrir. Todo cuelga de un nombre que todavía no es legalmente tuyo.
             </p>
+
+            {/* Legal Assertion */}
+            <div className="flex gap-4 items-start py-4">
+              <div className="w-1 h-12 bg-brass flex-shrink-0"></div>
+              <p className="text-base md:text-lg font-medium text-ink">
+                En Chile la marca es de quien la registra primero.
+              </p>
+            </div>
 
             {/* Protection Badges */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -82,11 +77,6 @@ export default function Hero() {
 
             {/* Micro Stats */}
             <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-8 pt-8 border-t border-bone-line">
-              <div className="space-y-1">
-                <p className="text-2xl md:text-3xl font-serif font-bold text-ink">+250</p>
-                <p className="font-mono text-xs text-graphite">Activos gestionados</p>
-              </div>
-              <div className="w-px h-8 bg-bone-line hidden sm:block"></div>
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-serif font-bold text-ink">4.8/5</p>
                 <p className="font-mono text-xs text-graphite">Google Reviews</p>

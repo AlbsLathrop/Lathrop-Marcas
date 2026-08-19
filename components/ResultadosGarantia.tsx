@@ -19,11 +19,11 @@ export default function ResultadosGarantia() {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight mb-6">
-          Resultados. Si no, garantía.
+          Mi garantía es sobre mi trabajo, no sobre el INAPI.
         </h2>
 
         <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-8">
-          No trabajo por procesos que se cierran en expediente. Trabajo por marcas que se registran. Si el INAPI rechaza, vuelvo a presentar sin cobrar honorarios de nuevo. Sin excusas, sin condiciones.
+          Ningún abogado honesto te puede prometer que tu marca va a quedar registrada: eso lo decide el examinador. Lo que sí te garantizo es lo que depende de mí. Si el INAPI observa o rechaza, preparo la respuesta y vuelvo a presentar sin cobrarte honorarios de nuevo. Y sigo siendo yo el que lleva tu expediente, de principio a fin.
         </p>
 
         <a
@@ -37,7 +37,7 @@ export default function ResultadosGarantia() {
           }}
           className="inline-flex items-center gap-2 px-8 md:px-12 py-4 bg-azure text-white rounded-lg font-semibold transition-all duration-200 hover:-translate-y-1 hover:bg-azure-bright"
         >
-          Garantizado. Empecemos →
+          Empecemos →
         </a>
       </div>
     </section>

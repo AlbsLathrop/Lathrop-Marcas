@@ -40,13 +40,13 @@ export default function Footer() {
               PROCESO
             </a>
             <a
-              href="#pricing"
+              href="#planes"
               className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
             >
-              PRICING
+              PLANES
             </a>
             <a
               href="#faq"
