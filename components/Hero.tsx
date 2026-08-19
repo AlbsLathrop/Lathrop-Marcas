@@ -43,7 +43,7 @@ export default function Hero() {
 
             {/* Paragraph */}
             <p className="text-base md:text-lg leading-relaxed text-graphite max-w-56ch" style={{ textWrap: 'pretty' }}>
-              Clientes, reputación, tu nombre en la fachada, los canales que quieres abrir. Todo cuelga de un nombre que todavía no es legalmente tuyo.
+              Clientes, reputación, tus ventas, tu crecimiento. Todo cuelga de una marca que todavía no es legalmente tuya.
             </p>
 
             {/* Protection Badges */}

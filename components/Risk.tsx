@@ -13,7 +13,7 @@ export default function Risk() {
     },
     {
       title: 'El rebranding lo pagas tú',
-      description: 'Logo, letrero, packaging, redes, posicionamiento. Ese costo crece cada mes que sigues operando sin registrar.',
+      description: 'Logo, letrero, packaging, redes, posicionamiento, tus anuncios. Ese costo crece cada mes que sigues operando sin registrar.',
       icon: (
         <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="14" cy="14" r="8" stroke="currentColor" strokeWidth="1.5"/>
@@ -137,7 +137,7 @@ export default function Risk() {
         <div className="space-y-6 mb-16">
           <p className="label-badge text-azure">El Riesgo de No Actuar</p>
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-bold text-ink leading-tight">
-            Sin registro vigente, tu nombre trabaja para quien llegue primero.
+            Sin registrar tu marca, tu negocio corre peligro.
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-[68ch] text-pretty">
             Da lo mismo cuántos años lleves usándolo. Si no está inscrito, no es tuyo.
@@ -152,28 +152,34 @@ export default function Risk() {
         </div>
 
         {/* What does NOT protect you */}
-        <div className="py-8 md:py-12 mb-12 md:mb-16 border-t border-slate-200">
-          <h3 className="text-lg font-display font-bold text-ink mb-8">
+        <div className="py-6 md:py-8 mb-12 md:mb-16 border-t border-b border-slate-200 max-w-2xl">
+          <h3 className="text-base font-display font-bold text-ink mb-6">
             Lo que NO te protege la marca:
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
-            <div className="flex flex-col items-start gap-3">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-graphite/40">
+          <div className="space-y-3">
+            <div className="flex items-center gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <p className="text-sm font-medium text-graphite">Tu razón social</p>
+              <p className="text-sm text-graphite">Tu razón social</p>
             </div>
-            <div className="flex flex-col items-start gap-3">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-graphite/40">
+            <div className="flex items-center gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <p className="text-sm font-medium text-graphite">Tu inicio de actividades</p>
+              <p className="text-sm text-graphite">Tu inicio de actividades</p>
             </div>
-            <div className="flex flex-col items-start gap-3">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-graphite/40">
+            <div className="flex items-center gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <p className="text-sm font-medium text-graphite">Tu dominio .cl</p>
+              <p className="text-sm text-graphite">Tu dominio .cl</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+              <p className="text-sm text-graphite">Que vendas hace años</p>
             </div>
           </div>
         </div>
