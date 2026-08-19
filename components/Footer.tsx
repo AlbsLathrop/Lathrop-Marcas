@@ -24,15 +24,6 @@ export default function Footer() {
           {/* Links */}
           <nav className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <a
-              href="#servicios"
-              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
-              style={{ color: 'rgba(255,255,255,0.6)' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
-            >
-              SERVICIOS
-            </a>
-            <a
               href="#proceso"
               className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}

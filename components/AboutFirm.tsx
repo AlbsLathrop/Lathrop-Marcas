@@ -1,6 +1,21 @@
 import Image from 'next/image';
 
 export default function AboutFirm() {
+  const features = [
+    {
+      label: 'Sin honorarios por reproceso',
+      desc: 'El segundo intento está incluido en el plan de registro.',
+    },
+    {
+      label: 'Mismo abogado, de principio a fin',
+      desc: 'Yo analizo tu marca, la presento y la defiendo.',
+    },
+    {
+      label: 'Criterio técnico, no formulario',
+      desc: 'Estrategia de clases pensada para cómo crece tu negocio.',
+    },
+  ]
+
   return (
     <section className="bg-bone py-10 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
@@ -13,7 +28,7 @@ export default function AboutFirm() {
         </h2>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-12">
           {/* Text Column — 2/3 width */}
           <div className="md:col-span-2 space-y-6 max-w-prose">
             <p className="text-lg md:text-xl leading-relaxed text-graphite">
@@ -47,6 +62,25 @@ export default function AboutFirm() {
             />
           </div>
         </div>
+
+        {/* Features Grid — Moved from WhyUs */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-bone-line border border-bone-line rounded overflow-hidden">
+          {features.map((feature, idx) => (
+            <div key={idx} className="bg-white p-6 md:p-8">
+              <h3 className="text-lg font-serif font-bold text-ink mb-3">
+                {feature.label}
+              </h3>
+              <p className="text-graphite">
+                {feature.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Footer Note */}
+        <p className="text-xs text-graphite/40 mt-8 text-center">
+          *Tasas oficiales de INAPI van aparte.
+        </p>
       </div>
     </section>
   )

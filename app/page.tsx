@@ -8,11 +8,9 @@ import Risk from '@/components/Risk'
 import VideoTestimonials from '@/components/VideoTestimonials'
 import Reviews from '@/components/Reviews'
 import LeadFormSection from '@/components/LeadFormSection'
-import Services from '@/components/Services'
 import Process from '@/components/Process'
 import ResultadosGarantia from '@/components/ResultadosGarantia'
 import Pricing from '@/components/Pricing'
-import WhyUs from '@/components/WhyUs'
 import FAQ from '@/components/FAQ'
 import CTAFinal from '@/components/CTAFinal'
 import FAQSchemaClient from '@/components/FAQSchemaClient'
@@ -29,11 +27,9 @@ export default function Home() {
       <VideoTestimonials />
       <Reviews />
       <LeadFormSection />
-      <Services />
       <Process />
       <ResultadosGarantia />
       <Pricing />
-      <WhyUs />
       <FAQ />
       <CTAFinal />
     </>
