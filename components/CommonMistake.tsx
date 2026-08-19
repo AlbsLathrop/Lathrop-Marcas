@@ -96,7 +96,7 @@ export default function CommonMistake() {
                   </p>
 
                   {/* Progress bar */}
-                  <div className="h-1.5 bg-bone-line rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-graphite/20 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-brass transition-all duration-700"
                       style={{
@@ -111,7 +111,7 @@ export default function CommonMistake() {
         </div>
 
         {/* Closing statement */}
-        <div className="border-l-4 border-azure pl-6 py-4 mb-8 bg-white/50 rounded-r">
+        <div className="border-l-4 border-azure pl-6 py-4 mb-8">
           <p className="text-lg md:text-xl font-serif font-bold text-ink leading-tight">
             Registrar cuesta lo mismo en cualquiera de estas etapas. Cambiar el nombre, no.
           </p>

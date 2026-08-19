@@ -25,7 +25,7 @@ export default function Process() {
         {/* Process Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           {/* Left: Info Box */}
-          <div className="bg-white border border-bone-line rounded-lg p-6 md:p-8 h-fit">
+          <div className="bg-white border border-bone-line rounded-lg p-6 md:p-8 h-fit md:sticky md:top-24 md:self-start">
             <p className="font-mono text-xs text-azure uppercase tracking-widest mb-2">Plazos INAPI</p>
             <h3 className="text-lg font-serif font-bold text-ink mb-2">8 a 14 meses</h3>
             <p className="text-sm text-graphite">El rango depende de la clase, de si alguien se opone y de las observaciones que formule el INAPI. Lo que sí es fijo: mi seguimiento del expediente durante todo el trámite.</p>
