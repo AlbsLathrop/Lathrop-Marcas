@@ -84,7 +84,7 @@ export default function CommonMistake() {
               En lo que inviertes hoy
             </p>
 
-            {['Publicidad y Ads', 'Cursos y mentorías', 'Sitio web y branding', 'Inventario y operación'].map((item) => (
+            {['Publicidad y Ads', 'Cursos y mentorías', 'Sitio web y branding', 'Local, equipo y operación'].map((item) => (
               <div
                 key={item}
                 className="bg-white border border-bone-line rounded-lg py-6 px-4 text-center font-medium text-graphite"

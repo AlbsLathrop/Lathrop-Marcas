@@ -18,10 +18,18 @@ export default function WrittenCases() {
       result: '5 proyectos protegidos en distintas regiones.',
       resultHighlight: '5 proyectos',
     },
+    {
+      tag: 'Bloqueo de canal de venta',
+      name: 'Ecommerce en Mercado Libre',
+      description:
+        'Tenía las ventas funcionando y quiso abrir Tienda Oficial en Mercado Libre. La plataforma le pidió el título de marca y no lo tenía: el canal quedó bloqueado hasta resolver el registro. Presentamos la solicitud y destrabamos la operación.',
+      result: 'Canal habilitado con la solicitud en trámite.',
+      resultHighlight: 'Canal habilitado',
+    },
   ];
 
   return (
-    <div className="cases grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="cases grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {cases.map((caseItem, idx) => (
         <div key={idx} className="case bg-white border border-bone-line rounded-lg p-8 md:p-7 relative overflow-hidden transition-all duration-300" style={{
           background: '#fff',

@@ -1,24 +1,37 @@
 "use client";
 
+import { useState } from 'react';
 import WrittenCases from './WrittenCases';
+import VideoModal from './VideoModal';
 
 export default function VideoTestimonials() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
+
   const videos = [
     {
       name: 'Cherry Boom',
       description: 'Aseguró su marca y hoy opera con título vigente.',
       tag: 'Agencia · Publicidad',
       videoId: 'PicBZqTpIu4',
-      url: 'https://youtube.com/shorts/PicBZqTpIu4',
     },
     {
       name: 'StartHunt',
       description: 'Registró su marca antes de escalar su operación.',
       tag: 'B2B · Consultoría',
       videoId: 'GFLXJF8Pk7c',
-      url: 'https://youtube.com/shorts/GFLXJF8Pk7c',
     },
-  ]
+  ];
+
+  const handleVideoClick = (videoId: string) => {
+    setSelectedVideoId(videoId);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedVideoId(null);
+  };
 
   return (
     <section className="bg-bone py-20 md:py-28">
@@ -47,12 +60,11 @@ export default function VideoTestimonials() {
         {/* Videos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {videos.map((video, idx) => (
-            <a
+            <button
               key={idx}
-              href={video.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="vid-card group cursor-pointer"
+              onClick={() => handleVideoClick(video.videoId)}
+              className="vid-card group cursor-pointer text-left hover:scale-105 transition-transform"
+              aria-label={`Ver testimonio de ${video.name}`}
             >
               {/* Video Frame */}
               <div className="vid-frame relative w-full aspect-video bg-ink rounded-lg overflow-hidden mb-4">
@@ -109,10 +121,17 @@ export default function VideoTestimonials() {
                   </span>
                 </div>
               </div>
-            </a>
+            </button>
           ))}
         </div>
       </div>
+
+      {/* Video Modal */}
+      <VideoModal
+        videoId={selectedVideoId}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
 
       <style jsx>{`
         @keyframes scroll-left {

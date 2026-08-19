@@ -71,7 +71,7 @@ export default function Pricing() {
               <h3 className="text-xl font-serif font-bold mb-4">Registro de Marca</h3>
               <p className="text-2xl font-serif font-bold leading-tight text-bone mb-2">De la búsqueda al título.</p>
               <p className="text-sm text-white/50 mb-4">Alcance y clases definidos según tu modelo de negocio.</p>
-              <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-azure-bright">Ideal para</b><br />Ecommerce y servicios con proyección nacional.</p>
+              <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-azure-bright">Ideal para</b><br />Negocios que ya operan con clientes y nombre propio.</p>
             </div>
             <div className="space-y-2 mb-6 flex-1">
               <p className="font-mono text-xs text-white/50 uppercase tracking-widest mb-3">Incluye</p>
@@ -107,7 +107,7 @@ export default function Pricing() {
               <h3 className="text-xl font-serif font-bold mb-4">Protección Integral</h3>
               <p className="text-2xl font-serif font-bold leading-tight text-bone mb-2">Gestión y defensa continua.</p>
               <p className="text-sm text-white/50 mb-4">A la medida de tu portafolio de marcas.</p>
-              <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-azure-bright">Ideal para</b><br />Marcas con alta inversión en Ads o planes regional.</p>
+              <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-azure-bright">Ideal para</b><br />Marcas con varias líneas, sucursales o planes de expansión.</p>
             </div>
             <div className="space-y-2 mb-6 flex-1">
               <p className="font-mono text-xs text-white/50 uppercase tracking-widest mb-3">Incluye</p>

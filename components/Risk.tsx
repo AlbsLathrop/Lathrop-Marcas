@@ -9,7 +9,8 @@ export default function Risk() {
     {
       title: 'Pérdida del nombre comercial',
       description:
-        'Un tercero puede registrar tu nombre antes que tú y forzarte a rehacerlo todo: marca, web, redes y el capital comercial que construiste durante años.',
+        'Un tercero puede registrar tu nombre antes que tú y forzarte a rehacerlo todo: marca, web, redes y el capital comercial que construiste durante años. En Chile la marca es de quien la inscribe, no de quien la usa.',
+      tag: null,
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
           <path pathLength="1" d="M13 36 V6" />
@@ -19,9 +20,37 @@ export default function Risk() {
       ),
     },
     {
-      title: 'Fricción comercial en expansión',
+      title: 'La reputación no se transfiere',
       description:
-        'Mercado Libre Tienda Oficial, distribuidores y cadenas de retail exigen título de marca vigente. Sin él, cada canal nuevo tiene un freno legal antes de empezar.',
+        'Años de reseñas en Google, recomendaciones y boca a boca están atados a un nombre. Si tienes que cambiarlo, esa ficha empieza de cero: mismo equipo, misma calidad, cero estrellas. Para un negocio que vive de que lo recomienden, ese es el activo más caro de reconstruir.',
+      tag: 'Servicios',
+      svg: (
+        <svg className="risk-ico" viewBox="0 0 40 40">
+          <path pathLength="1" d="M8 20 Q8 12 16 12 Q24 12 24 20" />
+          <path pathLength="1" d="M6 28 Q6 18 20 18 Q34 18 34 28" />
+          <circle pathLength="1" cx="20" cy="8" r="2" />
+        </svg>
+      ),
+    },
+    {
+      title: 'El nombre también está en el mundo físico',
+      description:
+        'Fachada, señalética, uniformes, boletas, contratos y convenios. Cambiar de nombre no es actualizar un sitio web: es rehacer un local y avisarle a cada cliente que sigues siendo tú. El costo crece con cada mes que sigues operando.',
+      tag: 'Local',
+      svg: (
+        <svg className="risk-ico" viewBox="0 0 40 40">
+          <path pathLength="1" d="M10 34 V8 L20 2 L30 8 V34 Z" />
+          <path pathLength="1" d="M20 2 V34" />
+          <path pathLength="1" d="M14 16 H26" />
+          <path pathLength="1" d="M14 24 H26" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Canales de venta bloqueados',
+      description:
+        'Mercado Libre Tienda Oficial, distribuidores y cadenas de retail exigen título de marca vigente o al menos solicitud en trámite. Sin eso, cada canal nuevo tiene un freno legal antes de empezar a vender.',
+      tag: 'Productos',
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
           <path pathLength="1" d="M5 20 H17" />
@@ -34,16 +63,17 @@ export default function Risk() {
       ),
     },
     {
-      title: 'Activo sin respaldo legal',
+      title: 'Competencia directa con nombre parecido',
       description:
-        'En una venta, fusión o ronda de inversión, una marca no registrada no tiene valor contable. El trabajo construido queda en narrativa, no en documento.',
+        'El riesgo real no es un tercero anónimo: es alguien de tu mismo rubro que abre cerca con un nombre casi igual y te desvía clientes que creían estar contratándote a ti. Con la marca registrada eso se detiene. Sin ella, no.',
+      tag: null,
       svg: (
         <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M11 6 H26 L30 10 V34 H11 Z" />
-          <path pathLength="1" d="M15 15 H26" />
-          <path pathLength="1" d="M15 20 H26" />
-          <path pathLength="1" d="M15 25 H22" />
-          <circle className="seal" cx="28" cy="30" r="5" />
+          <circle pathLength="1" cx="14" cy="14" r="8" />
+          <circle pathLength="1" cx="26" cy="26" r="8" />
+          <path pathLength="1" d="M20 20 L30 30" />
+          <path pathLength="1" d="M14 6 V22" />
+          <path pathLength="1" d="M26 18 V34" />
         </svg>
       ),
     },
@@ -81,19 +111,19 @@ export default function Risk() {
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-white/70">
-            Cada día que operas sin marca registrada es un día en que cualquier competidor puede apropiarse legalmente de tu identidad comercial.
+            Cada día que operas sin marca registrada es un día en que cualquiera puede inscribir tu nombre y obligarte a dejar de usarlo. No importa cuántos años lleves construyéndolo.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {risks.map((risk, index) => (
             <div
               key={index}
               ref={(el) => {
                 riskRefs.current[index] = el;
               }}
-              className="risk-item p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group"
+              className="risk-item p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group flex flex-col"
               style={{
                 background: 'rgba(255,255,255,0.04)',
                 backdropFilter: 'blur(20px) saturate(180%)',
@@ -108,16 +138,37 @@ export default function Risk() {
                 e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
               }}
             >
+              {/* Tag */}
+              {risk.tag && (
+                <div
+                  style={{
+                    fontFamily: 'JetBrains Mono, monospace',
+                    fontSize: '9px',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: '#5B9BD1',
+                    border: '1px solid rgba(255,255,255,0.2)',
+                    borderRadius: '4px',
+                    padding: '3px 9px',
+                    display: 'inline-block',
+                    marginBottom: '12px',
+                    width: 'fit-content',
+                  }}
+                >
+                  {risk.tag}
+                </div>
+              )}
+
               {/* SVG Icon */}
               {risk.svg}
 
-              {/* Title (.n class) */}
-              <h3 className="n text-lg font-semibold uppercase tracking-widest mb-3" style={{ fontSize: '13px', color: '#5B9BD1', minHeight: '2.8em', lineHeight: 1.5, display: 'flex', alignItems: 'flex-end' }}>
+              {/* Title */}
+              <h3 className="text-lg font-semibold uppercase tracking-widest mb-3" style={{ fontSize: '13px', color: '#5B9BD1', minHeight: '2.8em', lineHeight: 1.5, display: 'flex', alignItems: 'flex-end' }}>
                 {risk.title}
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-100 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-100 leading-relaxed flex-grow">
                 {risk.description}
               </p>
             </div>

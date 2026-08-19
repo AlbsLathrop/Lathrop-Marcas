@@ -19,8 +19,8 @@ export default function AboutFirm() {
               La diferencia con mi servicio es que cada marca es el activo más importante de la empresa: exige criterio técnico y especializado, no atención genérica y rápida.
             </p>
             <p className="text-lg md:text-xl leading-relaxed text-graphite">
-              Trabajo solo con dueños de negocio que entienden que proteger su marca es{' '}
-              <span style={{ color: '#2D5A8C' }}>una inversión patrimonial con retorno medible</span>. Es la cara y base de su empresa.
+              Trabajo con dueños de negocio que entienden que su nombre es{' '}
+              <span style={{ color: '#2D5A8C' }}>un activo, no un trámite</span>. Da lo mismo si vendes un producto o prestas un servicio: si tus clientes te encuentran por tu nombre, ese nombre hay que protegerlo.
             </p>
           </div>
 

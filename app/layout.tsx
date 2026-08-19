@@ -22,7 +22,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Registro de Marca en Chile · Lathrop Marcas',
   description:
-    'Asesoría técnica especializada en registro de marcas ante el INAPI. Para negocios que ya facturan y necesitan proteger su identidad comercial con criterio técnico.',
+    'Asesoría técnica en registro de marcas ante el INAPI. Para negocios de servicios y productos que ya operan y necesitan proteger su nombre con criterio técnico.',
   keywords: [
     'registro de marcas',
     'INAPI',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Registro de Marca en Chile · Lathrop Marcas',
     description:
-      'Asesoría técnica especializada en registro de marcas ante el INAPI. Para negocios que ya facturan y necesitan proteger su identidad comercial con criterio técnico.',
+      'Asesoría técnica en registro de marcas ante el INAPI. Para negocios de servicios y productos que ya operan y necesitan proteger su nombre con criterio técnico.',
     url: 'https://lathropmarcas.cl',
     type: 'website',
     locale: 'es_CL',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Registro de Marca en Chile · Lathrop Marcas',
     description:
-      'Asesoría técnica especializada en registro de marcas ante el INAPI.',
+      'Asesoría técnica en registro de marcas ante el INAPI. Para negocios de servicios y productos que ya operan y necesitan proteger su nombre con criterio técnico.',
     images: ['/images/og.jpg'],
   },
   icons: {
