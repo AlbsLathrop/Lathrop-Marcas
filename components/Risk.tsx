@@ -1,47 +1,36 @@
-"use client";
-
-import { useEffect, useRef } from 'react';
-
 export default function Risk() {
-  const blockARefs = useRef<(HTMLDivElement | null)[]>([]);
-  const blockBRefsLeft = useRef<(HTMLDivElement | null)[]>([]);
-  const blockBRefsRight = useRef<(HTMLDivElement | null)[]>([]);
-
   const blockA = [
     {
-      title: 'Alguien puede inscribir tu nombre antes que tú',
-      description:
-        'No necesita conocerte ni haberte visto nunca. Basta con que lo inscriba primero. Recuperarlo después es lento, caro y no siempre se puede.',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M13 36 V6" />
-          <path pathLength="1" d="M13 7 L31 11.5 L13 16" />
-          <circle pathLength="1" cx="13" cy="36" r="2.3" />
+      title: 'Te lo pueden quitar mañana',
+      description: 'Basta con que alguien lo inscriba primero. No necesita conocerte ni haberte visto nunca.',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 36V6" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M13 7L31 11.5L13 16" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="13" cy="36" r="2.3" stroke="#2D5A8C" strokeWidth="1.5"/>
         </svg>
       ),
     },
     {
-      title: 'Sin registro, no tienes con qué defenderte',
-      description:
-        'Si mañana alguien abre con tu nombre o uno casi igual, no hay nada que presentar. La ley protege al que inscribió, no al que llegó antes.',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <circle pathLength="1" cx="14" cy="14" r="8" />
-          <circle pathLength="1" cx="26" cy="26" r="8" />
-          <path pathLength="1" d="M20 20 L30 30" />
-          <path pathLength="1" d="M14 6 V22" />
-          <path pathLength="1" d="M26 18 V34" />
+      title: 'Sin registro no hay nada que presentar',
+      description: 'Si alguien abre con tu nombre, no tienes con qué defenderte. La ley protege al que inscribió.',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="8" stroke="#2D5A8C" strokeWidth="1.5"/>
+          <circle cx="26" cy="26" r="8" stroke="#2D5A8C" strokeWidth="1.5"/>
+          <path d="M20 20L30 30" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M14 6V22" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M26 18V34" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       ),
     },
     {
-      title: 'El que te copia está cerca',
-      description:
-        'No es un tercero anónimo en internet: es alguien de tu rubro que abre con un nombre casi igual y te desvía clientes que creían estar contratándote a ti.',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M10 20 L25 10 M25 10 L25 25 M25 10 L35 20" />
-          <path pathLength="1" d="M12 22 Q20 30 28 32" />
+      title: 'El que te copia es del rubro',
+      description: 'No es un desconocido en internet. Es alguien que ya te vio funcionar y te desvía clientes.',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 20L25 10M25 10L25 25M25 10L35 20" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 22Q20 30 28 32" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       ),
     },
@@ -49,27 +38,25 @@ export default function Risk() {
 
   const blockBServices = [
     {
-      title: 'Las reseñas no se mudan',
-      description:
-        'Años de estrellas en Google atadas a un nombre. Si tienes que cambiarlo, esa ficha parte de cero: mismo equipo, misma calidad, sin reputación.',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M8 20 Q8 12 16 12 Q24 12 24 20" />
-          <path pathLength="1" d="M6 28 Q6 18 20 18 Q34 18 34 28" />
-          <circle pathLength="1" cx="20" cy="8" r="2" />
+      title: 'Tus reseñas no se mudan',
+      description: 'Años de estrellas en Google atadas a un nombre. Si lo cambias, esa ficha parte de cero.',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 20Q8 12 16 12Q24 12 24 20" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M6 28Q6 18 20 18Q34 18 34 28" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <circle cx="20" cy="8" r="2" fill="#2D5A8C"/>
         </svg>
       ),
     },
     {
       title: 'Tu nombre está en la fachada',
-      description:
-        'Señalética, uniformes, boletas, contratos y convenios. Cambiarlo no es editar una web: es rehacer un local y avisarle a cada cliente que sigues siendo tú.',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M10 34 V8 L20 2 L30 8 V34 Z" />
-          <path pathLength="1" d="M20 2 V34" />
-          <path pathLength="1" d="M14 16 H26" />
-          <path pathLength="1" d="M14 24 H26" />
+      description: 'Señalética, uniformes, boletas, contratos. Cambiarlo no es editar una web.',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 34V8L20 2L30 8V34Z" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M20 2V34" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M14 16H26" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M14 24H26" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       ),
     },
@@ -78,110 +65,60 @@ export default function Risk() {
   const blockBProducts = [
     {
       title: 'Mercado Libre te frena',
-      description:
-        'Tienda Oficial exige título de marca vigente o al menos solicitud en trámite. Sin eso, el canal queda bloqueado hasta que resuelvas el registro.',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M5 20 H17" />
-          <path pathLength="1" d="M17 20 L28 10" />
-          <path pathLength="1" d="M17 20 H29" />
-          <path pathLength="1" d="M17 20 L28 30" />
-          <circle pathLength="1" cx="17" cy="20" r="2.3" />
-          <path pathLength="1" d="M34 6 V34" />
+      description: 'Tienda Oficial exige título de marca o solicitud en trámite. Sin eso, el canal queda bloqueado.',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 20H17" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M17 20L28 10" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M17 20H29" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M17 20L28 30" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <circle cx="17" cy="20" r="2.3" stroke="#2D5A8C" strokeWidth="1.5"/>
+          <path d="M34 6V34" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       ),
     },
     {
-      title: 'Retail y distribuidores lo piden',
-      description:
-        'Cada cadena y cada distribuidor nuevo pide acreditar la marca. Sin registro, cada canal que abres tiene un freno legal antes de vender el primer producto.',
-      svg: (
-        <svg className="risk-ico" viewBox="0 0 40 40">
-          <path pathLength="1" d="M10 34 L10 8" />
-          <path pathLength="1" d="M30 34 L30 8" />
-          <path pathLength="1" d="M10 14 L30 14" />
-          <path pathLength="1" d="M10 22 L30 22" />
-          <path pathLength="1" d="M10 30 L30 30" />
+      title: 'Cada distribuidor te lo va a pedir',
+      description: 'Cada cadena y cada canal nuevo pide acreditar la marca antes de vender.',
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 34L10 8" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M30 34L30 8" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M10 14L30 14" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M10 22L30 22" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M10 30L30 30" stroke="#2D5A8C" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       ),
     },
   ];
 
-  const setupObserver = (refs: React.MutableRefObject<(HTMLDivElement | null)[]>) => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    refs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return observer;
-  };
-
-  useEffect(() => {
-    const obs1 = setupObserver(blockARefs);
-    const obs2 = setupObserver(blockBRefsLeft);
-    const obs3 = setupObserver(blockBRefsRight);
-
-    return () => {
-      [obs1, obs2, obs3].forEach((obs) => {
-        obs.disconnect();
-      });
-    };
-  }, []);
-
-  const RiskCard = ({ risk, index, refArray }: { risk: any; index: number; refArray: React.MutableRefObject<(HTMLDivElement | null)[]> }) => (
-    <div
-      ref={(el) => {
-        refArray.current[index] = el;
-      }}
-      className="risk-item p-5 md:p-10 rounded-xl transition-all duration-300 hover:-translate-y-1 cursor-default group flex flex-col h-full"
-      style={{
-        background: 'rgba(255,255,255,0.04)',
-        backdropFilter: 'blur(20px) saturate(180%)',
-        border: '1px solid rgba(255,255,255,0.08)',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
-        borderTop: '2px solid rgba(59,130,246,0.4)',
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(59,130,246,0.3)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
-      }}
-    >
-      {/* SVG Icon */}
-      <div className="mb-2 md:mb-4">{risk.svg}</div>
+  const RiskCard = ({ risk }: { risk: any }) => (
+    <div className="p-6 md:p-8 rounded-lg bg-gray-100 border border-blue-200 flex flex-col h-full hover:shadow-sm transition-shadow">
+      {/* Icon */}
+      <div className="mb-4">{risk.icon}</div>
 
       {/* Title */}
-      <h3 className="text-xl font-serif font-bold text-white mb-3 leading-tight">
+      <h3 className="text-lg font-serif font-bold text-ink mb-2 leading-tight">
         {risk.title}
       </h3>
 
       {/* Description */}
-      <p className="text-base text-gray-200 leading-relaxed flex-grow">
+      <p className="text-sm text-graphite leading-relaxed flex-grow">
         {risk.description}
       </p>
     </div>
   );
 
   return (
-    <section className="bg-ink text-white py-10 md:py-24">
+    <section className="bg-white text-ink py-10 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-6 mb-16">
-          <p className="label-badge text-azure-bright">El Riesgo de No Actuar</p>
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight">
+          <p className="label-badge text-azure">El Riesgo de No Actuar</p>
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold text-ink leading-tight">
             Sin registro vigente, tu nombre trabaja para quien llegue primero.
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed text-white/70 max-w-2xl text-pretty">
+          <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-2xl text-pretty">
             Da lo mismo cuántos años lleves usándolo. Si no está inscrito, no es tuyo.
           </p>
         </div>
@@ -189,12 +126,12 @@ export default function Risk() {
         {/* Block A — Three cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
           {blockA.map((risk, index) => (
-            <RiskCard key={index} risk={risk} index={index} refArray={blockARefs} />
+            <RiskCard key={index} risk={risk} />
           ))}
         </div>
 
         {/* Block B — Two columns with headers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12 md:mb-16">
           {/* Left Column — Services */}
           <div>
             <div className="inline-flex items-center px-3 py-1.5 bg-brass text-ink rounded font-mono text-xs font-bold uppercase tracking-widest mb-6">
@@ -202,7 +139,7 @@ export default function Risk() {
             </div>
             <div className="space-y-4 md:space-y-6">
               {blockBServices.map((risk, index) => (
-                <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsLeft} />
+                <RiskCard key={index} risk={risk} />
               ))}
             </div>
           </div>
@@ -214,10 +151,17 @@ export default function Risk() {
             </div>
             <div className="space-y-4 md:space-y-6">
               {blockBProducts.map((risk, index) => (
-                <RiskCard key={index} risk={risk} index={index} refArray={blockBRefsRight} />
+                <RiskCard key={index} risk={risk} />
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Closing statement */}
+        <div className="border-l-4 border-azure pl-6 py-4">
+          <p className="text-lg md:text-xl font-serif font-bold text-ink leading-tight">
+            Registrar cuesta lo mismo hoy que en tres años. Cambiar el nombre, no.
+          </p>
         </div>
       </div>
     </section>
