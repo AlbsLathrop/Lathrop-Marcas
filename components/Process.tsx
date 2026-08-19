@@ -9,7 +9,7 @@ export default function Process() {
   ]
 
   return (
-    <section id="proceso" className="bg-bone py-20 md:py-28">
+    <section id="proceso" className="bg-bone py-12 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-16">

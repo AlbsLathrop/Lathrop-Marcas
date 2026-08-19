@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function AboutFirm() {
   return (
-    <section className="bg-bone py-16 md:py-24">
+    <section className="bg-bone py-10 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Label */}
         <p className="label-badge text-azure mb-8">Sobre la Firma</p>

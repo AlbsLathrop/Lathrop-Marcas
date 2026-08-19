@@ -21,7 +21,7 @@ export default function Reviews() {
   ]
 
   return (
-    <section className="bg-ink text-white py-20 md:py-28">
+    <section className="bg-ink text-white py-12 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-16">

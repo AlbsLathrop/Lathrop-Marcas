@@ -11,7 +11,7 @@ export default function Pricing() {
   }
 
   return (
-    <section id="planes" className="bg-bone py-12 md:py-16">
+    <section id="planes" className="bg-bone py-8 md:py-16">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-6 mb-16">

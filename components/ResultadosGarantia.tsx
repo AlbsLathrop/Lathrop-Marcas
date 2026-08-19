@@ -5,7 +5,7 @@ export default function ResultadosGarantia() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20empezar%20el%20proceso%20de%20registro.`
 
   return (
-    <section className="bg-ink text-white py-20 md:py-28 relative">
+    <section className="bg-ink text-white py-12 md:py-28 relative">
       <div className="max-w-6xl mx-auto px-4 md:px-8 text-center">
         {/* Seal icon */}
         <div className="guarantee flex justify-center mb-8">

@@ -7,11 +7,11 @@ export default function Hero() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20registrar%20mi%20marca.`
 
   return (
-    <section className="bg-bone relative overflow-hidden" style={{ padding: '56px 0 100px' }}>
+    <section className="bg-bone relative overflow-hidden" style={{ padding: 'clamp(24px, 5vw, 56px) 0 clamp(40px, 8vw, 100px)' }}>
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'center', position: 'relative' }}>
           {/* Left Column */}
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-3 md:space-y-6">
             {/* Badge */}
             <div className="flex items-center gap-2">
               <span className="inline-block font-mono text-xs font-medium text-graphite uppercase tracking-widest">
@@ -37,17 +37,17 @@ export default function Hero() {
             </h1>
 
             {/* Legal Assertion - Moved up */}
-            <p className="text-base md:text-lg font-medium" style={{ color: '#2D5A8C' }}>
+            <p className="text-sm md:text-lg font-medium" style={{ color: '#2D5A8C', lineHeight: 1.4 }}>
               En Chile la marca es de quien la registra primero.
             </p>
 
             {/* Paragraph */}
-            <p className="text-lg leading-relaxed text-graphite max-w-56ch" style={{ textWrap: 'pretty' }}>
+            <p className="text-base md:text-lg leading-relaxed text-graphite max-w-56ch" style={{ textWrap: 'pretty' }}>
               Clientes, reputación, tu nombre en la fachada, los canales que quieres abrir. Todo cuelga de un nombre que todavía no es legalmente tuyo.
             </p>
 
             {/* Protection Badges */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-4 order-last md:order-3 md:pt-2">
               <div className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-azure flex-shrink-0 mt-0.5"></div>
                 <div>
@@ -65,7 +65,7 @@ export default function Hero() {
             </div>
 
             {/* CTA Button */}
-            <div className="pt-4">
+            <div className="md:pt-4">
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -87,7 +87,7 @@ export default function Hero() {
             </div>
 
             {/* Micro Stats */}
-            <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-8 pt-8 border-t border-bone-line">
+            <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-8 pt-4 md:pt-8 border-t border-bone-line">
               <div className="space-y-1">
                 <p className="text-2xl md:text-3xl font-serif font-bold text-ink">4.8/5</p>
                 <p className="font-mono text-xs text-graphite">Google Reviews</p>
@@ -101,8 +101,8 @@ export default function Hero() {
           </div>
 
           {/* Right Column - Portrait Card */}
-          <div className="flex flex-col items-center md:items-end">
-            <div className="w-full max-w-xs relative">
+          <div className="flex flex-col items-center md:items-end order-last md:order-2 md:pt-0 pt-8">
+            <div className="w-full max-w-[240px] md:max-w-xs relative">
               {/* Corner Brackets */}
               <div className="absolute -top-3 -left-3 w-4 h-4 border-t border-l border-azure z-10"></div>
               <div className="absolute -top-3 -right-3 w-4 h-4 border-t border-r border-azure z-10"></div>

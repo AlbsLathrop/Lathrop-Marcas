@@ -30,7 +30,7 @@ export default function ClientLogos() {
   ];
 
   return (
-    <section className="logos bg-bone py-14 md:py-16 border-t border-b border-bone-line">
+    <section className="logos bg-bone py-8 md:py-16 border-t border-b border-bone-line">
       <div className="wrap max-w-6xl mx-auto px-4 md:px-8">
         {/* Label */}
         <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest text-center mb-8">

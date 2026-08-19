@@ -28,7 +28,7 @@ export default function CommonMistake() {
   }, []);
 
   return (
-    <section className="bg-bone py-16 md:py-24">
+    <section className="bg-bone py-10 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="space-y-8 mb-12">
           <p className="label-badge text-azure">El error más común</p>
