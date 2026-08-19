@@ -4,7 +4,7 @@ export default function Services() {
       number: '01',
       title: 'Registro de Marca',
       tags: ['Búsqueda', 'Estrategia', 'Solicitud', 'Seguimiento'],
-      description: 'Analizo la disponibilidad del signo, defino la estrategia de clases de Niza y gestiono el expediente completo ante el INAPI. Tu activo, protegido desde el inicio.'
+      description: 'Analizo la disponibilidad, defino las clases y gestiono el expediente completo ante el INAPI.'
     },
     {
       number: '02',
@@ -16,7 +16,7 @@ export default function Services() {
       number: '03',
       title: 'Vigilancia Marcaria',
       tags: ['Monitoreo', 'Alertas', 'Acción preventiva'],
-      description: 'Monitoreo el registro de marcas que puedan amenazar tu negocio. La expansión exige que tu activo permanezca blindado en todo momento.'
+      description: 'Monitoreo el registro para detectar marcas que puedan amenazar tu negocio, y actúo antes de que sea tarde.'
     },
   ]
 
@@ -30,7 +30,7 @@ export default function Services() {
             Protección en tres frentes.
           </h2>
           <p className="text-lg text-white/70 max-w-56ch">
-            Cada servicio está diseñado para dueños de negocio que entienden que su marca es una decisión técnica, no un trámite.
+            Para dueños de negocio que tratan su marca como un activo, no como un trámite.
           </p>
         </div>
 

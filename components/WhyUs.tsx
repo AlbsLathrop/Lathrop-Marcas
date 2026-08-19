@@ -24,7 +24,7 @@ export default function WhyUs() {
             Un abogado especialista. Ningún formulario genérico.
           </h2>
           <p className="text-lg text-white/70 max-width-56ch">
-            Registrar una marca no es completar un formulario en línea: es definir qué proteges, cómo lo proteges y contra qué. Cada expediente exige criterio técnico, no procesamiento masivo.
+            Registrar una marca es definir qué proteges, cómo y contra qué. Eso exige criterio, no un formulario.
           </p>
         </div>
 

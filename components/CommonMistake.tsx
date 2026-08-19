@@ -42,7 +42,7 @@ export default function CommonMistake() {
           {/* Left Column */}
           <div className="space-y-6">
             <p className="text-lg md:text-xl leading-relaxed text-graphite">
-              Ads, cursos, mentorías, sitio web... inviertes en todo lo que escala tu negocio. Pero hay una base que sostiene TODA esa inversión y que nadie protege: tu marca.
+              Ads, cursos, mentorías, sitio web. Inviertes en todo lo que escala tu negocio, pero hay una base que sostiene toda esa inversión y que nadie protege: tu marca.
             </p>
 
             <div

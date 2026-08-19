@@ -22,7 +22,7 @@ export default function WrittenCases() {
       tag: 'Bloqueo de canal de venta',
       name: 'Ecommerce en Mercado Libre',
       description:
-        'Tenía las ventas funcionando y quiso abrir Tienda Oficial en Mercado Libre. La plataforma le pidió el título de marca y no lo tenía: el canal quedó bloqueado hasta resolver el registro. Presentamos la solicitud y destrabamos la operación.',
+        'Quiso abrir Tienda Oficial en Mercado Libre y la plataforma le pidió el título de marca. Sin eso, el canal quedaba bloqueado. Presenté la solicitud y se destrabó la operación.',
       result: 'Canal habilitado con la solicitud en trámite.',
       resultHighlight: 'Canal habilitado',
     },

@@ -23,7 +23,7 @@ export default function ResultadosGarantia() {
         </h2>
 
         <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-8">
-          Ningún abogado honesto te puede prometer que tu marca va a quedar registrada: eso lo decide el examinador. Lo que sí te garantizo es lo que depende de mí. Si el INAPI observa o rechaza, preparo la respuesta y vuelvo a presentar sin cobrarte honorarios de nuevo. Y sigo siendo yo el que lleva tu expediente, de principio a fin.
+          Ningún abogado honesto te puede prometer que tu marca va a quedar registrada: eso lo decide el examinador. Lo que sí te garantizo es lo que depende de mí. Si el INAPI observa o rechaza, vuelvo a presentar sin cobrarte honorarios de nuevo, y sigo siendo yo el que lleva tu expediente.
         </p>
 
         <a

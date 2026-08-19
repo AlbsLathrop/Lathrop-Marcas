@@ -20,7 +20,7 @@ export default function AboutFirm() {
               Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Yo analizo tu marca, defino en qué clases va, la presento y la defiendo si alguien se opone. La misma persona de principio a fin.
             </p>
             <p className="text-lg md:text-xl leading-relaxed text-graphite">
-              Trabajo con dueños de negocio que entienden que su nombre es un activo, no un trámite. Da lo mismo si vendes un producto o prestas un servicio: si tus clientes te encuentran por tu nombre, ese nombre hay que protegerlo.
+              Da lo mismo si vendes un producto o prestas un servicio: si tus clientes te encuentran por tu nombre, ese nombre hay que protegerlo.
             </p>
 
             {/* Blockquote */}
