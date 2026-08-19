@@ -8,7 +8,7 @@ export default function CasesReales() {
         <div className="space-y-4 mb-16">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Casos reales</p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-ink leading-tight">
-            Negocios reales. Procesos técnicos reales.
+            Negocios reales. Resultados estratégicos.
           </h2>
           <p className="text-lg md:text-xl text-graphite leading-relaxed max-w-[68ch] text-pretty">
             No son casos hipotéticos: negocios que ya operaban y necesitaban resolver su marca.

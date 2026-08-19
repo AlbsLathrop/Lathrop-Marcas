@@ -12,7 +12,7 @@ export default function Process() {
         <div className="mb-12 md:mb-16">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest mb-3">El Proceso</p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-ink mb-6 leading-tight">
-            De cero a marca registrada.
+            De estar en peligro a marca registrada y protegida.
           </h2>
           <p className="text-lg text-graphite max-w-56ch text-pretty">
             Sin sorpresas, sin fricción comercial. Cada etapa tiene un responsable claro: yo.
@@ -25,12 +25,17 @@ export default function Process() {
             {/* Left: Label and timeframe */}
             <div>
               <p className="font-mono text-xs text-azure uppercase tracking-widest mb-1">Plazos INAPI</p>
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-ink">8 a 14 meses</h3>
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-ink">6 a 12 meses<sup className="text-base text-graphite">*</sup></h3>
             </div>
             {/* Right: Description */}
             <div>
-              <p className="text-sm text-graphite leading-relaxed">El rango depende de la clase, de si alguien se opone y de las observaciones que formule el INAPI. Lo que sí es fijo: mi seguimiento del expediente durante todo el trámite.</p>
+              <p className="text-sm text-graphite leading-relaxed">El rango depende de la clase, de si alguien se opone y de las observaciones que formule el INAPI. Lo que sí es fijo: mi seguimiento del expediente durante todo el trámite.<sup>*</sup></p>
             </div>
+          </div>
+          <div className="mt-3 pt-3 border-t border-slate-200">
+            <p className="text-xs text-graphite/70">
+              <sup>*</sup>Plazo referencial. Cada expediente depende de los tiempos del INAPI y no puede garantizarse.
+            </p>
           </div>
         </div>
 

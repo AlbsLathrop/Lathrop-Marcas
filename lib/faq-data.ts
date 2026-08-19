@@ -7,7 +7,7 @@ export const faqData = [
   {
     question: '¿Cuánto demora registrar una marca en el INAPI?',
     answer:
-      'Entre 8 y 14 meses en la mayoría de los casos, contando desde que se presenta la solicitud hasta que se emite el título. El rango se mueve según la clase, si alguien se opone y si el INAPI formula observaciones. Un expediente limpio va por el lado corto; una oposición lo empuja al largo. La búsqueda previa importa justamente por eso: los plazos se alargan por conflictos que se podían anticipar.',
+      'Entre 6 y 12 meses en la mayoría de los casos, contando desde que se presenta la solicitud hasta que se emite el título. Es un plazo referencial: depende de la clase, de si alguien se opone y de si el INAPI formula observaciones. Un expediente limpio va por el lado corto; una oposición lo empuja al largo. La búsqueda previa importa justamente por eso: los plazos se alargan por conflictos que se podían anticipar.',
   },
   {
     question: '¿Cómo sé si una marca ya está registrada?',
