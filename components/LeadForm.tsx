@@ -211,17 +211,23 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
       </div>
 
       {/* Submit Button */}
-      <button
-        type="submit"
-        disabled={isLoading || !formData.nombre || !formData.marca}
-        className={`w-full px-4 py-2.5 rounded-lg font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
-          variant === 'dark'
-            ? 'bg-white text-ink hover:bg-opacity-90'
-            : 'bg-ink text-white hover:bg-opacity-90'
-        }`}
-      >
-        {isLoading ? 'Enviando...' : 'Enviar datos'}
-      </button>
+      {variant === 'dark' ? (
+        <button
+          type="submit"
+          disabled={isLoading || !formData.nombre || !formData.marca}
+          className="w-full px-4 py-2.5 rounded-lg font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-opacity-90"
+        >
+          {isLoading ? 'Enviando...' : 'Enviar datos'}
+        </button>
+      ) : (
+        <button
+          type="submit"
+          disabled={isLoading || !formData.nombre || !formData.marca}
+          className="w-full px-4 py-2.5 rounded-lg font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90"
+        >
+          {isLoading ? 'Enviando...' : 'Enviar datos'}
+        </button>
+      )}
 
       {/* Message */}
       {message && (

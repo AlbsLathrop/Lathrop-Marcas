@@ -9,15 +9,17 @@ export default function Footer() {
         {/* Top Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-8 border-b border-white/10">
           {/* Logo */}
-          <a href="/" className="flex items-center">
-            <Image
-              src="/images/lathrop-logo-light.png"
-              width={462}
-              height={160}
-              className="h-10 md:h-10 w-auto"
-              alt="Lathrop Marcas"
-            />
-          </a>
+          <div className="flex justify-center md:justify-start">
+            <a href="/" className="flex items-center">
+              <Image
+                src="/images/lathrop-logo-light.png"
+                width={462}
+                height={160}
+                className="h-10 md:h-10 w-auto"
+                alt="Lathrop Marcas"
+              />
+            </a>
+          </div>
 
           {/* Links */}
           <nav className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
