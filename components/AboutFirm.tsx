@@ -20,17 +20,17 @@ export default function AboutFirm() {
     <section className="bg-ink text-white py-1 md:py-4">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Label */}
-        <p className="label-badge text-azure-bright mb-2 md:mb-4 md:mb-8">Sobre la Firma</p>
+        <p className="label-badge text-azure-bright mb-1 md:mb-2 md:mb-4">Sobre la Firma</p>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-2 md:mb-4 md:mb-12">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-2 md:mb-4 md:mb-8">
           Vas a hablar conmigo, no con un asistente.
         </h2>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-start mb-2 md:mb-4 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 md:gap-8 items-start mb-2 md:mb-4 md:mb-8">
           {/* Text Column — flex width */}
-          <div className="space-y-6 max-w-prose">
+          <div className="space-y-4 md:space-y-6 max-w-prose">
             <p className="text-lg md:text-xl leading-relaxed text-white/80">
               Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Yo analizo tu marca, veo si existen idénticas o similares que puedan jugar en contra, elaboro una estrategia marcaria a futuro, defino en qué clases va, la presento y la defiendo si alguien se opone o si INAPI pone obstáculos. La misma persona de principio a fin.
             </p>
@@ -39,7 +39,7 @@ export default function AboutFirm() {
             </p>
 
             {/* Blockquote */}
-            <div className="border-t border-b border-azure-bright/30 py-6">
+            <div className="border-t border-b border-azure-bright/30 py-4">
               <p className="italic text-lg md:text-xl leading-relaxed text-white/90">
                 «Registrar una marca sin estrategia de clases es como firmar un contrato sin leerlo.»
               </p>
@@ -57,7 +57,7 @@ export default function AboutFirm() {
               width={750}
               height={982}
               loading="lazy"
-              className="w-full max-w-[175px] md:max-w-[225px] object-cover object-center"
+              className="w-full max-w-[140px] md:max-w-[225px] object-cover object-center"
               style={{ aspectRatio: '750/982' }}
             />
           </div>
@@ -66,7 +66,7 @@ export default function AboutFirm() {
         {/* Features Grid — Moved from WhyUs */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/20 rounded overflow-hidden">
           {features.map((feature, idx) => (
-            <div key={idx} className="bg-white/5 p-6 md:p-8 border-r border-white/10 last:border-r-0">
+            <div key={idx} className="bg-white/5 p-4 md:p-6 border-r border-white/10 last:border-r-0">
               <h3 className="text-lg font-display font-bold text-white mb-3">
                 {feature.label}
               </h3>

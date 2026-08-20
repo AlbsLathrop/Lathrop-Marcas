@@ -217,16 +217,24 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
       {variant === 'dark' ? (
         <button
           type="submit"
-          disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-gray-100 inline-flex items-center justify-center"
+          disabled={isLoading}
+          className={`w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all inline-flex items-center justify-center ${
+            !formData.nombre || !formData.marca
+              ? 'bg-white/50 text-ink/50 cursor-not-allowed'
+              : 'bg-white text-ink hover:bg-gray-100'
+          } ${isLoading ? 'opacity-75 cursor-wait' : ''}`}
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
       ) : (
         <button
           type="submit"
-          disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90 inline-flex items-center justify-center"
+          disabled={isLoading}
+          className={`w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all inline-flex items-center justify-center ${
+            !formData.nombre || !formData.marca
+              ? 'bg-ink/50 text-white/50 cursor-not-allowed'
+              : 'bg-ink text-white hover:bg-opacity-90'
+          } ${isLoading ? 'opacity-75 cursor-wait' : ''}`}
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
