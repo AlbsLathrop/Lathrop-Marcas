@@ -33,7 +33,7 @@ export default function AboutFirm() {
           <div className="space-y-4 md:space-y-6 max-w-prose">
             <div>
               <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
-                Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Conmigo:
+                Los estudios grandes te asignan a un junior. Los abogados masivos invierten menos tiempo en tu proceso. Conmigo:
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex gap-3 text-lg md:text-xl leading-relaxed text-white/80">
