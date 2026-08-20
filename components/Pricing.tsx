@@ -9,10 +9,10 @@ export default function Pricing() {
   }
 
   return (
-    <section id="planes" className="bg-ink text-white py-8 md:py-16">
+    <section id="planes" className="bg-ink text-white py-1 md:py-6">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="space-y-6 mb-16">
+        <div className="space-y-4 md:space-y-6 mb-3 md:mb-16">
           <p className="font-mono text-xs font-medium text-azure-bright uppercase tracking-widest">
             Los planes
           </p>
@@ -25,9 +25,9 @@ export default function Pricing() {
         </div>
 
         {/* 3 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mb-4">
           {/* Card 1: Informe Marcario */}
-          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col card-hover">
+          <div className="bg-white/10 border border-white/20 rounded-[8px] p-6 flex flex-col card-hover">
             <div className="mb-6">
               <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mb-2">Punto de partida</p>
               <h3 className="text-xl font-display font-bold text-white mb-4">Informe Marcario</h3>
@@ -61,7 +61,7 @@ export default function Pricing() {
           </div>
 
           {/* Card 2: Registro (Featured) */}
-          <div className="bg-white/10 border-2 border-brass rounded-[8px] p-8 flex flex-col relative md:scale-105 md:z-10 shadow-lg" style={{ overflow: 'visible' }}>
+          <div className="bg-white/10 border-2 border-brass rounded-[8px] p-6 flex flex-col relative md:scale-105 md:z-10 shadow-lg" style={{ overflow: 'visible' }}>
             <div className="absolute text-xs font-mono font-bold uppercase tracking-widest bg-azure text-white rounded left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0" style={{ top: '-12px', padding: '5px 12px', borderRadius: '4px' }}>
               Más solicitado
             </div>
@@ -99,7 +99,7 @@ export default function Pricing() {
           </div>
 
           {/* Card 3: Protección Integral */}
-          <div className="bg-white/10 border border-white/20 rounded-[8px] p-8 flex flex-col card-hover">
+          <div className="bg-white/10 border border-white/20 rounded-[8px] p-6 flex flex-col card-hover">
             <div className="mb-6">
               <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mb-2">Recomendado</p>
               <h3 className="text-xl font-display font-bold text-white mb-4">Protección Integral</h3>

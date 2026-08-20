@@ -7,12 +7,12 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="bg-white py-12 md:py-28">
+    <section id="faq" className="bg-white py-1 md:py-8">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 lg:gap-16">
           {/* Left Column - Sticky */}
           <div className="lg:sticky lg:top-24 lg:self-start h-fit space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-2 md:space-y-4">
               <p className="label-badge">Preguntas Frecuentes</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-ink leading-tight">
                 Preguntas frecuentes sobre el registro de marcas
@@ -24,7 +24,7 @@ export default function FAQ() {
             </p>
 
             {/* Contact Block */}
-            <div className="pt-8 border-t border-slate-200 space-y-4">
+            <div className="pt-8 border-t border-slate-200 space-y-1">
               <h3 className="text-lg font-display font-bold text-ink">
                 ¿Tu duda no está acá?
               </h3>
@@ -48,7 +48,7 @@ export default function FAQ() {
           </div>
 
           {/* Right Column - Accordion */}
-          <div className="space-y-4">
+          <div className="space-y-2 md:space-y-4">
             {faqData.map((faq, index) => (
               <div
                 key={index}
@@ -59,7 +59,7 @@ export default function FAQ() {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="w-full px-6 md:px-8 py-3 md:py-5 min-h-11 md:min-h-auto flex items-center justify-between transition-colors duration-200 text-left"
+                  className="w-full px-6 md:px-8 py-1 md:py- min-h-11 md:min-h-auto flex items-center justify-between transition-colors duration-200 text-left"
                   style={{
                     background: openIndex === index ? 'rgba(59,130,246,0.04)' : 'transparent'
                   }}
@@ -82,7 +82,7 @@ export default function FAQ() {
                     opacity: openIndex === index ? 1 : 0,
                   }}
                 >
-                  <div className="px-6 md:px-8 py-4 md:py-5 bg-gray-50 border-t border-gray-200">
+                  <div className="px-6 md:px-8 py-1 md:py- bg-gray-50 border-t border-gray-200">
                     <p className="text-base md:text-lg text-text-muted leading-relaxed">
                       {faq.answer}
                     </p>

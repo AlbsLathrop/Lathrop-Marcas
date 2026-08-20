@@ -8,10 +8,10 @@ export default function Vigilancia() {
   }
 
   return (
-    <section className="bg-white py-8 md:py-16">
+    <section className="bg-white py-1 md:py-6">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="space-y-6 mb-16">
+        <div className="space-y-6 mb-12">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">
             Servicio aparte
           </p>
@@ -24,11 +24,11 @@ export default function Vigilancia() {
         </div>
 
         {/* Vigilancia Card */}
-        <div className="bg-white border border-slate-200 rounded-[8px] p-8 md:p-12 mb-8">
+        <div className="bg-white border border-slate-200 rounded-[8px] p-6 md:p-12 mb-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left */}
             <div>
-              <ul className="space-y-2 mb-8">
+              <ul className="space-y-2 mb-4">
                 {[
                   'Alertas si alguien intenta registrar marca parecida',
                   'Monitoreo continuo en INAPI',

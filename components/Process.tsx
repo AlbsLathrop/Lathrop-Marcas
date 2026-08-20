@@ -6,7 +6,7 @@ export default function Process() {
   ]
 
   return (
-    <section id="proceso" className="bg-white py-12 md:py-28">
+    <section id="proceso" className="bg-white py-1 md:py-8">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-12 md:mb-16">
@@ -20,7 +20,7 @@ export default function Process() {
         </div>
 
         {/* PLAZOS Band — Two-part layout */}
-        <div className="bg-white border border-slate-200 rounded-[8px] px-6 md:px-8 py-4 md:py-5 mb-12 md:mb-16">
+        <div className="bg-white border border-slate-200 rounded-[8px] px-6 md:px-8 py-1 md:py- mb-12 md:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left: Label and timeframe */}
             <div>
@@ -58,7 +58,7 @@ export default function Process() {
 
               {/* Connector (right arrow) — Between etapas */}
               {(idx === 0 || idx === 1) && (
-                <div className="text-brass text-lg font-medium mb-4 text-right pr-4">
+                <div className="text-brass text-lg font-medium mb-2 md:mb-4 text-right pr-4">
                   →
                 </div>
               )}
@@ -67,7 +67,7 @@ export default function Process() {
         </div>
 
         {/* Mobile — Single column with down arrows */}
-        <div className="md:hidden space-y-4">
+        <div className="md:hidden space-y-1">
           {steps.map((step, idx) => (
             <div key={idx}>
               {/* Step Card */}

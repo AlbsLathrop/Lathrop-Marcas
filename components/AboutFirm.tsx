@@ -17,18 +17,18 @@ export default function AboutFirm() {
   ]
 
   return (
-    <section className="bg-ink text-white py-10 md:py-24">
+    <section className="bg-ink text-white py-1 md:py-4">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Label */}
-        <p className="label-badge text-azure-bright mb-8">Sobre la Firma</p>
+        <p className="label-badge text-azure-bright mb-2 md:mb-4 md:mb-8">Sobre la Firma</p>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-12">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-2 md:mb-4 md:mb-12">
           Vas a hablar conmigo, no con un asistente.
         </h2>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-start mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-start mb-2 md:mb-4 md:mb-12">
           {/* Text Column — flex width */}
           <div className="space-y-6 max-w-prose">
             <p className="text-lg md:text-xl leading-relaxed text-white/80">

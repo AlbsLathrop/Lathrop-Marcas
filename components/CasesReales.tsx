@@ -2,10 +2,10 @@ import WrittenCases from './WrittenCases';
 
 export default function CasesReales() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-6 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="space-y-4 mb-16">
+        <div className="space-y-4 mb-12">
           <p className="font-mono text-xs font-medium text-azure uppercase tracking-widest">Casos reales</p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-ink leading-tight">
             Negocios reales. Resultados estratégicos.

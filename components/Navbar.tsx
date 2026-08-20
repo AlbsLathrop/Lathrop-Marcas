@@ -24,7 +24,7 @@ export default function Navbar() {
           : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-1 md:py- flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <Image
@@ -47,7 +47,7 @@ export default function Navbar() {
               (window as any).fbq('track', 'Lead');
             }
           }}
-          className="px-5 md:px-6 py-2 md:py-3 min-h-11 md:min-h-auto inline-flex items-center justify-center bg-ink border border-azure/30 text-bone rounded-[8px] font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
+          className="px-5 md:px-6 py-1 md:py- min-h-11 md:min-h-auto inline-flex items-center justify-center bg-ink border border-azure/30 text-bone rounded-[8px] font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
         >
           Contacto
         </a>

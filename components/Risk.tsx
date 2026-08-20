@@ -131,10 +131,10 @@ export default function Risk() {
   );
 
   return (
-    <section className="bg-white text-ink py-10 md:py-24">
+    <section className="bg-white text-ink py-1 md:py-4">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="space-y-6 mb-16">
+        <div className="space-y-4 md:space-y-6 mb-3 md:mb-16">
           <p className="label-badge text-azure">El Riesgo de No Actuar</p>
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-bold text-ink leading-tight">
             Sin registrar tu marca, tu negocio corre peligro.
@@ -145,14 +145,14 @@ export default function Risk() {
         </div>
 
         {/* Block A — Three cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mb-2 md:mb-4 md:mb-16">
           {blockA.map((risk, index) => (
             <RiskCard key={index} risk={risk} />
           ))}
         </div>
 
         {/* What does NOT protect you */}
-        <div className="py-6 md:py-8 mb-12 md:mb-16 border-t border-b border-slate-200 max-w-2xl">
+        <div className="py-2 md:py-8 mb-12 md:mb-16 border-t border-b border-slate-200 max-w-2xl">
           <h3 className="text-base font-display font-bold text-ink mb-6">
             Lo que NO te protege la marca:
           </h3>

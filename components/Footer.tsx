@@ -25,7 +25,7 @@ export default function Footer() {
           <nav className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <a
               href="#proceso"
-              className="px-4 py-3 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              className="px-4 py-1 md:py- min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
@@ -34,7 +34,7 @@ export default function Footer() {
             </a>
             <a
               href="#planes"
-              className="px-4 py-3 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              className="px-4 py-1 md:py- min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
@@ -43,7 +43,7 @@ export default function Footer() {
             </a>
             <a
               href="#faq"
-              className="px-4 py-3 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              className="px-4 py-1 md:py- min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 space-y-4 text-center md:text-left">
+        <div className="pt-8 space-y-1 text-center md:text-left">
           <p className="text-sm text-gray-400">
             © 2026 Lathrop Marcas. Todos los derechos reservados.
           </p>
