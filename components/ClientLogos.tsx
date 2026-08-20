@@ -49,7 +49,7 @@ export default function ClientLogos() {
             style={{
               animation: isHovering
                 ? 'none'
-                : 'scroll-left 55s linear infinite',
+                : 'scroll-left 11s linear infinite',
               WebkitMaskImage:
                 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
               maskImage:

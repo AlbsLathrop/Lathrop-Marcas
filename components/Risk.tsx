@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Risk() {
   const blockA = [
     {
@@ -90,9 +92,11 @@ export default function Risk() {
   ];
 
   const RiskCard = ({ risk }: { risk: any }) => (
-    <div className="p-6 md:p-8 rounded-[8px] bg-gray-100 border border-slate-200 flex flex-col h-full card-hover">
+    <div className="p-6 md:p-8 rounded-[8px] bg-white shadow-md flex flex-col h-full card-hover">
       {/* Icon */}
-      <div className="mb-4 text-azure">{risk.icon}</div>
+      <div className="mb-4 text-ink" style={{ width: '32px', height: '32px' }}>
+        {risk.icon && React.cloneElement(risk.icon, { width: 32, height: 32 })}
+      </div>
 
       {/* Title */}
       <h3 className="text-lg font-display font-bold text-ink mb-2 leading-tight">
@@ -107,15 +111,15 @@ export default function Risk() {
   );
 
   return (
-    <section className="bg-white text-ink py-1 md:py-4">
+    <section className="bg-ink text-white py-2 md:py-5">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 md:space-y-6 mb-3 md:mb-16">
-          <p className="label-badge text-azure">El Riesgo de No Actuar</p>
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-bold text-ink leading-tight">
+          <p className="label-badge text-azure-bright">El Riesgo de No Actuar</p>
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-bold text-white leading-tight">
             Sin registrar tu marca, tu negocio corre peligro.
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed text-graphite max-w-[68ch] text-pretty">
+          <p className="text-lg md:text-xl leading-relaxed text-white/70 max-w-[68ch] text-pretty">
             Da lo mismo cuántos años lleves usándolo. Si no está inscrito, no es tuyo.
           </p>
         </div>
@@ -128,8 +132,8 @@ export default function Risk() {
         </div>
 
         {/* What does NOT protect you */}
-        <div className="py-2 md:py-8 mb-12 md:mb-16 border-t border-b border-slate-200 max-w-2xl">
-          <h3 className="text-base font-display font-bold text-ink mb-6">
+        <div className="py-2 md:py-8 mb-12 md:mb-16 border-t border-b border-white/20 max-w-2xl">
+          <h3 className="text-base font-display font-bold text-white mb-6">
             Lo que NO te protege la marca:
           </h3>
           <div className="space-y-3">
@@ -137,74 +141,104 @@ export default function Risk() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <p className="text-sm text-graphite">Tu razón social</p>
+              <p className="text-sm text-white/70">Tu razón social</p>
             </div>
             <div className="flex items-center gap-3">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <p className="text-sm text-graphite">Tu inicio de actividades</p>
+              <p className="text-sm text-white/70">Tu inicio de actividades</p>
             </div>
             <div className="flex items-center gap-3">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <p className="text-sm text-graphite">Tu dominio .cl</p>
+              <p className="text-sm text-white/70">Tu dominio .cl</p>
             </div>
             <div className="flex items-center gap-3">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-red-400 flex-shrink-0">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <p className="text-sm text-graphite">Que vendas hace años</p>
+              <p className="text-sm text-white/70">Que vendas hace años</p>
             </div>
           </div>
         </div>
 
-        {/* Block B — Two columns with headers and aligned rows */}
+        {/* Block B — Mobile: stacked by category, Desktop: side-by-side */}
         <div className="mb-12 md:mb-16">
-          {/* Badges row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-6">
-            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest">
-              Si ofreces servicios
+          {/* Mobile Layout: Badge + Cards grouped by category */}
+          <div className="md:hidden space-y-8">
+            {/* Services Section */}
+            <div>
+              <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest mb-4">
+                Si ofreces servicios
+              </div>
+              <div className="space-y-4">
+                {blockBServices.map((risk, index) => (
+                  <RiskCard key={`services-${index}`} risk={risk} />
+                ))}
+              </div>
             </div>
-            <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest">
-              Si vendes productos
+
+            {/* Products Section */}
+            <div>
+              <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest mb-4">
+                Si vendes productos
+              </div>
+              <div className="space-y-4">
+                {blockBProducts.map((risk, index) => (
+                  <RiskCard key={`products-${index}`} risk={risk} />
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Cards grid - 2 columns, auto rows */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 auto-rows-fr">
-            {/* Services cards */}
-            {blockBServices.map((risk, index) => (
-              <RiskCard key={`services-${index}`} risk={risk} />
-            ))}
+          {/* Desktop Layout: Badges row + 2x2 grid */}
+          <div className="hidden md:block">
+            {/* Badges row */}
+            <div className="grid grid-cols-2 gap-8 mb-6">
+              <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest">
+                Si ofreces servicios
+              </div>
+              <div className="inline-flex items-center px-3 py-1.5 bg-azure text-white rounded font-mono text-xs font-bold uppercase tracking-widest">
+                Si vendes productos
+              </div>
+            </div>
 
-            {/* Products cards */}
-            {blockBProducts.map((risk, index) => (
-              <RiskCard key={`products-${index}`} risk={risk} />
-            ))}
+            {/* Cards grid - 2 columns, auto rows */}
+            <div className="grid grid-cols-2 gap-8 auto-rows-fr">
+              {/* Services cards */}
+              {blockBServices.map((risk, index) => (
+                <RiskCard key={`services-${index}`} risk={risk} />
+              ))}
+
+              {/* Products cards */}
+              {blockBProducts.map((risk, index) => (
+                <RiskCard key={`products-${index}`} risk={risk} />
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Closing block with statistic */}
-        <div className="border-t border-slate-200 pt-12 mt-12 md:mt-16">
+        <div className="border-t border-white/20 pt-12 mt-12 md:mt-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Statistic */}
             <div className="flex flex-col items-start md:items-center md:justify-center">
-              <p className="text-6xl md:text-7xl font-display font-bold text-azure leading-tight">
+              <p className="text-6xl md:text-7xl font-display font-bold text-brass leading-tight">
                 +200
               </p>
-              <p className="text-base md:text-lg text-graphite mt-4">
+              <p className="text-base md:text-lg text-white/70 mt-4">
                 solicitudes de marca al día en Chile
               </p>
             </div>
 
             {/* Right: Message */}
             <div>
-              <p className="text-lg md:text-xl font-semibold text-ink leading-relaxed">
+              <p className="text-lg md:text-xl font-semibold text-white leading-relaxed">
                 Basta con que aparezca una parecida a la tuya para que el problema empiece a costar caro.
               </p>
-              <p className="text-xs text-graphite/60 mt-6">
+              <p className="text-xs text-white/50 mt-6">
                 Fuente: INAPI.
               </p>
             </div>

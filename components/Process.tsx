@@ -6,7 +6,7 @@ export default function Process() {
   ]
 
   return (
-    <section id="proceso" className="bg-white py-1 md:py-8">
+    <section id="proceso" className="bg-white py-2 md:py-10">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-12 md:mb-16">

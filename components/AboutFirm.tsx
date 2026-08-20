@@ -17,7 +17,7 @@ export default function AboutFirm() {
   ]
 
   return (
-    <section className="bg-ink text-white py-1 md:py-4">
+    <section className="bg-ink text-white py-2 md:py-5">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Label */}
         <p className="label-badge text-azure-bright mb-1 md:mb-2 md:mb-4">Sobre la Firma</p>
@@ -49,17 +49,19 @@ export default function AboutFirm() {
             </div>
           </div>
 
-          {/* Image Column — 1/3 width */}
+          {/* Image Column — Circular */}
           <div className="flex justify-center md:justify-start">
-            <Image
-              src="/images/alberto-retrato.jpg"
-              alt="Alberto Lathrop, abogado especialista en marcas"
-              width={750}
-              height={982}
-              loading="lazy"
-              className="w-full max-w-[140px] md:max-w-[225px] object-cover object-center"
-              style={{ aspectRatio: '750/982' }}
-            />
+            <div className="w-[150px] h-[150px] md:w-[180px] md:h-[180px] rounded-full overflow-hidden border-2 border-azure-bright/30 flex-shrink-0">
+              <Image
+                src="/images/alberto-retrato.jpg"
+                alt="Alberto Lathrop, abogado especialista en marcas"
+                width={750}
+                height={982}
+                loading="lazy"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: 'center 35%' }}
+              />
+            </div>
           </div>
         </div>
 

@@ -7,7 +7,7 @@ export default function Hero() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20registrar%20mi%20marca.`
 
   return (
-    <section className="bg-white relative overflow-hidden" style={{ padding: 'clamp(16px, 3vw, 56px) 0 clamp(24px, 6vw, 100px)' }}>
+    <section className="bg-white relative overflow-hidden" style={{ padding: 'clamp(20px, 3.75vw, 70px) 0 clamp(30px, 7.5vw, 125px)' }}>
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'start', position: 'relative' }}>
           {/* Left Column */}

@@ -9,15 +9,12 @@ export default function Pricing() {
   }
 
   return (
-    <section id="planes" className="bg-ink text-white py-1 md:py-6">
+    <section id="planes" className="bg-ink text-white py-2 md:py-8">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 md:space-y-6 mb-3 md:mb-16">
-          <p className="font-mono text-xs font-medium text-azure-bright uppercase tracking-widest">
-            Los planes
-          </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">
-            Claridad total antes de empezar.
+            Planes
           </h2>
           <p className="text-lg leading-relaxed text-white/70 max-w-56ch">
             Cada caso se cotiza a la medida de su complejidad. Empiezo por entender el tuyo y te envío una propuesta clara.
