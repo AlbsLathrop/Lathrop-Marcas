@@ -23,11 +23,11 @@ export default function Hero() {
             <h1 className="heading-large md:max-w-3xl" style={{
               lineHeight: 1.15,
               marginBottom: '44px',
-              fontSize: 'clamp(2.23rem, 5vw, 3rem)'
+              fontSize: 'clamp(2.56rem, 5vw, 3rem)'
             }}>
               Sin registrar tu marca, arriesgas{' '}
               <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
-                todo lo que construiste
+                lo que construiste
                 <svg viewBox="0 0 220 10" preserveAspectRatio="none" style={{
                   position: 'absolute',
                   bottom: '-8px',
