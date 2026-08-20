@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'start', position: 'relative' }}>
           {/* Left Column */}
-          <div className="space-y-3 md:space-y-6">
+          <div className="space-y-4 md:space-y-8">
             {/* Badge */}
             <div className="flex items-center gap-2">
               <span className="inline-block font-mono text-xs font-medium text-graphite uppercase tracking-widest">

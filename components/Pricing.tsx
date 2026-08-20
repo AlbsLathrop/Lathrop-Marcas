@@ -40,9 +40,7 @@ export default function Pricing() {
               {[
                 'Búsqueda en software especializado',
                 'Marcas idénticas o similares registradas',
-                'Detección de uso en web y redes',
                 'Análisis de riesgo con criterio técnico',
-                'Conclusiones del abogado especialista',
                 'Recomendación clara y accionable'
               ].map((item, i) => (
                 <div key={i} className="flex gap-2 text-sm text-white">
@@ -76,11 +74,7 @@ export default function Pricing() {
               {[
                 'Todo lo del Informe Marcario',
                 'Estrategia de clases Niza',
-                'Redacción y presentación ante INAPI',
-                'Seguimiento del expediente',
-                'Respuesta a requerimientos',
                 'Defensa ante oposiciones',
-                'Vigilancia marcaria 12 meses',
                 'Garantía de segundo intento'
               ].map((item, i) => (
                 <div key={i} className="flex gap-2 text-sm text-white">
@@ -113,9 +107,7 @@ export default function Pricing() {
                 'Todo lo del Registro de Marca',
                 'Vigilancia marcaria continua 24 meses',
                 'Alertas de marcas similares',
-                'Asesoría en cesiones y licencias',
-                'Estrategia de expansión internacional',
-                'Primera renovación acompañada'
+                'Estrategia de expansión internacional'
               ].map((item, i) => (
                 <div key={i} className="flex gap-2 text-sm text-white">
                   <span className="text-azure-bright flex-shrink-0">•</span>

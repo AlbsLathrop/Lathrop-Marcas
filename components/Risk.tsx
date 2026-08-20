@@ -50,17 +50,6 @@ export default function Risk() {
       ),
     },
     {
-      title: 'Tus clientes te buscan por tu nombre',
-      description: 'Si aparece uno casi igual, esas búsquedas y recomendaciones se van a su puerta, no a la tuya.',
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.5"/>
-          <path d="M6 16C6 16 6 24 12 28C18 24 18 16 18 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M26 12L34 12M30 8V16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
-      ),
-    },
-    {
       title: 'Tu nombre está en la fachada',
       description: 'Señalética, uniformes, boletas, contratos. Y tendrás que cambiar tu Instagram y tu web, perdiendo todo lo que construiste ahí.',
       icon: (
@@ -95,19 +84,6 @@ export default function Risk() {
           <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5"/>
           <path d="M20 20L28 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
-      ),
-    },
-    {
-      title: 'Cada distribuidor te lo va a pedir',
-      description: 'Cada cadena y cada canal nuevo pide acreditar la marca antes de vender.',
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 34L10 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-          <path d="M30 34L30 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-          <path d="M10 14L30 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-          <path d="M10 22L30 22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-          <path d="M10 30L30 30" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
       ),
     },
