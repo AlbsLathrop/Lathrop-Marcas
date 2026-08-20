@@ -28,12 +28,35 @@ export default function AboutFirm() {
         </h2>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 md:gap-8 items-start mb-2 md:mb-4 md:mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 md:gap-8 items-start mb-10 md:mb-4 md:mb-8">
           {/* Text Column — flex width */}
           <div className="space-y-4 md:space-y-6 max-w-prose">
-            <p className="text-lg md:text-xl leading-relaxed text-white/80">
-              Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Yo analizo tu marca, veo si existen idénticas o similares que puedan jugar en contra, elaboro una estrategia marcaria a futuro, defino en qué clases va, la presento y la defiendo si alguien se opone o si INAPI pone obstáculos. La misma persona de principio a fin.
-            </p>
+            <div>
+              <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-4">
+                Los estudios grandes te asignan a un junior. Las plataformas online te dan un formulario. Conmigo:
+              </p>
+              <ul className="space-y-2 mb-4">
+                <li className="flex gap-3 text-lg md:text-xl leading-relaxed text-white/80">
+                  <span className="text-azure-bright flex-shrink-0">✓</span>
+                  <span>Reviso si hay marcas idénticas o similares que jueguen en contra</span>
+                </li>
+                <li className="flex gap-3 text-lg md:text-xl leading-relaxed text-white/80">
+                  <span className="text-azure-bright flex-shrink-0">✓</span>
+                  <span>Defino en qué clases va la tuya y armo la estrategia a futuro</span>
+                </li>
+                <li className="flex gap-3 text-lg md:text-xl leading-relaxed text-white/80">
+                  <span className="text-azure-bright flex-shrink-0">✓</span>
+                  <span>Presento la solicitud y hago el seguimiento</span>
+                </li>
+                <li className="flex gap-3 text-lg md:text-xl leading-relaxed text-white/80">
+                  <span className="text-azure-bright flex-shrink-0">✓</span>
+                  <span>Te defiendo si alguien se opone o si el INAPI pone obstáculos</span>
+                </li>
+              </ul>
+              <p className="text-lg md:text-xl leading-relaxed text-white font-semibold">
+                La misma persona de principio a fin.
+              </p>
+            </div>
             <p className="text-lg md:text-xl leading-relaxed text-white/80">
               Da lo mismo si vendes un producto o prestas un servicio: si tus clientes te encuentran por tu nombre, ese nombre hay que protegerlo.
             </p>

@@ -13,14 +13,18 @@ export default function Hero() {
           {/* Left Column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(24px, 5vw, 32px)' }}>
             {/* Badge */}
-            <div className="flex items-center gap-2" style={{ marginTop: 'clamp(48px, 8vw, 72px)' }}>
+            <div className="flex items-center gap-2" style={{ marginTop: 'clamp(16px, 4vw, 72px)' }}>
               <span className="inline-block font-mono text-xs font-medium text-graphite uppercase tracking-widest">
-                ● Especialista en propiedad industrial · Chile
+                ● Especialista en marcas · Chile
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="heading-large md:max-w-3xl" style={{ lineHeight: 1.15, marginBottom: '20px' }}>
+            <h1 className="heading-large md:max-w-3xl" style={{
+              lineHeight: 1.15,
+              marginBottom: '20px',
+              fontSize: 'clamp(1.8rem, 5vw, 3rem)'
+            }}>
               Sin registrar tu marca, arriesgas{' '}
               <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
                 todo lo que construiste
@@ -37,7 +41,7 @@ export default function Hero() {
             </h1>
 
             {/* Legal Assertion - Moved up */}
-            <p className="text-sm md:text-lg font-medium" style={{ color: '#2D5A8C', lineHeight: 1.4 }}>
+            <p className="text-base md:text-lg font-medium" style={{ color: '#2D5A8C', lineHeight: 1.4 }}>
               En Chile la marca es de quien la registra primero.
             </p>
 
@@ -75,8 +79,20 @@ export default function Hero() {
                     (window as any).fbq('track', 'Lead');
                   }
                 }}
-                className="inline-flex items-center justify-center gap-1 px-7 md:px-8 py-2.5 md:py-4 min-h-11 md:min-h-auto bg-ink text-white rounded-[8px] font-medium text-base md:text-lg hover:bg-azure-dark transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-1 px-7 md:px-8 py-2.5 md:py-4 min-h-11 md:min-h-auto bg-ink text-white rounded-[8px] font-medium text-base md:text-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ boxShadow: '0 8px 24px rgba(10,22,40,0.25)' }}
+                onMouseEnter={(e) => {
+                  if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+                    e.currentTarget.style.backgroundColor = '#B8DFF5';
+                    e.currentTarget.style.color = '#0B1A2F';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+                    e.currentTarget.style.backgroundColor = '';
+                    e.currentTarget.style.color = '';
+                  }
+                }}
               >
                 Hablar por WhatsApp
                 <span className="ml-1">→</span>

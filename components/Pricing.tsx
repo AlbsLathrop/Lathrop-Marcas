@@ -74,7 +74,7 @@ export default function Pricing() {
                 'Defensa ante oposiciones',
                 'Garantía de segundo intento'
               ].map((item, i) => (
-                <div key={i} className="flex gap-2 text-sm text-white">
+                <div key={i} className="flex gap-2 text-sm text-ink">
                   <span className="text-brass flex-shrink-0">•</span>
                   <span>{item}</span>
                 </div>
@@ -90,16 +90,16 @@ export default function Pricing() {
           </div>
 
           {/* Card 3: Protección Integral */}
-          <div className="bg-white/10 border border-white/20 rounded-[8px] p-6 flex flex-col card-hover">
+          <div className="bg-slate-50 border border-slate-200 rounded-[8px] p-6 flex flex-col card-hover">
             <div className="mb-6">
-              <p className="font-mono text-xs text-azure-bright uppercase tracking-widest mb-2">Recomendado</p>
-              <h3 className="text-xl font-display font-bold text-white mb-4">Protección Integral</h3>
-              <p className="text-2xl font-display font-bold leading-tight text-azure-bright mb-2">Gestión y defensa continua.</p>
-              <p className="text-sm text-white/70 mb-4">A la medida de tu portafolio de marcas.</p>
-              <p className="text-sm text-white/70 mb-6"><b className="font-mono text-xs text-white">Ideal para</b><br />Marcas con varias líneas, sucursales o planes de expansión.</p>
+              <p className="font-mono text-xs text-azure uppercase tracking-widest mb-2">Recomendado</p>
+              <h3 className="text-xl font-display font-bold text-ink mb-4">Protección Integral</h3>
+              <p className="text-2xl font-display font-bold leading-tight text-azure mb-2">Gestión y defensa continua.</p>
+              <p className="text-sm text-graphite mb-4">A la medida de tu portafolio de marcas.</p>
+              <p className="text-sm text-graphite mb-6"><b className="font-mono text-xs text-ink">Ideal para</b><br />Marcas con varias líneas, sucursales o planes de expansión.</p>
             </div>
             <div className="space-y-2 mb-6 flex-1">
-              <p className="font-mono text-xs text-white/60 uppercase tracking-widest mb-3">Incluye</p>
+              <p className="font-mono text-xs text-graphite/70 uppercase tracking-widest mb-3">Incluye</p>
               {[
                 'Todo lo del Registro de Marca',
                 'Vigilancia marcaria continua 24 meses',
