@@ -45,9 +45,20 @@ export default function Hero() {
               En Chile la marca es de quien la registra primero.
             </p>
 
-            {/* Paragraph */}
+            {/* Concepts Row */}
+            <div className="flex flex-wrap gap-2 items-center justify-start text-base md:text-lg font-medium text-graphite mb-4">
+              <span>Clientes</span>
+              <span className="text-azure">·</span>
+              <span>Reputación</span>
+              <span className="text-azure">·</span>
+              <span>Ventas</span>
+              <span className="text-azure">·</span>
+              <span>Crecimiento</span>
+            </div>
+
+            {/* Closing Statement */}
             <p className="text-base md:text-lg leading-relaxed text-graphite max-w-56ch" style={{ textWrap: 'pretty' }}>
-              Clientes, reputación, tus ventas, tu crecimiento. Todo cuelga de una marca que todavía no es legalmente tuya.
+              Todo cuelga de una marca que todavía no es legalmente tuya.
             </p>
 
             {/* Protection Badges */}
