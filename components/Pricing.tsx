@@ -75,7 +75,7 @@ export default function Pricing() {
                 'Garantía de segundo intento'
               ].map((item, i) => (
                 <div key={i} className="flex gap-2 text-sm text-ink">
-                  <span className="text-brass flex-shrink-0">•</span>
+                  <span className="text-azure flex-shrink-0">•</span>
                   <span>{item}</span>
                 </div>
               ))}
