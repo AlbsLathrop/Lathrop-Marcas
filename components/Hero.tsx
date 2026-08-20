@@ -7,13 +7,13 @@ export default function Hero() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20registrar%20mi%20marca.`
 
   return (
-    <section className="bg-white relative overflow-hidden py-14 md:py-24">
+    <section className="bg-white relative overflow-hidden py-4 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'start', position: 'relative' }}>
           {/* Left Column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(24px, 5vw, 32px)' }}>
             {/* Badge */}
-            <div className="flex items-center gap-2" style={{ marginTop: 'clamp(16px, 4vw, 72px)' }}>
+            <div className="flex items-center gap-2" style={{ marginTop: 'clamp(8px, 2vw, 16px)' }}>
               <span className="inline-block font-mono text-xs font-medium text-graphite uppercase tracking-widest">
                 ● Especialista en marcas · Chile
               </span>
@@ -23,7 +23,7 @@ export default function Hero() {
             <h1 className="heading-large md:max-w-3xl" style={{
               lineHeight: 1.15,
               marginBottom: '20px',
-              fontSize: 'clamp(1.8rem, 5vw, 3rem)'
+              fontSize: 'clamp(2.07rem, 5vw, 3rem)'
             }}>
               Sin registrar tu marca, arriesgas{' '}
               <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
