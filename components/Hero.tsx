@@ -22,8 +22,8 @@ export default function Hero() {
             {/* Heading */}
             <h1 className="heading-large md:max-w-3xl" style={{
               lineHeight: 1.15,
-              marginBottom: '20px',
-              fontSize: 'clamp(2.07rem, 5vw, 3rem)'
+              marginBottom: '44px',
+              fontSize: 'clamp(2.38rem, 5vw, 3rem)'
             }}>
               Sin registrar tu marca, arriesgas{' '}
               <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
