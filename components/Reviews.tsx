@@ -52,7 +52,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="bg-ink text-white py-3 md:py-12">
+    <section className="bg-ink text-white py-14 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-2 md:space-y-4 mb-2 md:mb-4 md:mb-12">

@@ -2,7 +2,7 @@ import WrittenCases from './WrittenCases';
 
 export default function CasesReales() {
   return (
-    <section className="bg-white py-6 md:py-28">
+    <section className="bg-white py-14 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-12">

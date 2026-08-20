@@ -17,7 +17,7 @@ export default function AboutFirm() {
   ]
 
   return (
-    <section className="bg-ink text-white py-3 md:py-7">
+    <section className="bg-ink text-white py-14 md:py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Label */}
         <p className="label-badge text-azure-bright mb-1 md:mb-2 md:mb-4">Sobre la Firma</p>

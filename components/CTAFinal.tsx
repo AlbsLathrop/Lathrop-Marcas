@@ -8,7 +8,7 @@ export default function CTAFinal() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20Alberto%2C%20quiero%20conversar%20sobre%20mi%20marca.`
 
   return (
-    <section className="bg-ink text-white py-1 md:py-8">
+    <section className="bg-ink text-white py-14 md:py-24">
       <div className="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-8">
         {/* Logo Signature */}
         <div className="flex justify-center mb-2 md:mb-4 md:mb-8">

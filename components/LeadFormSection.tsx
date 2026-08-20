@@ -2,7 +2,7 @@ import LeadForm from './LeadForm';
 
 export default function LeadFormSection() {
   return (
-    <section className="bg-white py-1 md:py-4">
+    <section className="bg-white py-14 md:py-24">
       <div className="max-w-4xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-2 mb-2 md:mb-4 text-center">
