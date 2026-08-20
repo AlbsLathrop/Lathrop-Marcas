@@ -53,7 +53,7 @@ export default function Vigilancia() {
                   if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                     (window as any).fbq('track', 'Lead');
                   }
-                }} className="w-full mt-4 py-2.5 border border-slate-200 text-ink text-center rounded font-medium text-sm hover:bg-white transition-all block">
+                }} className="w-full mt-4 py-2.5 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center border border-slate-200 text-ink text-center rounded font-medium text-sm hover:bg-white transition-all">
                   Hablar por WhatsApp →
                 </a>
               </div>
@@ -67,7 +67,7 @@ export default function Vigilancia() {
                   if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                     (window as any).fbq('track', 'Lead');
                   }
-                }} className="w-full mt-4 py-2.5 bg-ink text-white text-center rounded font-medium text-sm hover:opacity-90 transition-all block">
+                }} className="w-full mt-4 py-2.5 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center bg-ink text-white text-center rounded font-medium text-sm hover:opacity-90 transition-all">
                   Hablar por WhatsApp →
                 </a>
               </div>

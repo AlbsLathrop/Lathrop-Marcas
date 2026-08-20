@@ -22,9 +22,11 @@ const inter = Inter({
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#0B1A2F',
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lathropmarcas.cl'),
   title: 'Registro de Marca en Chile · Lathrop Marcas',
   description:
     'Asesoría técnica en registro de marcas ante el INAPI. Para negocios de servicios y productos que ya operan y necesitan proteger su nombre con criterio técnico.',
@@ -63,7 +65,6 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
-  themeColor: '#0B1A2F',
 }
 
 export default function RootLayout({

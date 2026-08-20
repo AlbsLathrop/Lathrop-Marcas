@@ -37,7 +37,7 @@ export default function ResultadosGarantia() {
                   (window as any).fbq('track', 'Lead');
                 }
               }}
-              className="inline-flex items-center gap-2 px-8 md:px-10 py-3.5 bg-azure text-white rounded-[8px] font-semibold text-base transition-all duration-200 hover:bg-opacity-90 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-8 md:px-10 py-2 md:py-3 min-h-11 md:min-h-auto bg-azure text-white rounded-[8px] font-semibold text-base transition-all duration-200 hover:bg-opacity-90 hover:-translate-y-0.5"
             >
               Empecemos →
             </a>

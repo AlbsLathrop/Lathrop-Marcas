@@ -55,7 +55,7 @@ export default function Pricing() {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
-            }} className="w-full py-2.5 border border-white/30 text-white text-center rounded font-medium text-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all">
+            }} className="w-full py-2.5 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center border border-white/30 text-white text-center rounded font-medium text-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all">
               Solicitar informe →
             </a>
           </div>
@@ -93,7 +93,7 @@ export default function Pricing() {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
-            }} className="w-full py-2.5 bg-azure text-white btn-primary-hover text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all font-bold">
+            }} className="w-full py-2.5 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center bg-azure text-white btn-primary-hover text-center rounded font-medium text-sm hover:-translate-y-0.5 transition-all font-bold">
               Iniciar el proceso →
             </a>
           </div>
@@ -127,7 +127,7 @@ export default function Pricing() {
               if (typeof window !== 'undefined' && typeof (window as any).fbq !== 'undefined') {
                 (window as any).fbq('track', 'Lead');
               }
-            }} className="w-full py-2.5 border border-white/30 text-white text-center rounded font-medium text-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all">
+            }} className="w-full py-2.5 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center border border-white/30 text-white text-center rounded font-medium text-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all">
               Solicitar propuesta →
             </a>
           </div>

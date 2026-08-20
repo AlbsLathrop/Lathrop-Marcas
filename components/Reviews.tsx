@@ -76,7 +76,7 @@ export default function Reviews() {
             href="https://maps.app.goo.gl/5JEzPc6exAVvHPUTA"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-brass text-brass font-medium rounded-[8px] hover:bg-brass hover:text-ink transition-all"
+            className="inline-flex items-center justify-center gap-2 px-6 py-2 md:py-3 min-h-11 md:min-h-auto border border-brass text-brass font-medium rounded-[8px] hover:bg-brass hover:text-ink transition-all"
           >
             Ver todas las opiniones en Google →
           </a>

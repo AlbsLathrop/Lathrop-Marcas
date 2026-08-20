@@ -25,7 +25,7 @@ export default function Footer() {
           <nav className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <a
               href="#proceso"
-              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              className="px-4 py-3 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
@@ -34,7 +34,7 @@ export default function Footer() {
             </a>
             <a
               href="#planes"
-              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              className="px-4 py-3 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
@@ -43,7 +43,7 @@ export default function Footer() {
             </a>
             <a
               href="#faq"
-              className="font-medium text-sm uppercase tracking-widest transition-colors duration-200"
+              className="px-4 py-3 md:py-2 min-h-11 md:min-h-auto inline-flex items-center justify-center font-medium text-sm uppercase tracking-widest transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.6)' }}
               onMouseEnter={(e) => e.currentTarget.style.color = 'white'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
@@ -62,10 +62,10 @@ export default function Footer() {
             Alberto Lathrop · Abogado · Propiedad Industrial · Registro y
             gestión ante el INAPI · Chile
           </p>
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-400 min-h-11 md:min-h-auto inline-flex items-center">
             <a
               href="/privacidad"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="px-3 py-2 inline-flex items-center justify-center text-gray-400 hover:text-white transition-colors min-h-11 md:min-h-auto"
             >
               Política de Privacidad
             </a>

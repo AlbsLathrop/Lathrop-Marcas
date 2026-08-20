@@ -156,7 +156,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           <button
             type="button"
             onClick={() => handleFacturaClick('si')}
-            className={`flex-1 px-4 py-2.5 rounded-[8px] font-medium transition-all ${
+            className={`flex-1 px-4 py-2 min-h-11 rounded-[8px] font-medium transition-all inline-flex items-center justify-center ${
               formData.factura === 'si'
                 ? 'bg-azure text-white border border-azure'
                 : 'bg-white border border-slate-200 text-ink hover:border-azure'
@@ -167,7 +167,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           <button
             type="button"
             onClick={() => handleFacturaClick('no')}
-            className={`flex-1 px-4 py-2.5 rounded-[8px] font-medium transition-all ${
+            className={`flex-1 px-4 py-2 min-h-11 rounded-[8px] font-medium transition-all inline-flex items-center justify-center ${
               formData.factura === 'no'
                 ? 'bg-azure text-white border border-azure'
                 : 'bg-white border border-slate-200 text-ink hover:border-azure'
@@ -218,7 +218,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-3 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-gray-100"
+          className="w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink hover:bg-gray-100 inline-flex items-center justify-center"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
@@ -226,7 +226,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading || !formData.nombre || !formData.marca}
-          className="w-full px-4 py-3 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90"
+          className="w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-ink text-white hover:bg-opacity-90 inline-flex items-center justify-center"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>

@@ -75,7 +75,7 @@ export default function Hero() {
                     (window as any).fbq('track', 'Lead');
                   }
                 }}
-                className="inline-flex items-center gap-1 px-7 md:px-8 py-3.5 md:py-4 bg-ink text-white rounded-[8px] font-medium text-base md:text-lg hover:bg-azure-dark transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-1 px-7 md:px-8 py-2.5 md:py-4 min-h-11 md:min-h-auto bg-ink text-white rounded-[8px] font-medium text-base md:text-lg hover:bg-azure-dark transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ boxShadow: '0 8px 24px rgba(10,22,40,0.25)' }}
               >
                 Hablar por WhatsApp

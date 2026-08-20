@@ -40,7 +40,7 @@ export default function FAQ() {
                     (window as any).fbq('track', 'Lead');
                   }
                 }}
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-ink text-white rounded-[8px] font-medium text-sm hover:bg-opacity-90 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 min-h-11 md:min-h-auto bg-ink text-white rounded-[8px] font-medium text-sm hover:bg-opacity-90 transition-all"
               >
                 Hablar por WhatsApp →
               </a>
@@ -59,7 +59,7 @@ export default function FAQ() {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="w-full px-6 md:px-8 py-4 md:py-5 flex items-center justify-between transition-colors duration-200 text-left"
+                  className="w-full px-6 md:px-8 py-3 md:py-5 min-h-11 md:min-h-auto flex items-center justify-between transition-colors duration-200 text-left"
                   style={{
                     background: openIndex === index ? 'rgba(59,130,246,0.04)' : 'transparent'
                   }}

@@ -47,7 +47,7 @@ export default function Navbar() {
               (window as any).fbq('track', 'Lead');
             }
           }}
-          className="px-5 md:px-6 py-2.5 md:py-3 bg-ink border border-azure/30 text-bone rounded-[8px] font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
+          className="px-5 md:px-6 py-2 md:py-3 min-h-11 md:min-h-auto inline-flex items-center justify-center bg-ink border border-azure/30 text-bone rounded-[8px] font-medium text-sm md:text-base transition-all duration-300 hover:bg-azure hover:border-azure"
         >
           Contacto
         </a>
