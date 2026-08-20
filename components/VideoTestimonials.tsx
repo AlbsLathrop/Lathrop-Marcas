@@ -34,7 +34,7 @@ export default function VideoTestimonials() {
   };
 
   return (
-    <section className="bg-white py-8 md:py-32">
+    <section className="bg-white py-10 md:py-40">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 mb-12">
@@ -54,10 +54,10 @@ export default function VideoTestimonials() {
               aria-label={`Ver testimonio de ${video.name}`}
             >
               {/* Video Frame */}
-              <div className="vid-frame relative w-full aspect-video bg-ink rounded-[8px] overflow-hidden mb-4">
+              <div className="vid-frame relative w-full bg-ink rounded-[8px] overflow-hidden mb-4" style={{ aspectRatio: '16/9' }}>
                 {/* Thumbnail Image */}
                 <Image
-                  src={`https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`}
+                  src={`https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`}
                   alt={video.name}
                   fill
                   loading="lazy"

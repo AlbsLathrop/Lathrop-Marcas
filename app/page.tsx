@@ -23,12 +23,12 @@ export default function Home() {
       <Hero />
       <ClientLogos />
       <Risk />
-      <AboutFirm />
       <CasesReales />
+      <AboutFirm />
       <Pricing />
+      <ResultadosGarantia />
       <Process />
       <Vigilancia />
-      <ResultadosGarantia />
       <VideoTestimonials />
       <Reviews />
       <LeadFormSection />

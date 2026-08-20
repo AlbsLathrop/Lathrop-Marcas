@@ -11,16 +11,16 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="hero-grid grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16" style={{ alignItems: 'start', position: 'relative' }}>
           {/* Left Column */}
-          <div className="space-y-4 md:space-y-8">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(24px, 5vw, 32px)' }}>
             {/* Badge */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2" style={{ marginTop: 'clamp(48px, 8vw, 72px)' }}>
               <span className="inline-block font-mono text-xs font-medium text-graphite uppercase tracking-widest">
                 ● Especialista en propiedad industrial · Chile
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="heading-large md:max-w-3xl">
+            <h1 className="heading-large md:max-w-3xl" style={{ lineHeight: 1.15, marginBottom: '20px' }}>
               Sin registrar tu marca, arriesgas{' '}
               <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
                 todo lo que construiste
@@ -47,7 +47,7 @@ export default function Hero() {
             </p>
 
             {/* Protection Badges */}
-            <div className="flex flex-col sm:flex-row gap-4 order-last md:order-3 md:pt-2">
+            <div className="flex flex-col sm:flex-row gap-4 order-last md:order-3 md:pt-2" style={{ marginTop: '32px', marginBottom: '32px' }}>
               <div className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-azure flex-shrink-0 mt-0.5"></div>
                 <div>
@@ -102,7 +102,7 @@ export default function Hero() {
 
           {/* Right Column - Portrait Card */}
           <div className="flex flex-col items-center md:items-end order-last md:order-2 md:pt-0 pt-8">
-            <div className="w-full max-w-[240px] md:max-w-xs relative">
+            <div className="w-full max-w-[240px] md:max-w-xs relative" style={{ aspectRatio: '4/5' }}>
               {/* Corner Brackets */}
               <div className="absolute -top-3 -left-3 w-4 h-4 border-t border-l border-azure z-10"></div>
               <div className="absolute -top-3 -right-3 w-4 h-4 border-t border-r border-azure z-10"></div>
@@ -111,7 +111,7 @@ export default function Hero() {
 
               {/* Portrait Container */}
               <div
-                className="portrait overflow-hidden aspect-[4/5] flex items-center justify-center relative rounded-sm"
+                className="portrait overflow-hidden flex items-center justify-center relative rounded-sm w-full h-full"
                 style={{
                   backgroundColor: '#0B1A2F',
                 }}

@@ -111,7 +111,7 @@ export default function Risk() {
   );
 
   return (
-    <section className="bg-ink text-white py-2 md:py-5">
+    <section className="bg-ink text-white py-3 md:py-7">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 md:space-y-6 mb-3 md:mb-16">

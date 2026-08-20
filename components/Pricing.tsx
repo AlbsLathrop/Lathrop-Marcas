@@ -9,7 +9,7 @@ export default function Pricing() {
   }
 
   return (
-    <section id="planes" className="bg-ink text-white py-2 md:py-8">
+    <section id="planes" className="bg-ink text-white py-3 md:py-10">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-4 md:space-y-6 mb-3 md:mb-16">

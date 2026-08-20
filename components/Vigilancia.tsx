@@ -8,7 +8,7 @@ export default function Vigilancia() {
   }
 
   return (
-    <section className="bg-white py-2 md:py-8 border-t border-slate-200">
+    <section className="bg-white py-3 md:py-10 border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="space-y-6 mb-12">
