@@ -25,9 +25,9 @@ export default function Hero() {
               marginBottom: '44px',
               fontSize: 'clamp(2.56rem, 5vw, 3rem)'
             }}>
-              Sin registrar tu marca, arriesgas{' '}
+              Otro puede registrar tu marca y{' '}
               <span className="inline-block" style={{ whiteSpace: 'nowrap', position: 'relative' }}>
-                lo que construiste
+                dejarte sin ella
                 <svg viewBox="0 0 220 10" preserveAspectRatio="none" style={{
                   position: 'absolute',
                   bottom: '-8px',
