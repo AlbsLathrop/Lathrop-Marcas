@@ -27,6 +27,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [errors, setErrors] = useState<{ nombre?: string; marca?: string }>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -45,8 +46,19 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
     setMessage(null);
+    setErrors({});
+
+    const newErrors: { nombre?: string; marca?: string } = {};
+    if (!formData.nombre.trim()) newErrors.nombre = 'El nombre es obligatorio';
+    if (!formData.marca.trim()) newErrors.marca = 'La marca es obligatoria';
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setIsLoading(true);
 
     try {
       const response = await fetch('https://albertotf.app.n8n.cloud/webhook/lead-lathrop', {
@@ -108,10 +120,12 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           name="nombre"
           value={formData.nombre}
           onChange={handleChange}
-          required
           placeholder="Tu nombre"
-          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field"
+          className={`w-full px-4 py-2.5 border rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field ${
+            errors.nombre ? 'border-red-500' : 'border-slate-200'
+          }`}
         />
+        {errors.nombre && <p className="text-red-500 text-xs mt-1">{errors.nombre}</p>}
       </div>
 
       {/* Marca */}
@@ -125,10 +139,12 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           name="marca"
           value={formData.marca}
           onChange={handleChange}
-          required
           placeholder="Nombre de tu marca"
-          className="w-full px-4 py-2.5 border border-slate-200 rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field"
+          className={`w-full px-4 py-2.5 border rounded-[8px] bg-white text-ink placeholder-graphite/50 form-field ${
+            errors.marca ? 'border-red-500' : 'border-slate-200'
+          }`}
         />
+        {errors.marca && <p className="text-red-500 text-xs mt-1">{errors.marca}</p>}
       </div>
 
       {/* Rubro */}
@@ -218,11 +234,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all inline-flex items-center justify-center ${
-            !formData.nombre || !formData.marca
-              ? 'bg-white/50 text-ink/50 cursor-not-allowed'
-              : 'bg-white text-ink hover:bg-gray-100'
-          } ${isLoading ? 'opacity-75 cursor-wait' : ''}`}
+          className="w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all inline-flex items-center justify-center bg-white text-ink hover:bg-gray-100 disabled:opacity-75 disabled:cursor-wait"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
@@ -230,11 +242,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all inline-flex items-center justify-center ${
-            !formData.nombre || !formData.marca
-              ? 'bg-ink/50 text-white/50 cursor-not-allowed'
-              : 'bg-ink text-white hover:bg-opacity-90'
-          } ${isLoading ? 'opacity-75 cursor-wait' : ''}`}
+          className="w-full px-4 py-2 min-h-11 rounded-[8px] font-semibold text-base transition-all inline-flex items-center justify-center bg-ink text-white hover:bg-opacity-90 disabled:opacity-75 disabled:cursor-wait"
         >
           {isLoading ? 'Enviando...' : 'Enviar datos'}
         </button>
