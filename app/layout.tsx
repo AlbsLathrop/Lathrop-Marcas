@@ -5,6 +5,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppLeadTracker from '@/components/WhatsAppLeadTracker'
+import AttributionTracker from '@/components/AttributionTracker'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -135,6 +136,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <WhatsAppLeadTracker />
+        <AttributionTracker />
         <main>{children}</main>
         <Footer />
       </body>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { getFirstTouch } from '@/lib/attribution';
 
 interface FormData {
   nombre: string;
@@ -73,6 +74,7 @@ export default function LeadForm({ variant = 'light' }: LeadFormProps) {
           factura: formData.factura || undefined,
           telefono: formData.telefono || undefined,
           email: formData.email || undefined,
+          ...getFirstTouch(),
         }),
       });
 
